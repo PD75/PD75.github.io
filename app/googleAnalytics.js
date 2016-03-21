@@ -7,3 +7,5 @@ i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
 
 ga('create', 'UA-75343768-1', 'auto');
 ga('send', 'pageview');
+
+console.log(ga.q);

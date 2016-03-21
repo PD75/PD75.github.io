@@ -1,0 +1,27 @@
+{
+  "name": "pd75.guthub.io",
+  "version": "0.0.1",
+  "description": "My home page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PD75/PD75.github.io.git"
+  },
+  "author": "Paul Dhillon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PD75/PD75.github.io/issues"
+  },
+  "homepage": "https://github.com/PD75/PD75.github.io",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2",
+    "semantic-ui": "^2.1.8"
+  },
+  "devDependencies": {
+    "eslint-plugin-angular": "^1.0.0"
+  }
+}
