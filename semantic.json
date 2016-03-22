@@ -1,21 +1,20 @@
 {
-  "base": "semantic-ui/",
+  "base": "dist\\semantic-ui\\",
   "paths": {
     "source": {
       "config": "src/theme.config",
       "definitions": "src/definitions/",
-      "site": "../dist/semantic-ui/site/",
+      "site": "src\\site\\",
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "../dist/semantic-ui/",
-      "uncompressed": "dist/components/",
-      "compressed": "dist/components/",
+      "packaged": "dist\\",
+      "uncompressed": "dist\\components\\",
+      "compressed": "dist\\components\\",
       "themes": "dist/themes/"
     },
     "clean": "dist/"
   },
-  "version": "2.1.8",
   "permission": false,
   "rtl": "No",
   "components": [
@@ -68,5 +67,6 @@
     "form",
     "state",
     "visibility"
-  ]
+  ],
+  "version": "2.1.8"
 }
