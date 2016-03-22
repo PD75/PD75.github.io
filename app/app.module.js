@@ -3,15 +3,17 @@ angular.module('app', ['ngRoute']);
 
 angular.module('app')
   .config(function($routeProvider) {
-   $routeProvider.
+    $routeProvider.
       when('/', {
         templateUrl: 'app/home.html',
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+      when('/consulting', {
+        templateUrl: 'app/consulting.html',
+      }).
+      when('/practical-startpage', {
+        templateUrl: 'app/practical-startpage.html',
       }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
       });
   });
