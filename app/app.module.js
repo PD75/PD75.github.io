@@ -1,5 +1,5 @@
 
-angular.module('app', ['ngRoute']);
+angular.module('app', ['ngRoute','uiAngular']);
 
 angular.module('app')
   .config(function($routeProvider) {
