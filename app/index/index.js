@@ -6,31 +6,33 @@
     .controller('IndexCtrl', IndexCtrl)
     .directive('pdIndex', IndexDirective);
 
-  function IndexCtrl() {
+  function IndexCtrl($location) {
     var vm = this;
+    vm.isActive = isActive;
 
     vm.menuVisibility = {
       type: 'fixed',
     };
+
+    function isActive(path) {
+      return path === $location.path();
+    }
+
   }
 
-  function IndexDirective() {
+  function IndexDirective($rootScope, $location, $anchorScroll) {
     return {
       restrict: 'A',
       controller: 'IndexCtrl',
       controllerAs: 'vm',
+      link: link,
     };
+    function link(s) {
+      s.$on('$routeChangeSuccess', function() {
+        if ($location.hash()) {
+          $anchorScroll();
+        }
+      });
+    }
   }
 })();
-
-
-// $(document)
-//   .ready(function() {
-//     setTimeout(function() {
-//       $('.ui.sticky')
-//         .sticky({
-//           context: '.example1',
-//           offset: 60,
-//         });
-//     }, 1500);
-//   });

@@ -5,9 +5,11 @@
     .module('app')
     .controller('PSCtrl', PSCtrl);
 
-  function PSCtrl(widgetService) {
+  function PSCtrl($location, widgetService) {
     var vm = this;
+    // vm.isActive = isActive;
 
+    vm.url = '#practical-startpage';
     vm.stickyData = {
       offset: 60,
     };
@@ -20,6 +22,10 @@
           vm.widgets = data;
         });
     }
+
+    // function isActive(hash) {
+    //   return hash === $location.hash();
+    // }
 
   }
 

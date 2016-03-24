@@ -1,17 +1,33 @@
 <div class="ui segment" ui-sticky-context="vm.stickyContext">
   <div class="left ui rail">
     <div class="ui sticky vertical right floated labeled icon menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
-      <a class="item">
+      <a class="item" ng-href="{{vm.url}}#about" ng-class="{active:vm.isActive('about')}">
         <i class="info icon"></i> About
       </a>
-      <a class="item">
+      <a class="item" ng-href="{{vm.url}}#help" ng-class="{active:vm.isActive('help')}">
         <i class="help icon"></i> Help
       </a>
-      <a class="item">
+      <a class="item" ng-href="{{vm.url}}#credits" ng-class="{active:vm.isActive('credits')}">
         <i class="thumbs up icon"></i> Credits
       </a>
     </div>
   </div>
+  
+  <!--<div class="right ui rail">
+    <div class="ui sticky vertical left floated menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
+      <div class="item" ng-href="{{vm.url}}#about" ng-class="{active:vm.isActive('about')}">
+        <i class="info icon"></i> About
+      </div>
+      <div class="item" ng-href="{{vm.url}}#help" ng-class="{active:vm.isActive('help')}">
+        <i class="help icon"></i> Help
+      </div>
+      <div class="item" ng-href="{{vm.url}}#credits" ng-class="{active:vm.isActive('credits')}">
+        <i class="thumbs up icon"></i> Credits
+      </div>
+    </div>
+  </div>-->
+  
+  <div class="anchor" id="about"></div>
   <div class="row">
     <img class="ui centered image" src="img/icon128.png" />
     <h1 class="ui center aligned header">Practical Startpage</h1>
@@ -44,6 +60,7 @@
       </li>
     </ul>
   </div>
+  <div class="anchor" id="help"></div>
   <div class="row">
     <h2 class="ui center aligned header">Help</h2>
 
@@ -58,6 +75,7 @@
       </div>
     </div>
   </div>
+  <div class="anchor" id="credits"></div>
   <div class="row">
     <h2 class="ui center aligned header">Credits</h2>
     <!--<h3 class="ui center aligned header">Libraries Used</h3>-->

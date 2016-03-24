@@ -15,7 +15,12 @@
   padding: 5em 0em;
 }
 
-.ui.tiny.image{
+.ui.tiny.image {
   width: auto;
   max-height: 60px;
+}
+
+.anchor {
+  position: relative;
+  top: -60px;
 }
