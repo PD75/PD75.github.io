@@ -8,9 +8,7 @@
 
   function IndexCtrl() {
     var vm = this;
-    vm.stickyData = {
-      offset: 60,
-    };
+
     vm.menuVisibility = {
       type: 'fixed',
     };

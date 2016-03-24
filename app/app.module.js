@@ -1,8 +1,11 @@
+(function() {
+  'use strict';
+  angular.module('app', ['ngRoute', 'uiAngular']);
 
-angular.module('app', ['ngRoute','uiAngular']);
+  angular.module('app')
+    .config(appConfig);
 
-angular.module('app')
-  .config(function($routeProvider) {
+  function appConfig($routeProvider) {
     $routeProvider.
       when('/', {
         templateUrl: 'app/home.html',
@@ -11,9 +14,12 @@ angular.module('app')
         templateUrl: 'app/consulting.html',
       }).
       when('/practical-startpage', {
-        templateUrl: 'app/practical-startpage.html',
+        templateUrl: 'app/practical-startpage/practical-startpage.html',
+        controller: 'PSCtrl',
+        controllerAs: 'vm',
       }).
       otherwise({
         redirectTo: '/',
       });
-  });
+  }
+})();
