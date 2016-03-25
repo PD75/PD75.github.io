@@ -94,11 +94,7 @@
     "angular/watchers-execution": [0, "$digest"],
     "angular/window-service": 2
   },
-  "plugins": [
-    "angular", "html"
-  ],
   "globals": {
-    "chrome": false,
     "angular": false
   }
 }
