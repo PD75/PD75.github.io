@@ -19,19 +19,20 @@
   "dependencies": {
     "angular": "^1.5.2",
     "angular-route": "^1.5.2",
-    "gulp-print": "^2.0.1",
+    "jquery": "^2.2.2",
     "semantic-ui": "^2.1.8"
   },
   "devDependencies": {
     "eslint": "*",
     "eslint-config-angular": "*",
     "eslint-plugin-angular": "*",
+    "eslint-plugin-html": "*",
     "gulp-angular-filesort": "*",
     "gulp-concat": "*",
     "gulp-eslint": "*",
-    "eslint-plugin-html": "*",
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
+    "gulp-print": "^2.0.1",
     "gulp-uglify": "*"
   }
 }
