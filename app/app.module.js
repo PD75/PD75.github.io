@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'uiAngular']);
+  angular.module('app', ['ngRoute', 'uiAngular', 'angulartics', 'angulartics.google.analytics']);
 
   angular.module('app')
     .config(appConfig);
@@ -16,6 +16,11 @@
       when('/practical-startpage', {
         templateUrl: 'app/practical-startpage/practical-startpage.html',
         controller: 'PSCtrl',
+        controllerAs: 'vm',
+      }).
+      when('/ui-angular', {
+        templateUrl: 'app/ui-angular/ui-angular.html',
+        controller: 'UICtrl',
         controllerAs: 'vm',
       }).
       otherwise({

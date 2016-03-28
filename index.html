@@ -20,12 +20,13 @@
   <img class="top image" src="img/page_header.jpg" />
   <div class="ui inverted blue main menu" ui-visibility ui-visibility-data="vm.menuVisibility">
     <div class="ui text container">
-      <div href="#" class="header item">
+      <!--<div href="#" class="header item">
         Paul Dhillon
-      </div>
-      <a href="#/" class="item" ng-class="{active:vm.isActive('/')}">About</a>
+      </div>-->
+      <a href="#/" class="item" ng-class="{active:vm.isActive('/')}">Home</a>
       <a href="#/consulting" class="item" ng-class="{active:vm.isActive('/consulting')}">Consulting</a>
       <a href="#/practical-startpage" class="item" ng-class="{active:vm.isActive('/practical-startpage')}">Practical Startpage</a>
+      <a href="#/ui-angular" class="item" ng-class="{active:vm.isActive('/ui-angular')}">UI Angular</a>
     </div>
   </div>
 
@@ -81,10 +82,14 @@
   <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
   <script src="dist/semantic-ui/dist/semantic.min.js"></script>
 
-  <script src="distDev/ui-angular/src/ui.module.js"></script>
-  <script src="distDev/ui-angular/src/behaviours/visibility.js"></script>
-  <script src="distDev/ui-angular/src/modules/sticky.js"></script>
+  <script src="dist/ui-angular.min.js"></script>
+  <!--<script src="distDev/ui-angular/src/ui.module.js"></script>-->
+  <!--<script src="distDev/ui-angular/src/behaviours/visibility.js"></script>-->
+  <!--<script src="distDev/ui-angular/src/modules/sticky.js"></script>-->
   <!--<script src="distDev/ui-angular/src/modules/ui.module.js"></script>-->
+
+  <script src="dist/angulartics-google-analytics.min.js"></script>
+  <script src="dist/angulartics.min.js"></script>
 
   <script src="app/app.module.js"></script>
   <script src="app/index/index.js"></script>
