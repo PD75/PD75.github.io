@@ -20,7 +20,9 @@
   "components": [
     "reset",
     "site",
+    "button",
     "container",
+    "form",
     "header",
     "icon",
     "image",
@@ -31,6 +33,7 @@
     "grid",
     "menu",
     "item",
+    "checkbox",
     "dimmer",
     "popup",
     "sticky",

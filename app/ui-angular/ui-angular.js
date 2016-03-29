@@ -12,9 +12,7 @@
     vm.url = '#ui-angular';
     vm.stickyData = {
       offset: 60,
-    };
-
-   
+    };   
   }
 
 })();

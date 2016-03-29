@@ -21,6 +21,7 @@
     "angular-route": "^1.5.2",
     "angulartics": "^1.0.3",
     "angulartics-google-analytics": "^0.1.4",
+    "bowser": "^1.0.0",
     "jquery": "^2.2.2",
     "semantic-ui": "^2.1.8"
   },

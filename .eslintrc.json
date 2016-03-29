@@ -91,9 +91,12 @@
     "angular/typecheck-number": 2,
     "angular/typecheck-object": 2,
     "angular/typecheck-string": 2,
-    "angular/watchers-execution": [0, "$digest"]
-    // "angular/window-service": 2
+    "angular/watchers-execution": [0, "$digest"],
+    "angular/window-service": 2
   },
+  "plugins": [
+    "angular", "html"
+  ],
   "globals": {
     "angular": false
   }

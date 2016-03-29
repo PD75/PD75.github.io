@@ -23,6 +23,11 @@
         controller: 'UICtrl',
         controllerAs: 'vm',
       }).
+      when('/ps-uninstall', {
+        templateUrl: 'app/practical-startpage/ps-uninstall.html',
+        controller: 'psUninstallCtrl',
+        controllerAs: 'vm',
+      }).
       otherwise({
         redirectTo: '/',
       });
