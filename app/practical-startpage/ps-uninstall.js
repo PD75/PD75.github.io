@@ -23,6 +23,9 @@
         title: 'Did not work',
         comment: 'I fix reported bugs as a priority. Clearing all data from option can resolve a issues.',
       }, {
+        title: 'Too many bugs',
+        comment: 'Please let me know what bugs there are in the box below, or submit in the menu on the left.',
+      },  {
         title: 'Did not like the way it looks',
         comment: 'Any advice on how to improve the look and feel is much appreciated',
       }, {
@@ -30,11 +33,8 @@
         comment: 'All chrome permissions are full, there is not way to only limit to read. All permissions that are core, need to be approved by the user to increase security.',
       }, {
         title: 'Feels unsafe',
-        comment: 'There is not tracking (that´s why I had to write this survey to find out you experience). The extension is open source, and avaiable on github including chrome store packages.',
-      }, {
-        title: 'Found too many bugs',
-        comment: 'Please let me know what bugs there are in the box below, or submit in the menu on the left.',
-      }, {
+        comment: 'There is not tracking (that´s why I had to write this survey to find out your experience). The extension is open source, and avaiable on github including chrome store packages.',
+      },{
         title: 'Found something better',
         comment: 'Please write what you are using, maybe there is something I could add.',
       }, {

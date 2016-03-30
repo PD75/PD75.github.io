@@ -1,10 +1,13 @@
 <div class="ui segment">
   <div class="ui grid">
     <div class="row">
+      <div class="sixteen wide column">
+        <h3>A moment for feedback on why you uninstalled Practical Startpage is much appreciated...</h3>
+        <h3> </h3>
+      </div>
       <div class="eight wide column">
         <div class="ui list">
           <div class="item" ng-repeat="object in vm.questions">
-          <!--<div class="item" ng-repeat="object in vm.questions" ui-popup data-content="{{object.comment}}">-->
             <div class="ui child checkbox">
               <input type="checkbox" ng-model="object.selected" ng-click="vm.checkboxCB()">
               <label>

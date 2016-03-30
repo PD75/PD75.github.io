@@ -5,7 +5,7 @@
     .module('app')
     .controller('PSCtrl', PSCtrl);
 
-  function PSCtrl($location, widgetService) {
+  function PSCtrl($location, $routeParams, widgetService) {
     var vm = this;
     // vm.isActive = isActive;
 
@@ -21,6 +21,10 @@
         .then(function(data) {
           vm.widgets = data;
         });
+      if (angular.isDefined($routeParams.uninstall) && $routeParams.uninstall) {
+        vm.modalUrl = 'app/practical-startpage/ps-uninstall-thanks.html';
+        vm.showModal = true;
+      }
     }
 
     // function isActive(hash) {
