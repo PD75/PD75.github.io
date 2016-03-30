@@ -6,7 +6,7 @@
     .module('app')
     .controller('psUninstallCtrl', psUninstallCtrl);
 
-  function psUninstallCtrl($routeParams, awsService) {
+  function psUninstallCtrl($routeParams, $location, awsService) {
     var vm = this;
 
     vm.buttonDisabled = true;
@@ -80,21 +80,24 @@
       if (angular.isDefined(vm.email) && vm.email.length > 0) {
         vm.data.email = vm.email;
       }
-      awsService.testPost(vm.data);
+      awsService.awsPost(vm.data, 'ps-uninstall')
+        .then(function() {
+          $location.url('/practical-startpage?uninstall=true');
+        });
     }
 
     getData();
     function getData() {
       var params = $routeParams;
-      if (angular.isDefined(params.usageTime) && angular.isNumber(+params.usageTime )) {
+      if (angular.isDefined(params.usageTime) && angular.isNumber(+params.usageTime)) {
         vm.data.usageTime = +params.usageTime;
       } else {
-         vm.data.usageTime = 0;
+        vm.data.usageTime = 0;
       }
       vm.data.userAgent = navigator.userAgent;
       vm.data.language = navigator.language;
       vm.data.webTime = new Date().getTime();
-      awsService.testPost(vm.data);
+      awsService.awsPost(vm.data, 'ps-uninstall');
     }
   }
 

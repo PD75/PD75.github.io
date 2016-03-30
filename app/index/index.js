@@ -6,15 +6,13 @@
     .controller('IndexCtrl', IndexCtrl)
     .directive('pdIndex', IndexDirective);
 
-  function IndexCtrl($location,awsService) {
+  function IndexCtrl($location) {
     var vm = this;
     vm.isActive = isActive;
 
     vm.menuVisibility = {
       type: 'fixed',
     };
-
-    awsService.testAWS();
 
     function isActive(path) {
       return path === $location.path();
