@@ -1,3 +1,4 @@
+
 (function() {
   'use strict';
 
@@ -5,11 +6,12 @@
     .module('app')
     .controller('psUninstallCtrl', psUninstallCtrl);
 
-  function psUninstallCtrl() {
+  function psUninstallCtrl($routeParams, awsService) {
     var vm = this;
 
     vm.buttonDisabled = true;
     vm.suggestions = false;
+    vm.data = {};
     vm.questions = [
       {
         title: 'Reinstalling to fix an issue',
@@ -19,16 +21,16 @@
         comment: 'Loading time is determined by amount of data you show on the screen. E.g. keeping bookmark tree expanded increases loading time',
       }, {
         title: 'Did not work',
-        comment: 'I fix reported bugs as a priority.Clearing all data from option can resolve a issues.',
+        comment: 'I fix reported bugs as a priority. Clearing all data from option can resolve a issues.',
       }, {
         title: 'Did not like the way it looks',
         comment: 'Any advice on how to improve the look and feel is much appreciated',
       }, {
         title: 'Requires too much permissions',
-        comment: 'To read chrome data there is two way permissions, there is not way around that. All permissions above the basics needed to start, need to be approved on a case by case by the user to increase security.',
+        comment: 'All chrome permissions are full, there is not way to only limit to read. All permissions that are core, need to be approved by the user to increase security.',
       }, {
         title: 'Feels unsafe',
-        comment: 'There is not tracking (that´s why I had to write this survey to find out you experience). The extension is open source, and avaiable on github including release packages I upload, so you don´t have to take my word for it. (link in "about")',
+        comment: 'There is not tracking (that´s why I had to write this survey to find out you experience). The extension is open source, and avaiable on github including chrome store packages.',
       }, {
         title: 'Found too many bugs',
         comment: 'Please let me know what bugs there are in the box below, or submit in the menu on the left.',
@@ -46,7 +48,7 @@
 
     function checkboxCB() {
       vm.buttonDisabled = true;
-          vm.suggestions = false;
+      vm.suggestions = false;
       for (var q = 0; q < vm.questions.length; q++) {
         if (vm.questions[q].selected && vm.questions[q].title !== 'Other') {
           vm.buttonDisabled = false;
@@ -55,19 +57,44 @@
         if (vm.questions[q].selected && vm.questions[q].title === 'Other') {
           vm.suggestions = true;
         }
-        if (vm.textBox.length > 3) {
+        if (angular.isDefined(vm.textBox) && vm.textBox.length > 3) {
           vm.buttonDisabled = false;
         }
       }
     }
 
     function submitSurvey() {
-      var x = 1;
+      var j = 0;
+      var answers = [];
+      for (var i = 0; i < vm.questions.length; i++) {
+        if (vm.questions[i].selected) {
+          answers[j++] = vm.questions[i].title;
+        }
+      }
+      if (answers.length > 0) {
+        vm.data.answers = answers;
+      }
+      if (angular.isDefined(vm.textBox) && vm.textBox.length > 0) {
+        vm.data.comments = vm.textBox;
+      }
+      if (angular.isDefined(vm.email) && vm.email.length > 0) {
+        vm.data.email = vm.email;
+      }
+      awsService.testPost(vm.data);
     }
-    
+
     getData();
     function getData() {
-      var y = detect.parse(navigator.userAgent);
+      var params = $routeParams;
+      if (angular.isDefined(params.usageTime) && angular.isNumber(+params.usageTime )) {
+        vm.data.usageTime = +params.usageTime;
+      } else {
+         vm.data.usageTime = 0;
+      }
+      vm.data.userAgent = navigator.userAgent;
+      vm.data.language = navigator.language;
+      vm.data.webTime = new Date().getTime();
+      awsService.testPost(vm.data);
     }
   }
 
