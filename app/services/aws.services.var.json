@@ -1,0 +1,8 @@
+{
+  "APIGateway":"https://1f77vg0huk.execute-api.eu-west-1.amazonaws.com",
+  "env":{
+    "localhost":"dev",
+    "pdca.duckdns.org":"test",
+    "pd75.github.io":"prod"
+  }
+}

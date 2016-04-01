@@ -19,8 +19,26 @@
   "dependencies": {
     "angular": "^1.5.2",
     "angular-route": "^1.5.2",
+    "angulartics": "^1.0.3",
+    "angulartics-google-analytics": "^0.1.4",
+    "gulp-markdown": "^1.2.0",
+    "gulp-marked": "^1.0.0",
+    "gulp-showdown": "0.0.3",
+    "highlight.js": "^9.2.0",
+    "jquery": "^2.2.2",
     "semantic-ui": "^2.1.8"
   },
   "devDependencies": {
+    "eslint": "*",
+    "eslint-config-angular": "*",
+    "eslint-plugin-angular": "*",
+    "eslint-plugin-html": "*",
+    "gulp-angular-filesort": "*",
+    "gulp-concat": "*",
+    "gulp-eslint": "*",
+    "gulp-load-plugins": "*",
+    "gulp-ng-annotate": "*",
+    "gulp-print": "^2.0.1",
+    "gulp-uglify": "*"
   }
 }

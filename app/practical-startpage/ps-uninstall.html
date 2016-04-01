@@ -1,0 +1,51 @@
+<div class="ui segment">
+  <div class="ui grid">
+    <div class="row">
+      <div class="sixteen wide column">
+        <h3>A moment for feedback on why you uninstalled Practical Startpage is much appreciated...</h3>
+        <h3> </h3>
+      </div>
+      <div class="eight wide column">
+        <div class="ui list">
+          <div class="item" ng-repeat="object in vm.questions">
+            <div class="ui child checkbox">
+              <input type="checkbox" ng-model="object.selected" ng-click="vm.checkboxCB()">
+              <label>
+                  {{object.title}}
+                </label>
+            </div>
+          </div>
+        </div>
+        <div class="ui form">
+          <div class="field">
+            <label>Comments</label>
+            <textarea rows="2" ng-model="vm.textBox" ng-keyup="vm.checkboxCB()"></textarea>
+          </div>
+          <div class="field">
+            <button class="ui button" ng-click="vm.submitSurvey()" ng-class="{disabled:vm.buttonDisabled}">
+              Submit
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="eight wide column">
+        <h4 ng-show="vm.suggestions">
+          Suggestions:
+          </h4>
+        <div class="ui divided tiny list">
+          <div class="item" ng-repeat="object in vm.questions" ng-if="(object.selected && object.comment)">
+            <div class="content">
+              <div class="header">{{object.title}}</div>
+              <div class="description">{{object.comment}}</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

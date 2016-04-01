@@ -97,8 +97,10 @@
   "plugins": [
     "angular", "html"
   ],
+  "env": {
+    "browser":true
+  },
   "globals": {
-    "chrome": false,
-    "angular": false
+    "angular":true
   }
 }
