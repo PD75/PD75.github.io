@@ -9,10 +9,13 @@
 
   <!-- Site Properties -->
   <title>PD75</title>
+
   <link rel="icon" type="image/png" href="img/favicon.ico">
 
   <link rel="stylesheet" type="text/css" href="dist/semantic-ui/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="app/index/index.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/angular-socialshare.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/github.min.css">-->
 
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">-->
@@ -58,6 +61,7 @@
           </div>
         </div>
       </div>
+
       <!--<div class="ui inverted section divider"></div>
       <div class="ui horizontal inverted small divided link list">
         <a class="item" href="#">Contact Us</a>
@@ -75,6 +79,13 @@
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>-->
 
   <script src="dist/ui-angular.min.js"></script>
+  <script src="/dist/angular-socialshare.js"></script>
+  <script src="/dist/angulike.js"></script>
+
+
+  <script src="http://platform.twitter.com/widgets.js"></script>
+
+
 
   <script src="dist/angulartics-google-analytics.min.js"></script>
   <script src="dist/angulartics.min.js"></script>
@@ -92,6 +103,18 @@
   <!--Load Last-->
   <script src="app/googleAnalytics.js"></script>
 
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  </script>
 
   <!-- Place this tag right after the last button or just before your close body tag. -->
   <!--<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>-->

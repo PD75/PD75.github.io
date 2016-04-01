@@ -13,19 +13,22 @@
     </div>
   </div>
 
-  <!--<div class="right ui rail">
-    <div class="ui sticky vertical left floated menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
-      <div class="item" ng-href="{{vm.url}}#about" ng-class="{active:vm.isActive('about')}">
-        <i class="info icon"></i> About
-      </div>
-      <div class="item" ng-href="{{vm.url}}#help" ng-class="{active:vm.isActive('help')}">
-        <i class="help icon"></i> Help
-      </div>
-      <div class="item" ng-href="{{vm.url}}#credits" ng-class="{active:vm.isActive('credits')}">
-        <i class="thumbs up icon"></i> Credits
-      </div>
+  <div class="right ui rail">
+    <div class="ui sticky vertical floated labeled icon menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
+      <!--<div class="item">
+        <div class="g-plusone" data-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf"></div>
+      </div>-->
+      <a class="item" ng-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf/reviews" target="_blank">
+        <i class="star icon"></i>Rate
+      </a>
+      <a class="item" ng-href="https://groups.google.com/forum/#!newtopic/practical-startpage" target="_blank">
+        <i class="bug icon"></i>Bugs
+      </a>
+      <a class="item" ng-href="https://github.com/PD75/practical-startpage" target="_blank">
+        <i class="github icon"></i>GitHub
+      </a>
     </div>
-  </div>-->
+  </div>
 
   <div class="anchor" id="about"></div>
   <div class="row">
@@ -33,6 +36,22 @@
     <h1 class="ui center aligned header">Practical Startpage</h1>
   </div>
   <div class="row">
+    <div class="ui fitted  divider"></div>
+
+    <div class="ui mini horizontal list">
+      <div class="fb-like item" data-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+      <div tweet="vm.like.name" tweet-url="vm.like.url" class="item"></div>
+      <div class="item">
+        <div linkedin class="linkedinShare" data-url="{{vm.like.url}}" data-title="{{vm.like.name}}" data-summary="Practical Startpage is a simple yet powerful, allowing easy access to browser data, such as bookmarks and history." data-shares="linkedinshares">{{linkedinshares}}</div>
+      </div>
+      <!--<div class="github item">
+        <a class="ui label">
+          <i class="github icon "></i> Star
+        </a>
+      </div>-->
+      <div google-plus="vm.like.url" class="item"></div>
+    </div>
+    <div class="ui fitted divider"></div>
     <p>
       Practical Startpage is a simple yet powerful, allowing easy access to browser data, such as bookmarks and history.
     </p>

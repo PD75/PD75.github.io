@@ -8,7 +8,11 @@
   function PSCtrl($location, $routeParams, widgetService) {
     var vm = this;
     // vm.isActive = isActive;
-
+    vm.like = {
+      url: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
+      name: 'Practical Startpage',
+      image: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
+    };
     vm.url = '#practical-startpage';
     vm.stickyData = {
       offset: 60,

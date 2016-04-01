@@ -1,0 +1,23 @@
+{
+  "name": "pd75.guthub.io",
+  "description": "My home page",
+  "main": "index.html",
+  "authors": [
+    "Paul Dhillon"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/PD75/PD75.github.io",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-socialshare": "^1.4.5",
+    "angulike": "^1.2.0"
+  }
+}

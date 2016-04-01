@@ -27,6 +27,7 @@ build/Release
 node_modules/
 /semantic-ui/
 typings
+bower_components/
 
 # Optional npm cache directory
 .npm

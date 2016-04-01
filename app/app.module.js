@@ -1,15 +1,15 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'uiAngular', 'angulartics', 'angulartics.google.analytics']);
+  angular.module('app', ['ngRoute', 'uiAngular','djds4rce.angular-socialshare','angulike', 'angulartics', 'angulartics.google.analytics']);
 
   angular.module('app')
     .config(appConfig);
 
   function appConfig($routeProvider) {
     $routeProvider.
-      when('/', {
-        templateUrl: 'app/home.html',
-      }).
+      // when('/', {
+      //   templateUrl: 'app/home.html',
+      // }).
       // when('/consulting', {
       //   templateUrl: 'app/consulting.html',
       // }).
