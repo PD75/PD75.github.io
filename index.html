@@ -13,20 +13,23 @@
 
   <link rel="stylesheet" type="text/css" href="dist/semantic-ui/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="app/index/index.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/github.min.css">-->
 
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">-->
 </head>
 
 <body ng-app="app" pd-index>
   <img class="top image" src="img/page_header.jpg" />
-  <div class="ui inverted blue main menu" ui-visibility ui-visibility-data="vm.menuVisibility">
+  <!--<div class="ui inverted blue main menu" ui-visibility ui-visibility-data="vm.menuVisibility">-->
+  <div class="ui inverted blue main menu">
     <div class="ui text container">
       <!--<div href="#" class="header item">
         Paul Dhillon
       </div>-->
-      <a href="#/" class="item" ng-class="{active:vm.isActive('/')}">Home</a>
+      <!--<a href="#/" class="item" ng-class="{active:vm.isActive('/')}">Home</a>-->
       <!--<a href="#/consulting" class="item" ng-class="{active:vm.isActive('/consulting')}">Consulting</a>-->
-      <a href="#/practical-startpage" class="item" ng-class="{active:vm.isActive('/practical-startpage')}">Practical Startpage</a>
-      <a href="#/ui-angular" class="item" ng-class="{active:vm.isActive('/ui-angular')}">UI Angular</a>
+      <!--<a href="#/practical-startpage" class="item" ng-class="{active:vm.isActive('/practical-startpage')}">Practical Startpage</a>-->
+      <!--<a href="#/ui-angular" class="item" ng-class="{active:vm.isActive('/ui-angular')}">UI Angular</a>-->
       <!--<a href="#/ps-uninstall" class="item" ng-class="{active:vm.isActive('/ui-angular')}">Uninstall</a>-->
     </div>
   </div>
@@ -35,47 +38,32 @@
   </div>
 
   <div class="ui inverted vertical footer segment">
-    <div class="ui center aligned container">
+    <div class="ui center aligned text container">
       <div class="ui stackable inverted divided grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 1</h4>
+        <div class="eight wide column">
+          <h4 class="ui inverted header">About</h4>
           <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
+            <a href="https://se.linkedin.com/pub/paul-dhillon/3/b91/8" class="item">
+              <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Paul Dhillon's profile on LinkedIn">
+            </a>
           </div>
+
         </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 2</h4>
+        <div class="eight wide column">
+          <h4 class="ui inverted header">Code</h4>
           <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
+            <a class="item" href="https://github.com/pd75">
+              <i class="ui big github icon"></i>
+            </a>
           </div>
-        </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Group 3</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
-          </div>
-        </div>
-        <div class="seven wide column">
-          <h4 class="ui inverted header">Footer Header</h4>
-          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
         </div>
       </div>
-      <div class="ui inverted section divider"></div>
+      <!--<div class="ui inverted section divider"></div>
       <div class="ui horizontal inverted small divided link list">
-        <a class="item" href="#">Site Map</a>
         <a class="item" href="#">Contact Us</a>
         <a class="item" href="#">Terms and Conditions</a>
         <a class="item" href="#">Privacy Policy</a>
-      </div>
+      </div>-->
     </div>
   </div>
   <script src="http://oss.maxcdn.com/jquery/2.2.0/jquery.min.js"></script>
@@ -83,13 +71,10 @@
   <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
   <script src="dist/semantic-ui/dist/semantic.min.js"></script>
 
-  <script src="dist/detect.min.js"></script>
+  <!--<script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>-->
 
   <script src="dist/ui-angular.min.js"></script>
-  <!--<script src="distDev/ui-angular/src/ui.module.js"></script>-->
-  <!--<script src="distDev/ui-angular/src/behaviours/visibility.js"></script>-->
-  <!--<script src="distDev/ui-angular/src/modules/sticky.js"></script>-->
-  <!--<script src="distDev/ui-angular/src/modules/ui.module.js"></script>-->
 
   <script src="dist/angulartics-google-analytics.min.js"></script>
   <script src="dist/angulartics.min.js"></script>

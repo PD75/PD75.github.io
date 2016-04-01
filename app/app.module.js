@@ -10,26 +10,26 @@
       when('/', {
         templateUrl: 'app/home.html',
       }).
-      when('/consulting', {
-        templateUrl: 'app/consulting.html',
-      }).
+      // when('/consulting', {
+      //   templateUrl: 'app/consulting.html',
+      // }).
       when('/practical-startpage', {
         templateUrl: 'app/practical-startpage/practical-startpage.html',
         controller: 'PSCtrl',
         controllerAs: 'vm',
       }).
-      when('/ui-angular', {
-        templateUrl: 'app/ui-angular/ui-angular.html',
-        controller: 'UICtrl',
-        controllerAs: 'vm',
-      }).
+      // when('/ui-angular', {
+      //   templateUrl: 'app/ui-angular/ui-angular.html',
+      //   controller: 'UICtrl',
+      //   controllerAs: 'vm',
+      // }).
       when('/ps-uninstall', {
         templateUrl: 'app/practical-startpage/ps-uninstall.html',
         controller: 'psUninstallCtrl',
         controllerAs: 'vm',
       }).
       otherwise({
-        redirectTo: '/',
+        redirectTo: '/practical-startpage',
       });
   }
 })();
