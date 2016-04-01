@@ -18,7 +18,12 @@
       return path === $location.path();
     }
 
+    if ($location.host() === 'pd75.github.io') {
+      ga('create', 'UA-75343768-1', 'auto');
 
+    } else {
+      ga('create', 'UA-75343768-2', 'auto');
+    }
 
   }
 

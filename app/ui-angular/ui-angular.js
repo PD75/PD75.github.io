@@ -5,14 +5,18 @@
     .module('app')
     .controller('UICtrl', UICtrl);
 
-  function UICtrl() {
+  function UICtrl($timeout) {
     var vm = this;
-    // vm.isActive = isActive;
 
+    // hljs.initHighlighting();
+    // vm.isActive = isActive;
+    $timeout(function() {
+      prettyPrint();
+    })
     vm.url = '#ui-angular';
     vm.stickyData = {
       offset: 60,
-    };   
+    };
   }
 
 })();

@@ -1,0 +1,125 @@
+<h2 id="modules">Modules</h2>
+<h3 id="common-features">Common features</h3>
+<ul>
+<li>All object are initiated if needed to. E.g.<pre><code class="lang-javascript">$(&#39;.classes&#39;).method();
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p><code>vm.directiveObject</code> Dom instance object to be used for <a href="http://semantic-ui.com">Semantic UI</a> usage. E.g.</p>
+<pre><code class="lang-javascript">vm.directiveObject.method(&#39;show&#39;);
+</code></pre>
+</li>
+<li><p><code>vm.directiveData</code> <a href="http://semantic-ui.com">Semantic UI</a> settings object. E.g.</p>
+<pre><code class="lang-javascript">vm.directiveData = {
+ on: &#39;hover&#39;,
+ onShow: function(){...}
+};
+</code></pre>
+</li>
+</ul>
+<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the <code>ui-directive</code> useless, i.e.</p>
+<pre><code class="lang-javascript"> $(&#39;.classes&#39;).method({
+  setting: value
+ });
+
+ /*OR*/
+
+ vm.directiveObject.method({
+  setting: value,
+  callBack: function(){...}
+ });
+</code></pre>
+<h3 id="dropdown">Dropdown</h3>
+<pre><code class="lang-html">&lt;ANY ui-dropdown=&quot;vm.dropdownObject&quot; 
+  class=&quot;ui dropdown&quot; 
+  ui-dropdown-data=&quot;vm.dropdownData&quot;&gt;
+  Title
+
+/*Dropdown content, static or ng-repeat*/  
+  &lt;ANY ...&gt;
+    &lt;ANY ng-repeat=&quot;item in vm.items&quot;&gt;
+      {{vm.content}}
+    &lt;/ANY&gt;  
+  &lt;/ANY&gt;  
+
+&lt;/ANY&gt;
+</code></pre>
+<ul>
+<li><code>vm.dropdownData</code> <a href="http://semantic-ui.com/modules/dropdown.html#/settings">Settings in Semantic UI</a> </li>
+<li><code>vm.dropdownObject</code> <a href="http://semantic-ui.com/modules/dropdown.html#behavior">Usage in Semantic UI</a></li>
+</ul>
+<p><strong>NOTE:</strong> There are a lot of design options for dropdowns in <a href="http://semantic-ui.com">Semantic UI</a> and therefore not practical to allow passing of the items as an array. Use <code>ng-repeat</code> to build dynamic dropdowns.</p>
+<h3 id="modal">Modal</h3>
+<pre><code class="lang-html">&lt;ui-modal 
+  ui-modal-show=&quot;vm.modalShow&quot;
+  ui-modal-url=&quot;urlpath/modal.html || vm.modalUrl&quot;
+  ui-modal-data=&quot;vm.modalData&quot;
+  ui-modal-obj=&quot;vm.modalObject&quot;&gt;
+
+/*Optional modal content*/  
+  &lt;div class=&quot;header&quot;&gt;Header&lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;  
+
+&lt;/ui-modal&gt;
+</code></pre>
+<ul>
+<li><p><code>vm.modalShow = true|false</code> will show or hide modal. Can also be used the check the status since it is updated for other events that affect the modal, like <code>vm.modalObject.modal(&#39;hide&#39;)</code></p>
+</li>
+<li><p><code>ui-modal-url</code> allows injection of another page to both allow nicer code structure and reuse. <strong>NOTE:</strong> you can only load html pages with or without angular content, but no directives.</p>
+<ul>
+<li><code>urlpath/modal.html</code> path to html page directly in the html document</li>
+<li><code>vm.modalUrl</code> varaible containing url</li>
+</ul>
+</li>
+<li><p><code>vm.modalData</code> <a href="http://semantic-ui.com/modules/modal.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.modalObject</code> <a href="http://semantic-ui.com/modules/modal.html#behavior">Usage in Semantic UI</a></p>
+</li>
+</ul>
+<h4 id="popup">Popup</h4>
+<pre><code class="lang-html">&lt;ANY ui-popup=&quot;vm.popupData&quot; 
+  ui-popup-obj=&quot;vm.popupObject&quot;
+  semanticUIMetadata&gt;
+
+  ...
+
+&lt;/ANY&gt;
+</code></pre>
+<ul>
+<li><p><code>vm.popupData</code> <a href="http://semantic-ui.com/modules/popup.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.popupObject</code> <a href="http://semantic-ui.com/modules/popup.html#behavior">Usage in Semantic UI</a></p>
+</li>
+<li><p><code>semanticUIMetadata</code> Can also specify content with html attributes, see <a href="http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata">Specifying Content In Metadata in Semantic UI</a></p>
+</li>
+</ul>
+<h4 id="sticky">Sticky</h4>
+<pre><code class="lang-html">&lt;ANY-OPTIONAL ui-sticky-context=&quot;vm.stickyContext&quot;&gt; 
+
+  ...
+
+  &lt;ANY ui-sticky=&quot;vm.stickyData&quot; 
+    ui-sticky-obj=&quot;vm.stickyObject&quot;
+    ui-sticky-context-id=&quot;vm.stickyContext&quot;&gt;
+  &lt;/ANY&gt;
+
+  ...
+
+&lt;/ANY-OPTIONAL&gt;
+</code></pre>
+<ul>
+<li><p><code>vm.stickyData</code> <a href="http://semantic-ui.com/modules/sticky.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.stickyObject</code> <a href="http://semantic-ui.com/modules/sticky.html#refreshing-cached-values">Usage in Semantic UI</a></p>
+</li>
+<li><p><code>vm.stickyContext</code> </p>
+<ul>
+<li>Just pass and empty variable for each case, allows sticking to adjescent dom elements</li>
+<li><code>ui-sticky-context</code> is on the DOM element you want it to stick to</li>
+<li>See <a href="http://semantic-ui.com/modules/sticky.html#sticking-to-adjacent-context">Sticking to Adjacent Context</a></li>
+</ul>
+</li>
+</ul>
