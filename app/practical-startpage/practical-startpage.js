@@ -1,3 +1,5 @@
+/* global detect chrome */
+
 (function() {
   'use strict';
 
@@ -8,6 +10,9 @@
   function PSCtrl($location, $routeParams, widgetService) {
     var vm = this;
     vm.install = install;
+    vm.checkBrowser = checkBrowser;
+    vm.browser = detect.parse(navigator.userAgent);
+
     // vm.isActive = isActive;
     vm.like = {
       url: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
@@ -30,7 +35,6 @@
         vm.showModal = true;
       }
       initFB();
-      var x = chrome.app.isInstalled;
     }
 
     function initFB() {
@@ -48,11 +52,12 @@
     }
 
     function install() {
-      chrome.webstore.install('https://chrome.google.com/webstore/detail/ikjalccfdoghanieehppljppanjlmkcf',function(params) {
-        var x = params;
-      }, function(params) {
-        var x = params;
-      })
+      chrome.webstore.install('https://chrome.google.com/webstore/detail/ikjalccfdoghanieehppljppanjlmkcf');
+    }
+
+    function checkBrowser(browser) {
+      var b = detect.parse(navigator.userAgent).browser.family;
+      return browser === detect.parse(navigator.userAgent).browser.family;
     }
   }
 

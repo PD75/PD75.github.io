@@ -66,7 +66,7 @@
     </ul>
     <div class="ui divider"></div>
 
-    <div class="ui stackable equal width grid">
+    <div class="ui stackable equal width grid" ng-if="vm.checkBrowser('Chrome')">
       <div class="column">
         <a class="blue fluid ui button" href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf/reviews" target="_blank">
           <i class="yellow star icon"></i>Rate
@@ -85,10 +85,47 @@
       </div>
       <div class="column">
         <button class="purple fluid ui button" ng-click="vm.install()">
-          <i class="plus icon"></i>Install
+          <img class="image" src="img/chrome_web_store-16.png"/>Install
         </button>
       </div>
     </div>
+
+    <div class="ui items" ng-if="vm.checkBrowser('Firefox')">
+      <div class="item">
+        <div class="ui tiny image">
+          <img src="img/firefox-64.png">
+        </div>
+        <div class="middle aligned content">
+          <div class="header">Firefox</div>
+          <div class="content">
+            Most of Practical Startpage can be used in firefox. If you wish it to be ported, or help out with porting, click on one of the buttons and add a comment:
+          </div>
+          <div class="extra">
+            <a class="ui tiny google plus button" href="https://groups.google.com/forum/#!topic/practical-startpage/HsJ1yinvLkU" target="_blank">
+              <i class="ui google icon"></i> Google Groups
+            </a>
+            <a class="ui tiny button" href="https://waffle.io/PD75/practical-startpage/cards/57022b8c48d1e6950070b561" target="_blank">
+              <i class="ui black github icon"></i>GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui items" ng-if="!vm.checkBrowser('Firefox') && !vm.checkBrowser('Chrome')">
+      <a class="item" href="https://www.google.com/chrome/" target="_blank">
+        <div class="ui tiny image">
+          <img class="ui tiny image" src="img/chrome-a_512.png">
+        </div>
+        <div class="middle aligned content">
+          <div class="header">Google Chrome Browser Required!</div>
+          <div class="content">
+            This extension is only supported in Google Chrome. Click here to install Chrome.
+          </div>
+        </div>
+      </a>
+    </div>
+
     <div class="ui  divider"></div>
   </div>
   <div class="anchor" id="help"></div>
@@ -107,31 +144,60 @@
       </div>
     </div>
   </div>
+  <div class="ui  divider"></div>
+  <br>
   <div class="anchor" id="credits"></div>
   <div class="row">
     <h2 class="ui center aligned header">Credits</h2>
     <!--<h3 class="ui center aligned header">Libraries Used</h3>-->
-    <div class="ui list">
-      <a class="item" href="http://semantic-ui.com/">
+    <div class="ui middle aligned selection list">
+      <a class="item" href="http://semantic-ui.com/" target="_blank">
         <img class="ui tiny image" src="img/logo-semantic-ui.png" />
-      </a>
-      <a class="item" href="https://angularjs.org/">
-        <img class="ui tiny image" src="img/logo-AngularJS.png" />
-      </a>
-      <a class="item" href="http://jquery.com/">
-        <img class="ui tiny image" src="img/jquery-mark-dark.gif" />
-      </a>
-      <a class="item" href="http://www.jstree.com/">
-        <img class="ui tiny image" src="img/logo-jsTree.png" />
-      </a>
-      <a class="item" href="https://github.com/ezraroi/ngJsTree">
         <div class="content">
-          <div class="header">ngJsTree</div>
+          <div class="header">Semantic UI</div>
+          <div class="description">
+            User Interface is the language of the web
+          </div>
         </div>
       </a>
-      <a class="item" href="https://github.com/marceljuenemann/angular-drag-and-drop-lists">
+      <a class="item" href="https://angularjs.org/" target="_blank">
+        <img class="ui tiny image" src="img/logo-AngularJS.png" />
+        <div class="content">
+          <div class="description">
+            HTML enhanced for web apps!
+          </div>
+        </div>
+      </a>
+      <a class="item" href="http://jquery.com/" target="_blank">
+        <img class="ui tiny image" src="img/jquery-mark-dark.gif" />
+        <div class="content">
+          <div class="description">
+            jQuery is a fast, small, and feature-rich JavaScript library.
+          </div>
+        </div>
+      </a>
+      <a class="item" href="http://www.jstree.com/" target="_blank">
+        <img class="ui tiny image" src="img/logo-jsTree.png" />
+        <div class="content">
+          <div class="description">
+            jsTree is jquery plugin, that provides interactive trees
+          </div>
+        </div>
+      </a>
+      <a class="item" href="https://github.com/ezraroi/ngJsTree" target="_blank">
+        <div class="content">
+          <div class="header">ngJsTree</div>
+          <div class="description">
+            Angular Directive for the famous JS Tree.
+          </div>
+        </div>
+      </a>
+      <a class="item" href="https://github.com/marceljuenemann/angular-drag-and-drop-lists" target="_blank">
         <div class="content">
           <div class="header">angular-drag-and-drop-lists</div>
+          <div class="description">
+            Angular directives for sorting nested lists using the HTML5 Drag & Drop API.
+          </div>
         </div>
       </a>
     </div>

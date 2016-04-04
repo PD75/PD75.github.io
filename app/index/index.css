@@ -24,3 +24,8 @@
   position: relative;
   top: -60px;
 }
+
+.ui.button > .image {
+  margin: -0.1em 0.4em -0.1em 0.1em;
+  height: 16px;
+}
