@@ -1,3 +1,5 @@
+/* global detect chrome */
+
 (function() {
   'use strict';
 
@@ -7,11 +9,14 @@
 
   function PSCtrl($location, $routeParams, widgetService) {
     var vm = this;
+    vm.install = install;
+    vm.checkBrowser = checkBrowser;
+    vm.browser = detect.parse(navigator.userAgent);
+
     // vm.isActive = isActive;
     vm.like = {
       url: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
       name: 'Practical Startpage',
-      image: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
     };
     vm.url = '#practical-startpage';
     vm.stickyData = {
@@ -29,12 +34,31 @@
         vm.modalUrl = 'app/practical-startpage/ps-uninstall-thanks.html';
         vm.showModal = true;
       }
+      initFB();
     }
 
-    // function isActive(hash) {
-    //   return hash === $location.hash();
-    // }
+    function initFB() {
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      } (document, 'script', 'facebook-jssdk'));
 
+    }
+
+    function install() {
+      chrome.webstore.install('https://chrome.google.com/webstore/detail/ikjalccfdoghanieehppljppanjlmkcf');
+    }
+
+    function checkBrowser(browser) {
+      var b = detect.parse(navigator.userAgent).browser.family;
+      return browser === detect.parse(navigator.userAgent).browser.family;
+    }
   }
 
 })();

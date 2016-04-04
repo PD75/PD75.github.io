@@ -1419,7 +1419,7 @@
 .ui.grid > .purple.row,
 .ui.grid > .purple.column,
 .ui.grid > .row > .purple.column {
-  background-color: #9b15bd !important;
+  background-color: #5027A0 !important;
   color: #FFFFFF;
 }
 
@@ -1443,7 +1443,7 @@
 .ui.grid > .grey.row,
 .ui.grid > .grey.column,
 .ui.grid > .row > .grey.column {
-  background-color: #767676 !important;
+  background-color: #555555 !important;
   color: #FFFFFF;
 }
 
