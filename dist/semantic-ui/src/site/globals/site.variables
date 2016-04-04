@@ -10,7 +10,8 @@
 @black            : #000000;
 @blue             : #1560BD;
 @red              : #bd1d15;
-@purple           : #9b15bd;
+@purple           : #5027A0;
+@grey             : #555555;
 
 /*-------------------
         Page
