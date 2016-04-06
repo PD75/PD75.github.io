@@ -10,7 +10,7 @@ var buildUI = require('./dist/semantic-ui/tasks/build');
 gulp.task('buildUI', buildUI);
 gulp.task('buildUIAngular', buildUIAngular);
 
-
+console.log("Session: %j", plugins);
 
 gulp.task('build', ['installDist', 'buildUIAngular', 'buildUI']);
 
@@ -26,10 +26,40 @@ gulp.task('installDist', function() {
 
 });
 
-gulp.task('mdToHtml', function() {
-  return gulp.src('./distDev/ui-angular/src/**/*.md')
+gulp.task('mdToMenu', function() {
+  var regEx1 = /(<\/h[2-3]>)(.|\n)*?(<h[2-3])/g;
+  var replacement1 = '<pre class="prettyprint $1">';
+  
+  
+  var regEx2 = /^<h[2-3] id="(.*)">(.*)<\/h.>[\s\S]/g;
+  var replacement2 = '</pre>';
+  
+  
+  
+  return gulp.src('./distDev/ui-angular/**/*.md')
     .pipe(plugins.print())
     .pipe(plugins.markdown())
-    // .pipe(plugins.showdown())
-    .pipe(gulp.dest('./app/ui-angular/'));
+    .pipe(plugins.replace(regEx1, replacement1))
+    .pipe(plugins.replace(regEx2, replacement2))
+    .pipe(plugins.concat('ui-angular-readme.html'))
+    .pipe(gulp.dest('./app/ui-angular'));
 });
+
+gulp.task('mdToHtml', function() {
+  var regEx1 = /<pre><code class="(.*)">/g;
+  var replacement1 = '<pre class="prettyprint $1">';
+  var regEx2 = /<\/code><\/pre>/g;
+  var replacement2 = '</pre>';  
+  
+  
+  return gulp.src('./distDev/ui-angular/**/*.md')
+    .pipe(plugins.print())
+    .pipe(plugins.markdown())
+    .pipe(plugins.replace(regEx1, replacement1))
+    .pipe(plugins.replace(regEx2, replacement2))
+    .pipe(plugins.concat('ui-angular-readme.html'))
+    .pipe(gulp.dest('./app/ui-angular'));
+});
+
+
+^(.|\n)*?(<h[2-3])

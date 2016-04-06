@@ -1,25 +1,76 @@
-<h2 id="modules">Modules</h2>
+<h1 id="ui-angular">UI Angular</h1>
+<p>My <em>KISS</em> -  semantic-ui/angularJS library</p>
+<h2 id="status">Status</h2>
+<p>This is WIP, and only modules I have needed are included; but requests and contributions are welcome.</p>
+<p>Please put an issue if you intend to contribute your work, then I will put some effort to write the rules and guidlines etc.</p>
+<ul>
+<li><p>Modules</p>
+<ul>
+<li>[ ] Accordian</li>
+<li>[ ] <del>Checkbox</del> *</li>
+<li>[ ] Dimmer</li>
+<li>[x] Dropdown</li>
+<li>[ ] Embed</li>
+<li>[x] Modal</li>
+<li>[ ] <del>Nag</del> *</li>
+<li>[x] Popup</li>
+<li>[ ] Progress</li>
+<li>[ ] Rating</li>
+<li>[ ] Search**</li>
+<li>[ ] Shape</li>
+<li>[ ] Sidebar</li>
+<li>[x] Sticky</li>
+<li>[ ] <del>Tab</del> *</li>
+<li>[ ] Transition**</li>
+</ul>
+</li>
+<li><p>Behaviours</p>
+<ul>
+<li>[ ] <del>API</del> *</li>
+<li>[ ] <del>Form Validation</del> *</li>
+<li>[x] visibility</li>
+</ul>
+</li>
+</ul>
+<p>* Found AngularJS out of the box does the job well enough
+** Not sure if AngularJs is better suited or not </p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li>angular: ...</li>
+<li>semantic-ui: both css and javascripts</li>
+<li>jquery: for semantic-ui</li>
+</ul>
+<h2 id="approach">Approach</h2>
+<p>Designed around KISS Principle <em>Keep it simple stupid</em></p>
+<ul>
+<li>Call <em>Semantic UI</em> js code as much as possible: <strong>Why reinvent the wheel!</strong></li>
+<li>Accept <strong>all</strong> parameters that <em>Semantic UI</em> does, as an object (don&#39;t clutter html, use controller and services)</li>
+<li><em>Semantic UI</em> syntax looks good with angular, no need to have directive to add html classes unless really nessesary or simpifies significantly</li>
+<li>If there is no <em>Semantic UI</em> js code, there needs to be a real benefit to write angular code (see point above)</li>
+</ul>
+
+<h2 id="behaviours">Behaviours</h2>
 <h3 id="common-features">Common features</h3>
 <ul>
-<li>All object are initiated if needed to. E.g.<pre><code class="lang-javascript">$(&#39;.classes&#39;).method();
-</code></pre>
+<li>All object are initiated if needed to. E.g.<pre class="prettyprint lang-javascript">$(&#39;.classes&#39;).method();
+</pre>
 </li>
 </ul>
 <ul>
-<li><p><code>vm.directiveObject</code> Dom instance object to be used for <a href="http://semantic-ui.com">Semantic UI</a> usage. E.g.</p>
-<pre><code class="lang-javascript">vm.directiveObject.method(&#39;show&#39;);
-</code></pre>
+<li><p><code>vm.directiveObject</code> Dom instance object to be used for [Semantic UI] usage. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveObject.method(&#39;show&#39;);
+</pre>
 </li>
-<li><p><code>vm.directiveData</code> <a href="http://semantic-ui.com">Semantic UI</a> settings object. E.g.</p>
-<pre><code class="lang-javascript">vm.directiveData = {
+<li><p><code>vm.directiveData</code> [Semantic UI] settings object. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveData = {
  on: &#39;hover&#39;,
  onShow: function(){...}
 };
-</code></pre>
+</pre>
 </li>
 </ul>
-<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the <code>ui-directive</code> useless, i.e.</p>
-<pre><code class="lang-javascript"> $(&#39;.classes&#39;).method({
+<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the ui-directive useless, i.e.</p>
+<pre class="prettyprint lang-javascript"> $(&#39;.classes&#39;).method({
   setting: value
  });
 
@@ -29,9 +80,54 @@
   setting: value,
   callBack: function(){...}
  });
-</code></pre>
+</pre>
+<h3 id="visibility">Visibility</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-visibility=&quot;vm.visibilityObject&quot;
+  ui-visibility-data=&quot;vm.visibilityData&quot;&gt;
+
+.... 
+
+&lt;/ANY&gt;
+</pre>
+<ul>
+<li><code>vm.visibilityData</code> <a href="http://semantic-ui.com/behaviors/visibility.html#/settings">Settings in Semantic UI</a> </li>
+<li><code>vm.visibilityObject</code> <a href="http://semantic-ui.com/behaviors/visibility.html#behaviors">Usage in Semantic UI</a></li>
+</ul>
+
+<h2 id="modules">Modules</h2>
+<h3 id="common-features">Common features</h3>
+<ul>
+<li>All object are initiated if needed to. E.g.<pre class="prettyprint lang-javascript">$(&#39;.classes&#39;).method();
+</pre>
+</li>
+</ul>
+<ul>
+<li><p><code>vm.directiveObject</code> Dom instance object to be used for <a href="http://semantic-ui.com">Semantic UI</a> usage. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveObject.method(&#39;show&#39;);
+</pre>
+</li>
+<li><p><code>vm.directiveData</code> <a href="http://semantic-ui.com">Semantic UI</a> settings object. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveData = {
+ on: &#39;hover&#39;,
+ onShow: function(){...}
+};
+</pre>
+</li>
+</ul>
+<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the <code>ui-directive</code> useless, i.e.</p>
+<pre class="prettyprint lang-javascript"> $(&#39;.classes&#39;).method({
+  setting: value
+ });
+
+ /*OR*/
+
+ vm.directiveObject.method({
+  setting: value,
+  callBack: function(){...}
+ });
+</pre>
 <h3 id="dropdown">Dropdown</h3>
-<pre><code class="lang-html">&lt;ANY ui-dropdown=&quot;vm.dropdownObject&quot; 
+<pre class="prettyprint lang-html">&lt;ANY ui-dropdown=&quot;vm.dropdownObject&quot; 
   class=&quot;ui dropdown&quot; 
   ui-dropdown-data=&quot;vm.dropdownData&quot;&gt;
   Title
@@ -44,14 +140,14 @@
   &lt;/ANY&gt;  
 
 &lt;/ANY&gt;
-</code></pre>
+</pre>
 <ul>
 <li><code>vm.dropdownData</code> <a href="http://semantic-ui.com/modules/dropdown.html#/settings">Settings in Semantic UI</a> </li>
 <li><code>vm.dropdownObject</code> <a href="http://semantic-ui.com/modules/dropdown.html#behavior">Usage in Semantic UI</a></li>
 </ul>
 <p><strong>NOTE:</strong> There are a lot of design options for dropdowns in <a href="http://semantic-ui.com">Semantic UI</a> and therefore not practical to allow passing of the items as an array. Use <code>ng-repeat</code> to build dynamic dropdowns.</p>
 <h3 id="modal">Modal</h3>
-<pre><code class="lang-html">&lt;ui-modal 
+<pre class="prettyprint lang-html">&lt;ui-modal 
   ui-modal-show=&quot;vm.modalShow&quot;
   ui-modal-url=&quot;urlpath/modal.html || vm.modalUrl&quot;
   ui-modal-data=&quot;vm.modalData&quot;
@@ -64,7 +160,7 @@
   &lt;/div&gt;  
 
 &lt;/ui-modal&gt;
-</code></pre>
+</pre>
 <ul>
 <li><p><code>vm.modalShow = true|false</code> will show or hide modal. Can also be used the check the status since it is updated for other events that affect the modal, like <code>vm.modalObject.modal(&#39;hide&#39;)</code></p>
 </li>
@@ -79,15 +175,15 @@
 <li><p><code>vm.modalObject</code> <a href="http://semantic-ui.com/modules/modal.html#behavior">Usage in Semantic UI</a></p>
 </li>
 </ul>
-<h4 id="popup">Popup</h4>
-<pre><code class="lang-html">&lt;ANY ui-popup=&quot;vm.popupData&quot; 
+<h3 id="popup">Popup</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-popup=&quot;vm.popupData&quot; 
   ui-popup-obj=&quot;vm.popupObject&quot;
   semanticUIMetadata&gt;
 
   ...
 
 &lt;/ANY&gt;
-</code></pre>
+</pre>
 <ul>
 <li><p><code>vm.popupData</code> <a href="http://semantic-ui.com/modules/popup.html#/settings">Settings in Semantic UI</a> </p>
 </li>
@@ -96,8 +192,8 @@
 <li><p><code>semanticUIMetadata</code> Can also specify content with html attributes, see <a href="http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata">Specifying Content In Metadata in Semantic UI</a></p>
 </li>
 </ul>
-<h4 id="sticky">Sticky</h4>
-<pre><code class="lang-html">&lt;ANY-OPTIONAL ui-sticky-context=&quot;vm.stickyContext&quot;&gt; 
+<h3 id="sticky">Sticky</h3>
+<pre class="prettyprint lang-html">&lt;ANY-OPTIONAL ui-sticky-context=&quot;vm.stickyContext&quot;&gt; 
 
   ...
 
@@ -109,7 +205,7 @@
   ...
 
 &lt;/ANY-OPTIONAL&gt;
-</code></pre>
+</pre>
 <ul>
 <li><p><code>vm.stickyData</code> <a href="http://semantic-ui.com/modules/sticky.html#/settings">Settings in Semantic UI</a> </p>
 </li>
