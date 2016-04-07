@@ -1,14 +1,25 @@
-/* GitHub Theme */
+code {
+    background: #f7f7f7;
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 2px;
+}
 
-.prettyprint {
-  background: white;
+
+
+/* Atelier Forest Light by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest) */
+
+
+/* Style */
+pre.prettyprint {
+  background: #f7f7f7;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   font-size: 12px;
   line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px;
 }
-
 .pln {
   color: #333333;
 }
@@ -17,95 +28,107 @@
   .str {
     color: #dd1144;
   }
+
   .kwd {
     color: #333333;
   }
+
   .com {
     color: #999988;
   }
+
   .typ {
     color: #445588;
   }
+
   .lit {
     color: #445588;
   }
+
   .pun {
     color: #333333;
   }
+
   .opn {
     color: #333333;
   }
+
   .clo {
     color: #333333;
   }
+
   .tag {
     color: navy;
   }
+
   .atn {
     color: teal;
   }
+
   .atv {
     color: #dd1144;
   }
+
   .dec {
     color: #333333;
   }
+
   .var {
     color: teal;
   }
+
   .fun {
     color: #990000;
   }
 }
-
-@media print,
-projection {
+@media print, projection {
   .str {
     color: #006600;
   }
+
   .kwd {
     color: #006;
     font-weight: bold;
   }
+
   .com {
     color: #600;
     font-style: italic;
   }
+
   .typ {
     color: #404;
     font-weight: bold;
   }
+
   .lit {
     color: #004444;
   }
-  .pun,
-  .opn,
-  .clo {
+
+  .pun, .opn, .clo {
     color: #444400;
   }
+
   .tag {
     color: #006;
     font-weight: bold;
   }
+
   .atn {
     color: #440044;
   }
+
   .atv {
     color: #006600;
   }
 }
-
-
 /* Specify class=linenums on a pre to get line numbering */
-
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-
 /* IE indents via margin-left */
-
 li.L0,
 li.L1,
 li.L2,
@@ -119,9 +142,7 @@ li.L9 {
   /* */
 }
 
-
 /* Alternate shading for lines */
-
 li.L1,
 li.L3,
 li.L5,

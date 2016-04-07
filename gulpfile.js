@@ -27,21 +27,21 @@ gulp.task('installDist', function() {
 });
 
 gulp.task('mdToMenu', function() {
-  var regEx1 = /(<\/h[2-3]>)(.|\n)*?(<h[2-3])/g;
-  var replacement1 = '<pre class="prettyprint $1">';
-  
-  
-  var regEx2 = /^<h[2-3] id="(.*)">(.*)<\/h.>[\s\S]/g;
-  var replacement2 = '</pre>';
-  
-  
-  
+  // var regEx1 = /id="(.*)">(.*)(<\/h[2-3]>)(.|\n)*?(<h[2-3])/g;
+  // var replacement1 = '$4 {anchor: \'$1\', title: \'$2\'} $3';
+
+
+  var regEx1 = /(<h[2-3]) id="(.*)">(.*)(<\/h[2-3]>)/g;
+  var replacement1 = '{anchor: \'$2\', title: \'$3\',}, $4';
+  var regEx2 = /(^|<\/h[2-3]>)(.|\n)*?($|{anchor:)/g;
+  var replacement2 = '$1\n $3 ';
+
   return gulp.src('./distDev/ui-angular/**/*.md')
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
     .pipe(plugins.replace(regEx2, replacement2))
-    .pipe(plugins.concat('ui-angular-readme.html'))
+    .pipe(plugins.concat('ui-angular-menu-draft.js'))
     .pipe(gulp.dest('./app/ui-angular'));
 });
 
@@ -49,17 +49,26 @@ gulp.task('mdToHtml', function() {
   var regEx1 = /<pre><code class="(.*)">/g;
   var replacement1 = '<pre class="prettyprint $1">';
   var regEx2 = /<\/code><\/pre>/g;
-  var replacement2 = '</pre>';  
-  
-  
+  var replacement2 = '</pre>';
+  var regEx3 = /<(h[1-4]) id="(.*)">(.*)<\/h[1-4]>/g;
+  var replacement3 = '<div class="anchor" id="$2"></div>\n<$1>$3</$1>';
+var regEx4 = /<li>(\[x\])(.*)<\/li>/g;
+  var replacement4 = '<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label>$2</label></div><br>';
+var regEx5 = /<li>(\[ \])(.*)<\/li>/g;
+  var replacement5 = '<div class="ui checkbox"><input type="checkbox"><label>$2</label></div><br>';
+
+
   return gulp.src('./distDev/ui-angular/**/*.md')
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
     .pipe(plugins.replace(regEx2, replacement2))
+    .pipe(plugins.replace(regEx3, replacement3))
+    .pipe(plugins.replace(regEx4, replacement4))
+    .pipe(plugins.replace(regEx5, replacement5))
     .pipe(plugins.concat('ui-angular-readme.html'))
     .pipe(gulp.dest('./app/ui-angular'));
 });
 
-
-^(.|\n)*?(<h[2-3])
+// (<h[2-3]) id="(.*)">(.*)(<\/h[2-3]>)
+// {anchor: '$2', title: '$3',}, $4
