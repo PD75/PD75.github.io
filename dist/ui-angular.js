@@ -1,5 +1,5 @@
 /**
- * ui-angular - v0.0.3
+ * ui-angular - v0.0.4
  * My KISS - semantic-ui/angularJS library  
  * https://github.com/PD75/ui-angular
  * MIT License
