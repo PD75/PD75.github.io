@@ -28,35 +28,122 @@
 <h3>Status</h3>
 <p>I have written directive as I have needed the modules, which mean they are used live and work. If you request a directive please allow a week for me to write it.</p>
 <p>Please put an issue if you intend to contribute your work, then I will put some effort to write the rules and guidlines etc.</p>
-<div class="anchor" id="modules"></div>
-<h4>Modules</h4>
-<ul>
-<div class="ui checkbox"><input type="checkbox"><label> Accordian</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> <del>Checkbox</del> *</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Dimmer</label></div><br>
-<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label> Dropdown</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Embed</label></div><br>
-<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label> Modal</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> <del>Nag</del> *</label></div><br>
-<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label> Popup</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Progress</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Rating</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Search**</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Shape</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Sidebar</label></div><br>
-<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label> Sticky</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> <del>Tab</del> *</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> Transition**</label></div><br>
-</ul>
-<div class="anchor" id="behaviours"></div>
-<h4>Behaviours</h4>
-<ul>
-<div class="ui checkbox"><input type="checkbox"><label> <del>API</del> *</label></div><br>
-<div class="ui checkbox"><input type="checkbox"><label> <del>Form Validation</del> *</label></div><br>
-<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label> visibility</label></div><br>
-</ul>
+<table class="ui celled table">
+<thead>
+<tr>
+<th>Backlog</th>
+<th>Planned</th>
+<th>Done</th>
+<th>Not Planned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimmer</td>
+<td>Accordian</td>
+<td>Dropdown</td>
+<td><del>Checkbox</del> *</td>
+</tr>
+<tr>
+<td>Embed</td>
+<td>Sidebar</td>
+<td>Modal</td>
+<td><del>Nag</del> *</td>
+</tr>
+<tr>
+<td>Progress</td>
+<td></td>
+<td>Popup</td>
+<td><del>Tab</del> *</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td></td>
+<td>Sticky</td>
+<td></td>
+</tr>
+<tr>
+<td>Search**</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shape</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Transition**</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Visibility</td>
+<td><del>API</del> *</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del>Form Validation</del> *</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del><strong>Elements</strong></del> ***</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del><strong>Collections</strong></del> ***</td>
+</tr>
+</tbody>
+</table>
 <p>* Found AngularJS out of the box does the job well enough
-** Not sure if AngularJs is better suited or not </p>
+*<em> Not sure if AngularJs is better suited or not 
+***</em> No javascript, so no plans unless there is a compelling reason</p>
+<div class="anchor" id="install"></div>
+<h2>Install</h2>
+<div class="anchor" id="download"></div>
+<h3>Download</h3>
+<div class="anchor" id="npm"></div>
+<h4>NPM</h4>
+<pre class="prettyprint lang-bat">&gt; npm install ui-angular --save
+</pre>
+<div class="anchor" id="bower"></div>
+<h4>Bower</h4>
+<pre class="prettyprint lang-bat">&gt; bower install ui-angular --save
+</pre>
+<div class="anchor" id="build"></div>
+<h3>Build</h3>
+<div class="anchor" id="local-build"></div>
+<h4>Local Build</h4>
+<p>To build inside <code>ui-angular</code> folder</p>
+<ul>
+<li>Go to ui-angular folder</li>
+<li>Install all needed packages <code>ui-angular&gt; npm install</code></li>
+<li>Build <code>ui-angular&gt; gulp build</code></li>
+</ul>
+<div class="anchor" id="integrated-build"></div>
+<h4>Integrated Build</h4>
+<p>To integrate with your own gulp build</p>
+<ul>
+<li>Copy ui-angular to your build folder and set the relative paths in the file</li>
+<li>There must be a semantic.json file in the same folder</li>
+<li>add <pre class="prettyprint lang-javascript">var buildUIAngular = require(&#39;[your path]/ui-angular/tasks/build&#39;)(__dirname); 
+gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
+</pre>
+</li>
+<li>And integrate this with your build task</li>
+</ul>
+<p>Only the the modules used for Semantic-UI will be included in the build</p>
 
 <div class="anchor" id="behaviours"></div>
 <h2>Behaviours</h2>

@@ -16,15 +16,33 @@
 
     vm.menu = [
       {
-        anchor: 'approach',
-        title: 'Approach',
+        anchor: 'about',
+        title: 'About',
+        children: [
+          {
+            anchor: 'approach',
+            title: 'Approach',
+          }, {
+            anchor: 'dependencies',
+            title: 'Dependencies',
+          },{
+            anchor: 'status',
+            title: 'Status',
+          }, 
+        ],
       }, {
-        anchor: 'status',
-        title: 'Status',
-      }, {
-        anchor: 'dependencies',
-        title: 'Dependencies',
-      }, {
+        anchor:  'install', 
+        title: 'Install',
+        children:[
+          {
+            anchor:  'download', 
+            title: 'Download',
+          },{
+            anchor:  'build', 
+            title: 'Build',
+          },
+        ],
+    },{
         anchor: 'behaviours',
         title: 'Behaviours',
         children: [

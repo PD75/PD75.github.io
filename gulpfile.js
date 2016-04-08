@@ -6,6 +6,10 @@ var plugins = require('gulp-load-plugins')();
 
 var buildUIAngular = require('./distDev/ui-angular/tasks/build')(__dirname);
 var buildUI = require('./dist/semantic-ui/tasks/build');
+var src = [
+  './distDev/ui-angular/**/*.md',
+  '!./distDev/ui-angular/node_modules/**/*',
+];
 
 gulp.task('buildUI', buildUI);
 gulp.task('buildUIAngular', buildUIAngular);
@@ -35,8 +39,7 @@ gulp.task('mdToMenu', function() {
   var replacement1 = '{anchor: \'$2\', title: \'$3\',}, $4';
   var regEx2 = /(^|<\/h[2-3]>)(.|\n)*?($|{anchor:)/g;
   var replacement2 = '$1\n $3 ';
-
-  return gulp.src('./distDev/ui-angular/**/*.md')
+  return gulp.src(src)
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
@@ -52,13 +55,15 @@ gulp.task('mdToHtml', function() {
   var replacement2 = '</pre>';
   var regEx3 = /<(h[1-4]) id="(.*)">(.*)<\/h[1-4]>/g;
   var replacement3 = '<div class="anchor" id="$2"></div>\n<$1>$3</$1>';
-var regEx4 = /<li>(\[x\])(.*)<\/li>/g;
+  var regEx4 = /<li>(\[x\])(.*)<\/li>/g;
   var replacement4 = '<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label>$2</label></div><br>';
-var regEx5 = /<li>(\[ \])(.*)<\/li>/g;
+  var regEx5 = /<li>(\[ \])(.*)<\/li>/g;
   var replacement5 = '<div class="ui checkbox"><input type="checkbox"><label>$2</label></div><br>';
+ var regEx6 = /<table>/g;
+  var replacement6 = '<table class="ui celled table">';
+ 
 
-
-  return gulp.src('./distDev/ui-angular/**/*.md')
+  return gulp.src(src)
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
@@ -66,6 +71,7 @@ var regEx5 = /<li>(\[ \])(.*)<\/li>/g;
     .pipe(plugins.replace(regEx3, replacement3))
     .pipe(plugins.replace(regEx4, replacement4))
     .pipe(plugins.replace(regEx5, replacement5))
+    .pipe(plugins.replace(regEx6, replacement6))
     .pipe(plugins.concat('ui-angular-readme.html'))
     .pipe(gulp.dest('./app/ui-angular'));
 });
