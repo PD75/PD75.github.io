@@ -21,10 +21,6 @@
     "angular-route": "^1.5.2",
     "angulartics": "^1.0.3",
     "angulartics-google-analytics": "^0.1.4",
-    "gulp-markdown": "^1.2.0",
-    "gulp-marked": "^1.0.0",
-    "gulp-showdown": "0.0.3",
-    "highlight.js": "^9.2.0",
     "jquery": "^2.2.2",
     "semantic-ui": "^2.1.8"
   },
@@ -38,7 +34,10 @@
     "gulp-eslint": "*",
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
-    "gulp-print": "^2.0.1",
+    "gulp-print": "*",
+    "gulp-replace": "^0.5.4",
+    "gulp-markdown": "^1.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-uglify": "*"
   }
 }

@@ -1,0 +1,326 @@
+<p align="center">
+  <img src="img/ui-angular.png" alt="UI Angular"/><br/>
+</p>
+
+<div class="anchor" id="ui-angular"></div>
+<h1>UI Angular</h1>
+<p>My <em>KISS</em> -  semantic-ui/angularJS library</p>
+<div class="anchor" id="about"></div>
+<h2>About</h2>
+<div class="anchor" id="approach"></div>
+<h3>Approach</h3>
+<p>Designed around KISS Principle <em>Keep it simple stupid</em></p>
+<ol>
+<li>Accept <strong>all</strong> parameters that <em>Semantic UI</em> does, angular features are extra.</li>
+<li>Pass data in variables and objects (don&#39;t clutter html, use controller and services)</li>
+<li>Call <em>Semantic UI</em> js code as much as possible: <strong>Why reinvent the wheel!</strong></li>
+<li><em>Semantic UI</em> syntax looks good with angular, no need to have directive to add html classes unless really nessesary or simpifies significantly</li>
+<li>Follow from last two points :If there is no <em>Semantic UI</em> js code, there needs to be a real benefit to write angular code.</li>
+</ol>
+<div class="anchor" id="dependencies"></div>
+<h3>Dependencies</h3>
+<ul>
+<li>AngularJS</li>
+<li>semantic UI</li>
+<li>jQuery</li>
+</ul>
+<div class="anchor" id="status"></div>
+<h3>Status</h3>
+<p>I have written directive as I have needed the modules, which mean they are used live and work. If you request a directive please allow a week for me to write it.</p>
+<p>Please put an issue if you intend to contribute your work, then I will put some effort to write the rules and guidlines etc.</p>
+<table class="ui celled table">
+<thead>
+<tr>
+<th>Backlog</th>
+<th>Planned</th>
+<th>Done</th>
+<th>Not Planned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimmer</td>
+<td>Accordian</td>
+<td>Dropdown</td>
+<td><del>Checkbox</del> *</td>
+</tr>
+<tr>
+<td>Embed</td>
+<td>Sidebar</td>
+<td>Modal</td>
+<td><del>Nag</del> *</td>
+</tr>
+<tr>
+<td>Progress</td>
+<td></td>
+<td>Popup</td>
+<td><del>Tab</del> *</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td></td>
+<td>Sticky</td>
+<td></td>
+</tr>
+<tr>
+<td>Search**</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Shape</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Transition**</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Visibility</td>
+<td><del>API</del> *</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del>Form Validation</del> *</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del><strong>Elements</strong></del> ***</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><del><strong>Collections</strong></del> ***</td>
+</tr>
+</tbody>
+</table>
+<p>* Found AngularJS out of the box does the job well enough
+*<em> Not sure if AngularJs is better suited or not 
+***</em> No javascript, so no plans unless there is a compelling reason</p>
+<div class="anchor" id="install"></div>
+<h2>Install</h2>
+<div class="anchor" id="download"></div>
+<h3>Download</h3>
+<div class="anchor" id="npm"></div>
+<h4>NPM</h4>
+<pre class="prettyprint lang-bat">&gt; npm install ui-angular --save
+</pre>
+<div class="anchor" id="bower"></div>
+<h4>Bower</h4>
+<pre class="prettyprint lang-bat">&gt; bower install ui-angular --save
+</pre>
+<div class="anchor" id="build"></div>
+<h3>Build</h3>
+<div class="anchor" id="local-build"></div>
+<h4>Local Build</h4>
+<p>To build inside <code>ui-angular</code> folder</p>
+<ul>
+<li>Go to ui-angular folder</li>
+<li>Install all needed packages <code>ui-angular&gt; npm install</code></li>
+<li>Build <code>ui-angular&gt; gulp build</code></li>
+</ul>
+<div class="anchor" id="integrated-build"></div>
+<h4>Integrated Build</h4>
+<p>To integrate with your own gulp build</p>
+<ul>
+<li>Copy ui-angular to your build folder and set the relative paths in the file</li>
+<li>There must be a semantic.json file in the same folder</li>
+<li>add <pre class="prettyprint lang-javascript">var buildUIAngular = require(&#39;[your path]/ui-angular/tasks/build&#39;)(__dirname); 
+gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
+</pre>
+</li>
+<li>And integrate this with your build task</li>
+</ul>
+<p>Only the the modules used for Semantic-UI will be included in the build</p>
+
+<div class="anchor" id="behaviours"></div>
+<h2>Behaviours</h2>
+<div class="anchor" id="common-features"></div>
+<h3>Common features</h3>
+<ul>
+<li>All object are initiated if needed to. E.g.<pre class="prettyprint lang-javascript">$(&#39;.classes&#39;).method();
+</pre>
+</li>
+</ul>
+<ul>
+<li><p><code>vm.directiveObject</code> Dom instance object to be used for [Semantic UI] usage. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveObject.method(&#39;show&#39;);
+</pre>
+</li>
+<li><p><code>vm.directiveData</code> [Semantic UI] settings object. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveData = {
+ on: &#39;hover&#39;,
+ onShow: function(){...}
+};
+</pre>
+</li>
+</ul>
+<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the ui-directive useless, i.e.</p>
+<pre class="prettyprint lang-javascript"> $(&#39;.classes&#39;).method({
+  setting: value
+ });
+
+ /*OR*/
+
+ vm.directiveObject.method({
+  setting: value,
+  callBack: function(){...}
+ });
+</pre>
+<div class="anchor" id="visibility"></div>
+<h3>Visibility</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-visibility=&quot;vm.visibilityObject&quot;
+  ui-visibility-data=&quot;vm.visibilityData&quot;&gt;
+
+.... 
+
+&lt;/ANY&gt;
+</pre>
+<ul>
+<li><code>vm.visibilityData</code> <a href="http://semantic-ui.com/behaviors/visibility.html#/settings">Settings in Semantic UI</a> </li>
+<li><code>vm.visibilityObject</code> <a href="http://semantic-ui.com/behaviors/visibility.html#behaviors">Usage in Semantic UI</a></li>
+</ul>
+
+<div class="anchor" id="modules"></div>
+<h2>Modules</h2>
+<div class="anchor" id="common-features"></div>
+<h3>Common features</h3>
+<ul>
+<li>All object are initiated if needed to. E.g.<pre class="prettyprint lang-javascript">$(&#39;.classes&#39;).method();
+</pre>
+</li>
+</ul>
+<ul>
+<li><p><code>vm.directiveObject</code> Dom instance object to be used for <a href="http://semantic-ui.com">Semantic UI</a> usage. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveObject.method(&#39;show&#39;);
+</pre>
+</li>
+<li><p><code>vm.directiveData</code> <a href="http://semantic-ui.com">Semantic UI</a> settings object. E.g.</p>
+<pre class="prettyprint lang-javascript">vm.directiveData = {
+ on: &#39;hover&#39;,
+ onShow: function(){...}
+};
+</pre>
+</li>
+</ul>
+<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the <code>ui-directive</code> useless, i.e.</p>
+<pre class="prettyprint lang-javascript"> $(&#39;.classes&#39;).method({
+  setting: value
+ });
+
+ /*OR*/
+
+ vm.directiveObject.method({
+  setting: value,
+  callBack: function(){...}
+ });
+</pre>
+<div class="anchor" id="dropdown"></div>
+<h3>Dropdown</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-dropdown=&quot;vm.dropdownObject&quot; 
+  class=&quot;ui dropdown&quot; 
+  ui-dropdown-data=&quot;vm.dropdownData&quot;&gt;
+  Title
+
+/*Dropdown content, static or ng-repeat*/  
+  &lt;ANY ...&gt;
+    &lt;ANY ng-repeat=&quot;item in vm.items&quot;&gt;
+      {{vm.content}}
+    &lt;/ANY&gt;  
+  &lt;/ANY&gt;  
+
+&lt;/ANY&gt;
+</pre>
+<ul>
+<li><code>vm.dropdownData</code> <a href="http://semantic-ui.com/modules/dropdown.html#/settings">Settings in Semantic UI</a> </li>
+<li><code>vm.dropdownObject</code> <a href="http://semantic-ui.com/modules/dropdown.html#behavior">Usage in Semantic UI</a></li>
+</ul>
+<p><strong>NOTE:</strong> There are a lot of design options for dropdowns in <a href="http://semantic-ui.com">Semantic UI</a> and therefore not practical to allow passing of the items as an array. Use <code>ng-repeat</code> to build dynamic dropdowns.</p>
+<div class="anchor" id="modal"></div>
+<h3>Modal</h3>
+<pre class="prettyprint lang-html">&lt;ui-modal 
+  ui-modal-show=&quot;vm.modalShow&quot;
+  ui-modal-url=&quot;urlpath/modal.html || vm.modalUrl&quot;
+  ui-modal-data=&quot;vm.modalData&quot;
+  ui-modal-obj=&quot;vm.modalObject&quot;&gt;
+
+/*Optional modal content*/  
+  &lt;div class=&quot;header&quot;&gt;Header&lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/div&gt;  
+
+&lt;/ui-modal&gt;
+</pre>
+<ul>
+<li><p><code>vm.modalShow = true|false</code> will show or hide modal. Can also be used the check the status since it is updated for other events that affect the modal, like <code>vm.modalObject.modal(&#39;hide&#39;)</code></p>
+</li>
+<li><p><code>ui-modal-url</code> allows injection of another page to both allow nicer code structure and reuse. <strong>NOTE:</strong> you can only load html pages with or without angular content, but no directives.</p>
+<ul>
+<li><code>urlpath/modal.html</code> path to html page directly in the html document</li>
+<li><code>vm.modalUrl</code> varaible containing url</li>
+</ul>
+</li>
+<li><p><code>vm.modalData</code> <a href="http://semantic-ui.com/modules/modal.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.modalObject</code> <a href="http://semantic-ui.com/modules/modal.html#behavior">Usage in Semantic UI</a></p>
+</li>
+</ul>
+<div class="anchor" id="popup"></div>
+<h3>Popup</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-popup=&quot;vm.popupData&quot; 
+  ui-popup-obj=&quot;vm.popupObject&quot;
+  semanticUIMetadata&gt;
+
+  ...
+
+&lt;/ANY&gt;
+</pre>
+<ul>
+<li><p><code>vm.popupData</code> <a href="http://semantic-ui.com/modules/popup.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.popupObject</code> <a href="http://semantic-ui.com/modules/popup.html#behavior">Usage in Semantic UI</a></p>
+</li>
+<li><p><code>semanticUIMetadata</code> Can also specify content with html attributes, see <a href="http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata">Specifying Content In Metadata in Semantic UI</a></p>
+</li>
+</ul>
+<div class="anchor" id="sticky"></div>
+<h3>Sticky</h3>
+<pre class="prettyprint lang-html">&lt;ANY-OPTIONAL ui-sticky-context=&quot;vm.stickyContext&quot;&gt; 
+
+  ...
+
+  &lt;ANY ui-sticky=&quot;vm.stickyData&quot; 
+    ui-sticky-obj=&quot;vm.stickyObject&quot;
+    ui-sticky-context-id=&quot;vm.stickyContext&quot;&gt;
+  &lt;/ANY&gt;
+
+  ...
+
+&lt;/ANY-OPTIONAL&gt;
+</pre>
+<ul>
+<li><p><code>vm.stickyData</code> <a href="http://semantic-ui.com/modules/sticky.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.stickyObject</code> <a href="http://semantic-ui.com/modules/sticky.html#refreshing-cached-values">Usage in Semantic UI</a></p>
+</li>
+<li><p><code>vm.stickyContext</code> </p>
+<ul>
+<li>Just pass and empty variable for each case, allows sticking to adjescent dom elements</li>
+<li><code>ui-sticky-context</code> is on the DOM element you want it to stick to</li>
+<li>See <a href="http://semantic-ui.com/modules/sticky.html#sticking-to-adjacent-context">Sticking to Adjacent Context</a></li>
+</ul>
+</li>
+</ul>
