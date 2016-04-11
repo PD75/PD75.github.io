@@ -25,7 +25,7 @@
 <body ng-app="app" pd-index>
   <img class="top image" src="img/page_header.jpg" />
   <div class="ui inverted blue main menu" ui-visibility ui-visibility-data="vm.menuVisibility">
-  <!--<div class="ui inverted blue main menu">-->
+    <!--<div class="ui inverted blue main menu">-->
     <div class="ui text container">
       <!--<div href="#" class="header item">
         Paul Dhillon
@@ -47,8 +47,12 @@
         <div class="eight wide column">
           <h4 class="ui inverted header">About</h4>
           <div class="ui inverted link list">
-            <a href="https://se.linkedin.com/pub/paul-dhillon/3/b91/8" class="item">
-              <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Paul Dhillon's profile on LinkedIn">
+            <a class="item" href="https://se.linkedin.com/in/pauldhillon75" target="_blank">
+              <div class="ui basic linkedin label">
+                <span>Linked</span>
+                <i class="large fitted linkedin square icon"></i>
+                <span>profile</span>
+              </div>
             </a>
           </div>
 
@@ -75,7 +79,7 @@
   <script src="//code.angularjs.org/1.5.0//angular.min.js"></script>
   <script src="//code.angularjs.org/1.5.0/angular-route.min.js"></script>
   <script src="dist/semantic-ui/dist/semantic.min.js"></script>
-  
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 
   <script src="dist/ui-angular.min.js"></script>

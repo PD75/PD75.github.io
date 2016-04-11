@@ -25,11 +25,6 @@
       <div class="item">
         <div linkedin class="linkedinShare" data-url="{{vm.like.url}}" data-title="{{vm.like.name}}" data-summary="Practical Startpage is a simple yet powerful, allowing easy access to browser data, such as bookmarks and history." data-shares="linkedinshares">{{linkedinshares}}</div>
       </div>
-      <!--<div class="github item">
-        <a class="ui label">
-          <i class="github icon "></i> Star
-        </a>
-      </div>-->
       <div google-plus="vm.like.url" class="item"></div>
     </div>
     <div class="ui fitted divider"></div>
@@ -83,10 +78,29 @@
           <i class="black github icon"></i>Contribute
         </a>
       </div>
-      <div class="column">
-        <button class="purple fluid ui button" ng-click="vm.install()">
-          <img class="image" src="img/chrome_web_store-16.png"/>Install
-        </button>
+      <div class="stackable equal width row">
+        <div class="column">
+          <button class="purple fluid ui button" ng-click="vm.install()">
+            <img class="image" src="img/chrome-a_512.png">Add to chrome
+          </button>
+        </div>
+        <div class="column">
+          <a class="blue fluid ui button" href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf" target="_blank">
+            <img class="image" src="img/chrome_web_store-16.png">Chrome web store
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui items" ng-if="vm.checkBrowser('Chrome Mobile')">
+      <div class="item">
+        <img class="ui tiny image" src="img/chrome-a_512.png">
+        <div class="middle aligned content">
+          <div class="header">Chrome Mobile</div>
+          <div class="content">
+            Chrome for mobile devices does not support extensions.
+          </div>
+        </div>
       </div>
     </div>
 
@@ -112,7 +126,7 @@
       </div>
     </div>
 
-    <div class="ui items" ng-if="!vm.checkBrowser('Firefox') && !vm.checkBrowser('Chrome')">
+    <div class="ui items" ng-if="!vm.checkBrowser('Firefox') && !vm.checkBrowser('Chrome') && !vm.checkBrowser('Chrome Mobile')">
       <a class="item" href="https://www.google.com/chrome/" target="_blank">
         <div class="ui tiny image">
           <img class="ui tiny image" src="img/chrome-a_512.png">
@@ -128,79 +142,205 @@
 
     <div class="ui  divider"></div>
   </div>
-  <div class="anchor" id="help"></div>
-  <div class="row">
-    <br>
-    <h2 class="ui center aligned header">Help</h2>
 
-    <!--<h3 class="ui center aligned header">Widgets</h3>-->
-    <div class="ui list">
-      <div class="item" ng-repeat="item in vm.widgets">
-        <i class="large icon" ng-class="item.icon"></i>
+  <br>
+  <div class="anchor" id="translation"></div>
+  <div class="row">
+    <h2 class="ui center aligned header">Translation</h2>
+    <div class="anchor" id="languages"></div>
+    <h3 class="ui header">Languages</h3>
+    <p>Practical Startpage has been translated to the following Languages.</p>
+    <div class="ui relaxed list">
+      <div class="item">
         <div class="content">
-          <div class="header">{{item.title}}</div>
-          <div class="description" ng-bind-html="item.html"></div>
+          <div class="header">English</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="header">Español/Spanish</div>
+          <div class="ui list">
+            <div class="item">
+              <div class="content">
+                <a class="header" href="https://github.com/albertva" target="_blank">@albertva</a>
+              </div>
+            </div>
+            <div class="item">
+              <img class="ui avatar image" src="/img/mattias.bengtsson.jpg">
+              <div class="content">
+                <div class="header">Mattias Bengtsson</div>
+              </div>
+              <div class="right floated content">
+                <a href="https://se.linkedin.com/in/mbengtsson" target="_blank">
+                  <div class="ui basic linkedin label">
+                    <span>Linked</span>
+                    <i class="large fitted linkedin square icon"></i>
+                    <span>profile</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="content">
+          <div class="header">Svenska/Swedish</div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="ui  divider"></div>
-  <br>
-  <div class="anchor" id="credits"></div>
-  <div class="row">
-    <h2 class="ui center aligned header">Credits</h2>
-    <!--<h3 class="ui center aligned header">Libraries Used</h3>-->
-    <div class="ui middle aligned selection list">
-      <a class="item" href="http://semantic-ui.com/" target="_blank">
-        <img class="ui tiny image" src="img/logo-semantic-ui.png" />
+    <br>
+    <div class="anchor" id="translate"></div>
+    <h3 class="ui header">Translate</h3>
+
+    <p>To make Practical Startpage more accessible your support in translation it is much appreciated.</p>
+    <div class="ui relaxed list">
+      <div class="item">
         <div class="content">
-          <div class="header">Semantic UI</div>
+          <div class="header">Translate through Google Translate</div>
           <div class="description">
-            User Interface is the language of the web
+            <ul>
+              <li>Put a new topic in Google Groups mentioning that you want to Translate</li>
+              <li>You will be sent a couple of links to you from Google Translate</li>
+              <li>Let me know when you are done</li>
+              <li>The translation will be integrated into Practical Startpage</li>
+              <li>See credits below to decide how you want to be recognised</li>
+            </ul>
           </div>
         </div>
-      </a>
-      <a class="item" href="https://angularjs.org/" target="_blank">
-        <img class="ui tiny image" src="img/logo-AngularJS.png" />
+      </div>
+      <div class="item">
         <div class="content">
+          <div class="header">Manage Translation your self</div>
           <div class="description">
-            HTML enhanced for web apps!
+            Branch and submit pull request. Details on how to on GitHub.
           </div>
         </div>
-      </a>
-      <a class="item" href="http://jquery.com/" target="_blank">
-        <img class="ui tiny image" src="img/jquery-mark-dark.gif" />
+      </div>
+      <div class="item">
         <div class="content">
-          <div class="description">
-            jQuery is a fast, small, and feature-rich JavaScript library.
+          <div class="header">Get credit for your hard work</div>
+          <div class="description">See options below on how your name will be displayed.</div>
+          <div class="ui list">
+            <div class="item">
+              <img class="ui avatar image" src="/img/rachel.png">
+              <span class="content">
+                <a class="header">Lindsay</a>
+                <div class="description">The picture is a picture of your choice, and here goes a short description</div>
+              </span>
+            </div>
+            <div class="item">
+              <img class="ui avatar image" src="/img/rachel.png">
+              <div class="content">
+                <div class="header">Rachel</div>
+                <div class="description">You can also have a button to e.g. homepage or LinkedIn.</div>
+              </div>
+              <div class="right floated content">
+                <a>
+                  <div class="ui basic linkedin label">
+                    <span>Linked</span>
+                    <i class="large fitted linkedin square icon"></i>
+                    <span>profile</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="content">
+                <a class="header">Matthew</a>
+                <div class="description">Can also only have description</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="content">
+                <a class="header">Or Only Name</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="content">
+                <a class="header">@yourTagWithLink</a>
+              </div>
+            </div>
           </div>
         </div>
-      </a>
-      <a class="item" href="http://www.jstree.com/" target="_blank">
-        <img class="ui tiny image" src="img/logo-jsTree.png" />
-        <div class="content">
-          <div class="description">
-            jsTree is jquery plugin, that provides interactive trees
-          </div>
-        </div>
-      </a>
-      <a class="item" href="https://github.com/ezraroi/ngJsTree" target="_blank">
-        <div class="content">
-          <div class="header">ngJsTree</div>
-          <div class="description">
-            Angular Directive for the famous JS Tree.
-          </div>
-        </div>
-      </a>
-      <a class="item" href="https://github.com/marceljuenemann/angular-drag-and-drop-lists" target="_blank">
-        <div class="content">
-          <div class="header">angular-drag-and-drop-lists</div>
-          <div class="description">
-            Angular directives for sorting nested lists using the HTML5 Drag & Drop API.
-          </div>
-        </div>
-      </a>
+      </div>
+      <div class="ui divider"></div>
     </div>
+
+    <br>
+    <div class="anchor" id="help"></div>
+    <div class="row">
+      <h2 class="ui center aligned header">Help</h2>
+
+      <!--<h3 class="ui center aligned header">Widgets</h3>-->
+      <div class="ui list">
+        <div class="item" ng-repeat="item in vm.widgets">
+          <i class="large icon" ng-class="item.icon"></i>
+          <div class="content">
+            <div class="header">{{item.title}}</div>
+            <div class="description" ng-bind-html="item.html"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui  divider"></div>
+
+    <br>
+    <div class="anchor" id="credits"></div>
+    <div class="row">
+      <h2 class="ui center aligned header">Credits</h2>
+      <!--<h3 class="ui center aligned header">Libraries Used</h3>-->
+      <div class="ui middle aligned selection list">
+        <a class="item" href="http://semantic-ui.com/" target="_blank">
+          <img class="ui tiny image" src="img/logo-semantic-ui.png" />
+          <div class="content">
+            <div class="header">Semantic UI</div>
+            <div class="description">
+              User Interface is the language of the web
+            </div>
+          </div>
+        </a>
+        <a class="item" href="https://angularjs.org/" target="_blank">
+          <img class="ui tiny image" src="img/logo-AngularJS.png" />
+          <div class="content">
+            <div class="description">
+              HTML enhanced for web apps!
+            </div>
+          </div>
+        </a>
+        <a class="item" href="http://jquery.com/" target="_blank">
+          <img class="ui tiny image" src="img/jquery-mark-dark.gif" />
+          <div class="content">
+            <div class="description">
+              jQuery is a fast, small, and feature-rich JavaScript library.
+            </div>
+          </div>
+        </a>
+        <a class="item" href="http://www.jstree.com/" target="_blank">
+          <img class="ui tiny image" src="img/logo-jsTree.png" />
+          <div class="content">
+            <div class="description">
+              jsTree is jquery plugin, that provides interactive trees
+            </div>
+          </div>
+        </a>
+        <a class="item" href="https://github.com/ezraroi/ngJsTree" target="_blank">
+          <div class="content">
+            <div class="header">ngJsTree</div>
+            <div class="description">
+              Angular Directive for the famous JS Tree.
+            </div>
+          </div>
+        </a>
+        <a class="item" href="https://github.com/marceljuenemann/angular-drag-and-drop-lists" target="_blank">
+          <div class="content">
+            <div class="header">angular-drag-and-drop-lists</div>
+            <div class="description">
+              Angular directives for sorting nested lists using the HTML5 Drag & Drop API.
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <ui-modal ui-modal-show="vm.showModal" ui-modal-url="vm.modalUrl"></ui-modal>
   </div>
-  <ui-modal ui-modal-show="vm.showModal" ui-modal-url="vm.modalUrl"></ui-modal>
-</div>
