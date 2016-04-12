@@ -1,17 +1,39 @@
 <div class="ui segment" ui-sticky-context="vm.stickyContext">
+
   <div class="right ui rail">
-    <div class="ui sticky vertical labeled icon menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
-      <a class="item" ng-href="{{vm.url}}#about" ng-class="{active:vm.isActive('about')}">
-        <i class="info icon"></i> About
-      </a>
-      <a class="item" ng-href="{{vm.url}}#help" ng-class="{active:vm.isActive('help')}">
-        <i class="help icon"></i> Help
-      </a>
-      <a class="item" ng-href="{{vm.url}}#credits" ng-class="{active:vm.isActive('credits')}">
-        <i class="thumbs up icon"></i> Credits
-      </a>
+    <div class="ui sticky vertical menu" ui-sticky ui-sticky-data="vm.stickyData" ui-sticky-context-id="vm.stickyContext">
+      <div class="item">
+        <a class="header" ng-href="{{vm.url}}#about">
+          About
+        </a>
+      </div>
+      <div class="item">
+        <a class="header" ng-href="{{vm.url}}#help">
+          Help
+        </a>
+        <div class="menu">
+          <a class="item" ng-href="{{vm.url}}#widgets">Widgets</a>
+          <a class="item" ng-href="{{vm.url}}#permissions">Permissions</a>
+        </div>
+      </div>
+      <div class="item">
+        <a class="header" ng-href="{{vm.url}}#translation">
+          Translation
+        </a>
+
+        <div class="menu">
+          <a class="item" ng-href="{{vm.url}}#languages">Languages</a>
+          <a class="item" ng-href="{{vm.url}}#translate">Translate</a>
+        </div>
+      </div>
+      <div class="item">
+        <a class="header" ng-href="{{vm.url}}#credits">
+          Credits
+        </a>
+      </div>
     </div>
   </div>
+
   <div itemscope itemtype="http://schema.org/SoftwareApplication" class="row">
     <img itemprop="image" class="ui centered image" src="img/icon128.png" />
     <h1 itemprop="name" class="ui center aligned header">Practical Startpage</h1>
@@ -20,12 +42,17 @@
     <div class="ui fitted  divider"></div>
 
     <div class="ui mini horizontal list">
+
       <div class="fb-like item" data-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+
       <div tweet="vm.like.name" tweet-url="vm.like.url" class="item"></div>
+
       <div class="item">
         <div linkedin class="linkedinShare" data-url="{{vm.like.url}}" data-title="{{vm.like.name}}" data-summary="Practical Startpage is a simple yet powerful, allowing easy access to browser data, such as bookmarks and history." data-shares="linkedinshares">{{linkedinshares}}</div>
       </div>
+
       <div google-plus="vm.like.url" class="item"></div>
+
     </div>
     <div class="ui fitted divider"></div>
   </div>
@@ -74,7 +101,7 @@
         </a>
       </div>
       <div class="column">
-        <a class="fluid ui button" href="https://github.com/PD75/practical-startpage" target="_blank">
+        <a class="fluid black basic ui button" href="https://github.com/PD75/practical-startpage" target="_blank">
           <i class="black github icon"></i>Contribute
         </a>
       </div>
@@ -143,136 +170,19 @@
     <div class="ui  divider"></div>
   </div>
 
-  <br>
-  <div class="anchor" id="translation"></div>
-  <div class="row">
-    <h2 class="ui center aligned header">Translation</h2>
-    <div class="anchor" id="languages"></div>
-    <h3 class="ui header">Languages</h3>
-    <p>Practical Startpage has been translated to the following Languages.</p>
-    <div class="ui relaxed list">
-      <div class="item">
-        <div class="content">
-          <div class="header">English</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="content">
-          <div class="header">Español/Spanish</div>
-          <div class="ui list">
-            <div class="item">
-              <div class="content">
-                <a class="header" href="https://github.com/albertva" target="_blank">@albertva</a>
-              </div>
-            </div>
-            <div class="item">
-              <img class="ui avatar image" src="/img/mattias.bengtsson.jpg">
-              <div class="content">
-                <div class="header">Mattias Bengtsson</div>
-              </div>
-              <div class="right floated content">
-                <a href="https://se.linkedin.com/in/mbengtsson" target="_blank">
-                  <div class="ui basic linkedin label">
-                    <span>Linked</span>
-                    <i class="large fitted linkedin square icon"></i>
-                    <span>profile</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="content">
-          <div class="header">Svenska/Swedish</div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="anchor" id="translate"></div>
-    <h3 class="ui header">Translate</h3>
 
-    <p>To make Practical Startpage more accessible your support in translation it is much appreciated.</p>
-    <div class="ui relaxed list">
-      <div class="item">
-        <div class="content">
-          <div class="header">Translate through Google Translate</div>
-          <div class="description">
-            <ul>
-              <li>Put a new topic in Google Groups mentioning that you want to Translate</li>
-              <li>You will be sent a couple of links to you from Google Translate</li>
-              <li>Let me know when you are done</li>
-              <li>The translation will be integrated into Practical Startpage</li>
-              <li>See credits below to decide how you want to be recognised</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="content">
-          <div class="header">Manage Translation your self</div>
-          <div class="description">
-            Branch and submit pull request. Details on how to on GitHub.
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="content">
-          <div class="header">Get credit for your hard work</div>
-          <div class="description">See options below on how your name will be displayed.</div>
-          <div class="ui list">
-            <div class="item">
-              <img class="ui avatar image" src="/img/rachel.png">
-              <span class="content">
-                <a class="header">Lindsay</a>
-                <div class="description">The picture is a picture of your choice, and here goes a short description</div>
-              </span>
-            </div>
-            <div class="item">
-              <img class="ui avatar image" src="/img/rachel.png">
-              <div class="content">
-                <div class="header">Rachel</div>
-                <div class="description">You can also have a button to e.g. homepage or LinkedIn.</div>
-              </div>
-              <div class="right floated content">
-                <a>
-                  <div class="ui basic linkedin label">
-                    <span>Linked</span>
-                    <i class="large fitted linkedin square icon"></i>
-                    <span>profile</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <a class="header">Matthew</a>
-                <div class="description">Can also only have description</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <a class="header">Or Only Name</a>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <a class="header">@yourTagWithLink</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ui divider"></div>
-    </div>
+  <div class="row">
 
     <br>
     <div class="anchor" id="help"></div>
     <div class="row">
       <h2 class="ui center aligned header">Help</h2>
 
-      <!--<h3 class="ui center aligned header">Widgets</h3>-->
+      <!--<div class="anchor" id="general"></div>
+      <h3 class="ui header">General</h3>-->
+
+      <div class="anchor" id="widgets"></div>
+      <h3 class="ui header">Widgets</h3>
       <div class="ui list">
         <div class="item" ng-repeat="item in vm.widgets">
           <i class="large icon" ng-class="item.icon"></i>
@@ -282,8 +192,190 @@
           </div>
         </div>
       </div>
+
+      <!--<div class="anchor" id="badges"></div>
+      <h3 class="ui header">Badges</h3>-->
+
+
+      <div class="anchor" id="permissions"></div>
+      <h3 class="ui header">Permissions</h3>
+      <p>Chrome apps are very restricted and permissions are needed for every interaction. Below follows a listing of all permissions, and how they are used by every part of Practical Startpage:</p>
+
+      <div class="ui list">
+        <div class="item">
+          <i class="large icon">
+            <img src="img/icon32.png">
+          </i>
+          <div class="content">
+            <div class="header">Practical Startpage Core</div>
+            <div class="description">
+              <ul>
+                <li>
+                  storage: save settings, keep track of version numbers
+                </li>
+                <li>
+                  management: check version
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-repeat="item in vm.widgets">
+          <i class="large icon" ng-class="item.icon"></i>
+          <div class="content">
+            <div class="header">{{item.title}}</div>
+            <div class="description">
+              <ul>
+                <li ng-repeat="permission in item.permissions">
+                  {{permission}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item" ng-repeat="item in vm.badges">
+          <i class="large icon" ng-class="item.icon"></i>
+          <div class="content">
+            <div class="header">{{item.title}}</div>
+            <div class="description">
+              <ul>
+                <li ng-repeat="permission in item.permissions">
+                  {{permission}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="ui  divider"></div>
+
+    <br>
+    <div class="anchor" id="translation"></div>
+    <div class="row">
+      <h2 class="ui center aligned header">Translation</h2>
+      <div class="anchor" id="languages"></div>
+      <h3 class="ui header">Languages</h3>
+      <p>Practical Startpage is available in the following Languages.</p>
+      <div class="ui relaxed list">
+        <div class="item">
+          <div class="content">
+            <div class="header">English</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Español/Spanish</div>
+            <div class="ui list">
+              <div class="item">
+                <div class="content">
+                  <a class="header" href="https://github.com/albertva" target="_blank">@albertva</a>
+                </div>
+              </div>
+              <div class="item">
+                <img class="ui avatar image" src="/img/mattias.bengtsson.jpg">
+                <div class="content">
+                  <div class="header">Mattias Bengtsson</div>
+                </div>
+                <div class="right floated content">
+                  <a href="https://se.linkedin.com/in/mbengtsson" target="_blank">
+                    <div class="ui basic linkedin label">
+                      <span>Linked</span>
+                      <i class="large fitted linkedin square icon"></i>
+                      <span>profile</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Svenska/Swedish</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="anchor" id="translate"></div>
+      <h3 class="ui header">Translate</h3>
+
+      <p>To make Practical Startpage more accessible your support in translation it is much appreciated.</p>
+      <div class="ui relaxed list">
+        <div class="item">
+          <div class="content">
+            <div class="header">Translate through Google Translate</div>
+            <div class="description">
+              <ul>
+                <li>Put a new topic in Google Groups mentioning that you want to Translate</li>
+                <li>You will be sent a couple of links to you from Google Translate</li>
+                <li>Let me know when you are done</li>
+                <li>The translation will be integrated into Practical Startpage</li>
+                <li>See credits below to decide how you want to be recognised</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Manage Translation your self</div>
+            <div class="description">
+              Branch and submit pull request. Details on how to on GitHub.
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Get credit for your hard work</div>
+            <div class="description">See options below on how your name will be displayed.</div>
+            <div class="ui list">
+              <div class="item">
+                <img class="ui avatar image" src="/img/rachel.png">
+                <span class="content">
+                <a class="header">Lindsay</a>
+                <div class="description">The picture is a picture of your choice, and here goes a short description</div>
+              </span>
+              </div>
+              <div class="item">
+                <img class="ui avatar image" src="/img/rachel.png">
+                <div class="content">
+                  <div class="header">Rachel</div>
+                  <div class="description">You can also have a button to e.g. homepage or LinkedIn.</div>
+                </div>
+                <div class="right floated content">
+                  <a>
+                    <div class="ui basic linkedin label">
+                      <span>Linked</span>
+                      <i class="large fitted linkedin square icon"></i>
+                      <span>profile</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                  <a class="header">Matthew</a>
+                  <div class="description">Can also only have description</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                  <a class="header">Or Only Name</a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                  <a class="header">@yourTagWithLink</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui divider"></div>
+      </div>
+    </div>
+
 
     <br>
     <div class="anchor" id="credits"></div>
@@ -341,6 +433,7 @@
           </div>
         </a>
       </div>
+
     </div>
     <ui-modal ui-modal-show="vm.showModal" ui-modal-url="vm.modalUrl"></ui-modal>
   </div>

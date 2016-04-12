@@ -19,6 +19,7 @@
               icon: widget.icon,
               title: data['w_' + key].message,
               html: $sce.trustAsHtml(data['w_' + key + '_help'].message),
+              permissions: widget.permissions,
             };
           });
           return s.widgets;

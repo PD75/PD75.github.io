@@ -39,7 +39,16 @@
   color: #287bbc;
   margin: 0;
 }
-.linkedin.label > span{
+
+.linkedin.label > span {
   position: relative;
-top: 2px;
+  top: 2px;
+}
+
+.menu > .item > .header {
+  color: #4d4d4d;
+}
+
+.menu > .item > .header:hover {
+  color: #000000;
 }
