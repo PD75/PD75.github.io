@@ -5,16 +5,10 @@
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
   "installed": {
-    "node/node.d.ts": {
+    "angularjs/angular.d.ts": {
       "commit": "8d44da84eb10cdcd2f7ea133f289caef817cb2b9"
     },
-    "orchestrator/orchestrator.d.ts": {
-      "commit": "8d44da84eb10cdcd2f7ea133f289caef817cb2b9"
-    },
-    "gulp/gulp.d.ts": {
-      "commit": "8d44da84eb10cdcd2f7ea133f289caef817cb2b9"
-    },
-    "q/Q.d.ts": {
+    "jquery/jquery.d.ts": {
       "commit": "8d44da84eb10cdcd2f7ea133f289caef817cb2b9"
     }
   }

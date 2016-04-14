@@ -2,7 +2,7 @@
 <div class="ui vertical menu">
   
   <div class="item" ng-repeat="header in vm.menu">
-    <a class="grey header" ng-href="{{vm.url+'#'+header.anchor}}" >{{header.title}}</a>
+    <a class="header" ng-href="{{vm.url+'#'+header.anchor}}" >{{header.title}}</a>
     <div class="menu">
 
       <a class="item" ng-href="{{vm.url+'#'+item.anchor}}" ng-repeat="item in header.children">

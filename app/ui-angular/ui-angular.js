@@ -7,7 +7,7 @@
 
   function UICtrl() {
     var vm = this;
-    vm.menuUrl = 'app/ui-angular/ui-angular-menu.html';
+    vm.menuUrl = 'app/shared/submenu.html';
     vm.url = '/#/ui-angular';
     vm.stickyData = {
       offset: 60,

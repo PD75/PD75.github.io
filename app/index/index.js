@@ -1,3 +1,5 @@
+/* global ga */
+
 (function() {
   'use strict';
 

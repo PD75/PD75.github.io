@@ -14,7 +14,7 @@ var src = [
 gulp.task('buildUI', buildUI);
 gulp.task('buildUIAngular', buildUIAngular);
 
-console.log("Session: %j", plugins);
+// console.log("Session: %j", plugins);
 
 gulp.task('build', ['installDist', 'buildUIAngular', 'buildUI']);
 
