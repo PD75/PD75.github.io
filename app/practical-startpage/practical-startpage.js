@@ -26,10 +26,14 @@
     activate();
 
     function activate() {
-      widgetService.get()
-        .then(function(data) {
-          vm.widgets = data;
-        });
+      if (angular.isDefined(widgetService.widgets) && widgetService.widgets.length > 0) {
+        vm.widgets = widgetService.widgets;
+      } else {
+        widgetService.get()
+          .then(function(data) {
+            vm.widgets = data;
+          });
+      }
       if (angular.isDefined($routeParams.uninstall) && $routeParams.uninstall) {
         vm.modalUrl = 'app/practical-startpage/ps-uninstall-thanks.html';
         vm.showModal = true;
@@ -56,7 +60,6 @@
     }
 
     function checkBrowser(browser) {
-      var b = detect.parse(navigator.userAgent).browser.family;
       return browser === detect.parse(navigator.userAgent).browser.family;
     }
 
@@ -73,7 +76,7 @@
             anchor: 'widgets',
             title: 'Widgets',
           }, {
-            anchor: 'premissions',
+            anchor: 'permissions',
             title: 'Permissions',
           },
         ],
