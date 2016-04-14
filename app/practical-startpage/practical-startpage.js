@@ -59,6 +59,41 @@
       var b = detect.parse(navigator.userAgent).browser.family;
       return browser === detect.parse(navigator.userAgent).browser.family;
     }
+
+    vm.menuUrl = 'app/shared/submenu.html';
+    vm.menu = [
+      {
+        anchor: 'about',
+        title: 'About',
+      }, {
+        anchor: 'help',
+        title: 'Help',
+        children: [
+          {
+            anchor: 'widgets',
+            title: 'Widgets',
+          }, {
+            anchor: 'premissions',
+            title: 'Permissions',
+          },
+        ],
+      }, {
+        anchor: 'translation',
+        title: 'Translation',
+        children: [
+          {
+            anchor: 'languages',
+            title: 'Languages',
+          }, {
+            anchor: 'translate',
+            title: 'Translate',
+          },
+        ],
+      }, {
+        anchor: 'credits',
+        title: 'Credits',
+      },
+    ];
   }
 
 })();

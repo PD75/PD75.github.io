@@ -13,9 +13,6 @@
       // when('/consulting', {
       //   templateUrl: 'app/consulting.html',
       // }).
-      when('/ln', {
-        templateUrl: 'app/practical-startpage/linkedinTest.html',
-      }).
      when('/practical-startpage', {
         templateUrl: 'app/practical-startpage/practical-startpage.html',
         controller: 'PSCtrl',

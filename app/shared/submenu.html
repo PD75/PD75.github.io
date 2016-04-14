@@ -1,0 +1,16 @@
+<div class="right ui rail">
+  <div class="ui sticky" ui-sticky ui-sticky-data="vm.stickyData" >
+    <div class="ui vertical menu ">
+
+      <div class="item" ng-repeat="header in vm.menu">
+        <a class="header" ng-href="{{vm.url+'#'+header.anchor}}">{{header.title}}</a>
+        <div class="menu">
+
+          <a class="item" ng-href="{{vm.url+'#'+item.anchor}}" ng-repeat="item in header.children">{{item.title}}</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
