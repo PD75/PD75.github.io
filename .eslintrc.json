@@ -44,7 +44,7 @@
     "angular/definedundefined": 2,
     "angular/di": [2, "function"],
     "angular/di-order": [0, true],
-    "angular/directive-name": [1,"ps|ui"],
+    "angular/directive-name": [1,"ps|ui|pd"],
     "angular/directive-restrict": [0, {
       "restrict": "AE",
       "explicit": "never"

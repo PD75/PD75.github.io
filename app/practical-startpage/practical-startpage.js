@@ -7,7 +7,7 @@
     .module('app')
     .controller('PSCtrl', PSCtrl);
 
-  function PSCtrl($location, $routeParams, widgetService) {
+  function PSCtrl($location, $routeParams, widgetService, IndexService) {
     var vm = this;
     vm.install = install;
     vm.checkBrowser = checkBrowser;
@@ -51,7 +51,7 @@
         js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
         fjs.parentNode.insertBefore(js, fjs);
-      } (document, 'script', 'facebook-jssdk'));
+      }(document, 'script', 'facebook-jssdk'));
 
     }
 
@@ -64,39 +64,36 @@
     }
 
     vm.menuUrl = 'app/shared/submenu.html';
-    vm.menu = [
-      {
-        anchor: 'about',
-        title: 'About',
+    vm.subMenu = [{
+      anchor: 'about',
+      title: 'About',
+    }, {
+      anchor: 'help',
+      title: 'Help',
+      children: [{
+        anchor: 'widgets',
+        title: 'Widgets',
       }, {
-        anchor: 'help',
-        title: 'Help',
-        children: [
-          {
-            anchor: 'widgets',
-            title: 'Widgets',
-          }, {
-            anchor: 'permissions',
-            title: 'Permissions',
-          },
-        ],
+        anchor: 'permissions',
+        title: 'Permissions',
+      }],
+    }, {
+      anchor: 'translation',
+      title: 'Translation',
+      children: [{
+        anchor: 'languages',
+        title: 'Languages',
       }, {
-        anchor: 'translation',
-        title: 'Translation',
-        children: [
-          {
-            anchor: 'languages',
-            title: 'Languages',
-          }, {
-            anchor: 'translate',
-            title: 'Translate',
-          },
-        ],
-      }, {
-        anchor: 'credits',
-        title: 'Credits',
-      },
-    ];
+        anchor: 'translate',
+        title: 'Translate',
+      }],
+    }, {
+      anchor: 'credits',
+      title: 'Credits',
+    }];
+
+    IndexService.setSubMenu(vm.subMenu);
+
   }
 
 })();
