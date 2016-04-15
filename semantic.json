@@ -39,6 +39,7 @@
     "checkbox",
     "dimmer",
     "popup",
+    "sidebar",
     "sticky",
     "transition",
     "visibility"
