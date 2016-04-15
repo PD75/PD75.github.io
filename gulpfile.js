@@ -59,9 +59,9 @@ gulp.task('mdToHtml', function() {
   var replacement4 = '<div class="ui checked checkbox"><input type="checkbox" checked="checked"><label>$2</label></div><br>';
   var regEx5 = /<li>(\[ \])(.*)<\/li>/g;
   var replacement5 = '<div class="ui checkbox"><input type="checkbox"><label>$2</label></div><br>';
- var regEx6 = /<table>/g;
+  var regEx6 = /<table>/g;
   var replacement6 = '<table class="ui celled table">';
- 
+
 
   return gulp.src(src)
     .pipe(plugins.print())
@@ -76,5 +76,10 @@ gulp.task('mdToHtml', function() {
     .pipe(gulp.dest('./app/ui-angular'));
 });
 
+gulp.task('psLocale', function() {
+  return gulp.src('distDev/practical-startpage/appDev/_locales/**/*')
+    .pipe(plugins.print())
+    .pipe(gulp.dest('app/practical-startpage/_locales'));
+});
 // (<h[2-3]) id="(.*)">(.*)(<\/h[2-3]>)
 // {anchor: '$2', title: '$3',}, $4
