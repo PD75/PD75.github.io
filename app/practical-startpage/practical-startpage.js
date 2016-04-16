@@ -7,12 +7,13 @@
     .module('app')
     .controller('PSCtrl', PSCtrl);
 
-  function PSCtrl($location, $routeParams, widgetService, IndexService) {
+  function PSCtrl($location, $routeParams, psDataService, IndexService) {
     var vm = this;
     vm.install = install;
     vm.checkBrowser = checkBrowser;
+    vm.getPromotional = getPromotional;
     vm.browser = detect.parse(navigator.userAgent);
-
+    vm.messages = {};
     // vm.isActive = isActive;
     vm.like = {
       url: 'https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf',
@@ -26,12 +27,13 @@
     activate();
 
     function activate() {
-      if (angular.isDefined(widgetService.widgets) && widgetService.widgets.length > 0) {
-        vm.widgets = widgetService.widgets;
+      if (angular.isDefined(psDataService.widgets) && psDataService.widgets.length > 0) {
+        vm.widgets = psDataService.widgets;
       } else {
-        widgetService.get()
+        psDataService.getWidgets()
           .then(function(data) {
             vm.widgets = data;
+            i18n();
           });
       }
       if (angular.isDefined($routeParams.uninstall) && $routeParams.uninstall) {
@@ -39,6 +41,21 @@
         vm.showModal = true;
       }
       initFB();
+    }
+
+    function i18n() {
+      angular.forEach(psDataService.messages, function(item, key) {
+        vm.messages[key] = item.message;
+      });
+    }
+
+    function getPromotional() {
+      var locale = navigator.language.substring(0, 2);
+      var locales = ['en', 'es', 'sv'];
+      if (locales.indexOf(locale) === -1) {
+        locale = 'en';
+      }
+      return 'app/practical-startpage/_locales/' + locale + '/promotional.html';
     }
 
     function initFB() {

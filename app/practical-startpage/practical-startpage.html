@@ -26,33 +26,10 @@
 <div class="anchor" id="about"></div>
 <div class="row">
   <br>
-  <h2 class="ui center aligned header">About</h2>
-  <p>
-    Practical Startpage is a simple yet powerful extensions for google chrome, allowing easy access to browser data, such as bookmarks and history.
-  </p>
-  <ul>
-    <li>
-      Responsive Design, adjust to all screens
-    </li>
-    <li>
-      Configurable, you can decide what widgets go where
-    </li>
-    <li>
-      Open Source, you can develop your own widgets (GitHub)
-    </li>
-    <li>
-      Bookmark tree with text search and bookmark editor
-    </li>
-    <li>
-      Quicklinks with link from bookmark folder of your choice
-    </li>
-    <li>
-      History, Apps, etc. from chrome
-    </li>
-    <li>
-      RSS Feed for e.g. news
-    </li>
-  </ul>
+  <h2 class="ui center aligned header" ng-bind="vm.messages.About">About</h2>
+  <div ng-include="vm.getPromotional()">
+  </div>
+  
   <div class="ui divider"></div>
 
   <div class="ui stackable equal width grid" ng-if="vm.checkBrowser('Chrome')">
@@ -137,13 +114,12 @@
   <div class="ui  divider"></div>
 </div>
 
-
 <div class="row">
 
   <br>
   <div class="anchor" id="help"></div>
   <div class="row">
-    <h2 class="ui center aligned header">Help</h2>
+    <h2 class="ui center aligned header" ng-bind="vm.messages.Help">Help</h2>
 
     <!--<div class="anchor" id="general"></div>
       <h3 class="ui header">General</h3>-->
