@@ -1,0 +1,284 @@
+{
+  "About": {
+    "message": "Om"
+  },
+  "Badges": {
+    "message": "Emblem"
+  },
+  "Check": {
+    "message": "Kolla"
+  },
+  "Clear": {
+    "message": "Rensa"
+  },
+  "Close": {
+    "message": "Stäng"
+  },
+  "days": {
+    "message": "dagar"
+  },
+  "Display": {
+    "message": "Visa"
+  },
+  "Edit": {
+    "message": "Redigera"
+  },
+  "EditUrl": {
+    "message": "Redigera webbadress"
+  },
+  "entries": {
+    "message": "poster"
+  },
+  "Delete": {
+    "message": "Radera"
+  },
+  "Homepage": {
+    "message": "Hemsida"
+  },
+  "Help": {
+    "message": "Hjälp"
+  },
+  "LoadDefault": {
+    "message": "Ladda förvalt"
+  },
+  "Links": {
+    "message": "Länkar"
+  },
+  "NewFolder": {
+    "message": "Ny mapp"
+  },
+  "Options": {
+    "message": "Alternativ"
+  },
+  "Save": {
+    "message": "Spara"
+  },
+  "SaveClose": {
+    "message": "Spara och stäng"
+  },
+  "Search": {
+    "message": "Sök"
+  },
+  "SelectAll": {
+    "message": "Välj alla"
+  },
+  "Title": {
+    "message": "Titel"
+  },
+  "UndoAll": {
+    "message": "Ångra allt"
+  },
+  "Url": {
+    "message": "Länk"
+  },
+  "WhatsNew": {
+    "message": "Nyheter"
+  },
+  "Close_key": {
+    "message": "Esc"
+  },
+  "Edit_key": {
+    "message": "F2"
+  },
+  "EditUrl_key": {
+    "message": "Shift+F2"
+  },
+  "Delete_key": {
+    "message": "Del"
+  },
+  "NewFolder_key": {
+    "message": "Ctrl+Shift+N"
+  },
+  "Save_key": {
+    "message": "Ctrl+S"
+  },
+  "SaveClose_key": {
+    "message": "Ctrl+Shift+S"
+  },
+  "UndoAll_key": {
+    "message": "Ctrl+Shift+Z"
+  },
+  "c_ps_slogan": {
+    "message": "Flexibel startsida som visar din data i en enda vy."
+  },
+  "c_about_languages": {
+    "message": "Språk"
+  },
+  "c_about_libraries": {
+    "message": "Änvända bibliotek"
+  },
+  "c_about_title_0": {
+    "message": "Practical Startpage i Chrome Web Store"
+  },
+  "c_about_text_0": {
+    "message": "Här kan du vill granska och betygsätta startsidan"
+  },
+  "c_about_title_1": {
+    "message": "Sprid ordet till en vän med e-post"
+  },
+  "c_about_text_1": {
+    "message": "Klicka här för att skapa ett e-post till en vän."
+  },
+  "c_about_title_2": {
+    "message": "Buggar, idéer eller bidra på GitHub"
+  },
+  "c_about_text_2": {
+    "message": "Om du har några idéer för manicker du vill utveckla, är koden på GitHub. Här kan du även skicka in felrapporter och frågor."
+  },
+  "c_about_title_3": {
+    "message": "Buggar, idéer eller frågor i Google Grupper"
+  },
+  "c_about_text_3": {
+    "message": "Använd Google-grupper för att ställa frågor och lämna idéer och buggar."
+  },
+  "c_about_title_4": {
+    "message": "Kontrollera status i utvecklingen"
+  },
+  "c_about_text_4": {
+    "message": "På Waffle board"
+  },
+  "c_bottomMenu": {
+    "message": "Nedre menyn"
+  },
+  "c_help_title_0": {
+    "message": "Konfigurerbara datalistor"
+  },
+  "c_help_text_0": {
+    "message": "Du kan placera manickerna hur du vill genom alternativ menyn"
+  },
+  "c_help_title_1": {
+    "message": "Responsiv design"
+  },
+  "c_help_text_1": {
+    "message": "Kolumner och innehåll anpassar sig för att ge bästa möjliga upplevelse på alla skärmbredder."
+  },
+  "c_help_title_2": {
+    "message": "Innehåll"
+  },
+  "c_help_text_2": {
+    "message": "Sidan består av tre kolumner, men för mindre skärmar går den högra kolumnen  samman med den mellersta kolumnen för innehållet ska vara användbart."
+  },
+  "c_o_editLayout": {
+    "message": "Redigera layouten"
+  },
+   "c_o_badgeLayout": {
+    "message": "Emblem layout"
+  },
+  "c_o_clearSettings": {
+    "message": "Rensa inställningar"
+  },
+  "c_o_cleared": {
+    "message": "Rensat!!!"
+  },
+  "c_o_version": {
+    "message": "Versionskontroll"
+  },
+  "c_o_layout": {
+    "message": "Manick layout"
+  },
+  "c_o_activeTabs": {
+    "message": "Aktiva tabbar"
+  },
+  "c_o_styles": {
+    "message": "Stil, färger"
+  },
+  "c_l_left": {
+    "message": "Vänster kolumnen"
+  },
+  "c_l_middle": {
+    "message": "Mitt kolumnen"
+  },
+  "c_l_right": {
+    "message": "Höger kolumnen"
+  },
+  "c_auth_title": {
+    "message": "Rättigheter krävs för $url$, klicka för att godkänna!!!",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "mysite.com"
+      }
+    }
+  },
+  "b_gmail_connection": {
+    "message": "Hämtning av data mislyckades, kolla att du har nätverks kontakt och är inloggad på gmail.!"
+  },
+  "b_gmail_noUnRead": {
+    "message": "(Olästa mails!)"
+  },
+  "Widgets": {
+    "message": "Manicker"
+  },
+  "w_BL": {
+    "message": "Knapplista"
+  },
+  "w_GL": {
+    "message": "Grupperad lista"
+  },
+  "w_bookmarkTree": {
+    "message": "Bokmärken"
+  },
+  "w_bookmarkTree_help": {
+    "message": "En trad struktur med alla bokmärken, har fulltextsökning <br/> <b> Obs!.. </b> Du väljer snabblänkar härifrån genom att högerklicka på mappen du vill få snablänkar från <br/> Klicka på redigera knappen för att redigera bokmärken."
+  },
+  "w_bookmarkTree_edit_title": {
+    "message": "Redigera bokmärken"
+  },
+  "w_chromeApps": {
+    "message": "Appar"
+  },
+  "w_chromeApps_help": {
+    "message": "En lista över Chrome-appar för närvarande installerad i webbläsaren <br/> <b> Obs!. </b> endast appar med en sida listas."
+  },
+  "w_closedTabs": {
+    "message": "Stängda"
+  },
+  "w_closedTabs_help": {
+    "message": "Nyligen stängda flikar <br/> <b> Obs! </b>. Rensas av chrome varje gång webbläsaren stängs."
+  },
+  "w_history": {
+    "message": "Historia"
+  },
+  "w_history_help": {
+    "message": "Besökta sidor"
+  },
+  "w_history_edit_title": {
+    "message": "Redigera historik"
+  },
+  "w_quicklinks": {
+    "message": "Snabblänkar"
+  },
+  "w_quicklinks_help": {
+    "message": "En lista över Chrome-appar för närvarande installerad i webbläsaren <br/> <b> Obs!. </b> endast appar med en sida listas."
+  },
+  "w_rssFeed": {
+    "message": "RSS"
+  },
+  "w_rssFeed_help": {
+    "message": "Du kan ha vilka RSS flöden du vill här, t.ex. nyhetsflöden"
+  },
+  "w_rssFeed_edit_title": {
+    "message": "Redigera RSS"
+  },
+  "w_rssFeed_addFeed": {
+    "message": "Lägg till flöde"
+  },
+  "w_rssFeed_settings": {
+    "message": "Ändra Inställningar"
+  },
+  "w_rssFeed_restoreDeleted": {
+    "message": "Återskapa raderade artiklar"
+  },
+  "w_rssFeed_auth_text": {
+    "message": "RSS använder Googles API: er för att få en enhetlig datastruktur från de olika flödena och kommer inte att fungera utan. Klicka här för att gå vidare och tillåta access för widgeten."
+  },
+  "w_rssFeed_err_title": {
+    "message": "Error vid laddning av RSS flöde"
+  },
+  "w_topSites": {
+    "message": "Top Sidor"
+  },
+  "w_topSites_help": {
+    "message": "Mest besökta sidor"
+  }
+}

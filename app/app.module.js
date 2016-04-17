@@ -1,6 +1,7 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'uiAngular','djds4rce.angular-socialshare','angulike', 'angulartics', 'angulartics.google.analytics']);
+  angular.module('app', ['ngRoute', 'uiAngular', 'djds4rce.angular-socialshare', 'angulike', 'angulartics', 'angulartics.google.analytics']);
+
 
   angular.module('app')
     .config(appConfig);
@@ -13,23 +14,23 @@
       // when('/consulting', {
       //   templateUrl: 'app/consulting.html',
       // }).
-     when('/practical-startpage', {
-        templateUrl: 'app/practical-startpage/practical-startpage.html',
-        controller: 'PSCtrl',
-        controllerAs: 'vm',
-      }).
-      when('/ui-angular', {
-        templateUrl: 'app/ui-angular/ui-angular.html',
-        controller: 'UICtrl',
-        controllerAs: 'vm',
-      }).
-      when('/ps-uninstall', {
-        templateUrl: 'app/practical-startpage/ps-uninstall.html',
-        controller: 'psUninstallCtrl',
-        controllerAs: 'vm',
-      }).
-      otherwise({
-        redirectTo: '/practical-startpage',
-      });
+    when('/practical-startpage', {
+      templateUrl: 'app/practical-startpage/practical-startpage.html',
+      controller: 'PSCtrl',
+      controllerAs: 'vm',
+    }).
+    when('/ui-angular', {
+      templateUrl: 'app/ui-angular/ui-angular.html',
+      controller: 'UICtrl',
+      controllerAs: 'vm',
+    }).
+    when('/ps-uninstall', {
+      templateUrl: 'app/practical-startpage/ps-uninstall.html',
+      controller: 'psUninstallCtrl',
+      controllerAs: 'vm',
+    }).
+    otherwise({
+      redirectTo: '/practical-startpage',
+    });
   }
 })();

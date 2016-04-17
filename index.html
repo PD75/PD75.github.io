@@ -22,75 +22,78 @@
   <link rel="stylesheet" href="app/ui-angular/ui-angular.css">
 </head>
 
-<body ng-app="app" pd-index>
-  <img class="top image" src="img/page_header.jpg" />
-  <div class="ui inverted blue main menu" ui-visibility ui-visibility-data="vm.menuVisibility">
-    <!--<div class="ui inverted blue main menu">-->
-    <div class="ui text container">
-      <!--<div href="#/" class="item">
-        <i class="sidebar icon"></i>
-      </div>-->
-      <!--<div href="#" class="header item">
-        Paul Dhillon
-      </div>-->
-      <!--<a href="#/" class="item" ng-class="{active:vm.isActive('/')}">Home</a>-->
-      <!--<a href="#/consulting" class="item" ng-class="{active:vm.isActive('/consulting')}">Consulting</a>-->
-      <a href="#/practical-startpage" class="item" ng-class="{active:vm.isActive('/practical-startpage')}">Practical Startpage</a>
-      <a href="#/ui-angular" class="item" ng-class="{active:vm.isActive('/ui-angular')}">UI Angular</a>
-      <!--<a href="#/ps-uninstall" class="item" ng-class="{active:vm.isActive('/ui-angular')}">Uninstall</a>-->
+<body ng-app="app" pd-index class="pushable">
+  <div class="ui blue inverted vertical sidebar menu" ui-sidebar ui-sidebar-event-id="vm.sideBarEvent">
+    <div class="header item">
+      <i class="ui caret down icon"></i>
+      Main Pages
+    </div>
+    <a class="item" ng-repeat="item in vm.menu" ng-href="#/{{item.url}}" ng-class="{active:vm.isActive('/{{item.url}}')}" ng-bind="item.menu">
+    </a>
+    <div class="header item">
+      <i class="ui caret down icon"></i>
+      Page Navigation
+    </div>
+    <div class="item" ng-repeat="header in vm.subMenu">
+      <a class="header" ng-href="{{vm.url+'#'+header.anchor}}">{{header.title}}</a>
+      <div class="menu">
+
+        <a class="item" ng-href="{{vm.url+'#'+item.anchor}}" ng-repeat="item in header.children">{{item.title}}</a>
+
+      </div>
     </div>
   </div>
-  <!--<div class="ui sidebar inverted vertical menu">
-    <a class="item">
-      1
-    </a>
-    <a class="item">
-      2
-    </a>
-    <a class="item">
-      3
-    </a>
-  </div>
-  <div class="pusher">-->
-  <!-- Site content !-->
-  </div>
-  
-  <div class="ui text container segment" ng-view>
-    
-  </div>
+  <div class="pusher">
+    <div class="ui inverted blue main menu mobile show" ui-visibility ui-visibility-data="vm.menuVisibility">
+      <a class="item sidebarBtn" ui-sidebar-event="vm.sideBarEvent">
+        <i class="sidebar icon"></i>
+      </a>
+    </div>
 
-  <div class="ui inverted vertical footer segment">
-    <div class="ui center aligned text container">
-      <div class="ui stackable inverted divided grid">
-        <div class="eight wide column">
-          <h4 class="ui inverted header">About</h4>
-          <div class="ui inverted link list">
-            <a class="item" href="https://se.linkedin.com/in/pauldhillon75" target="_blank">
-              <div class="ui basic linkedin label">
-                <span>Linked</span>
-                <i class="large fitted linkedin square icon"></i>
-                <span>profile</span>
-              </div>
-            </a>
-          </div>
+    <img class="top image" src="img/page_header.jpg" />
 
-        </div>
-        <div class="eight wide column">
-          <h4 class="ui inverted header">Code</h4>
-          <div class="ui inverted link list">
-            <a class="item" href="https://github.com/pd75">
-              <i class="ui big github icon"></i>
-            </a>
-          </div>
-        </div>
+    <div class="ui inverted blue main menu  computer show" ui-visibility ui-visibility-data="vm.menuVisibility">
+      <div class="ui text container">
+        <a href="#/practical-startpage" class="item" ng-class="{active:vm.isActive('/practical-startpage')}">Practical Startpage</a>
+        <a href="#/ui-angular" class="item" ng-class="{active:vm.isActive('/ui-angular')}">UI Angular</a>
       </div>
+    </div>
+    <div class="ui text container segment mobile nomargin" ng-view>
 
-      <!--<div class="ui inverted section divider"></div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+      <div class="ui center aligned text container">
+        <div class="ui stackable inverted divided grid">
+          <div class="eight wide column">
+            <h4 class="ui inverted header">About</h4>
+            <div class="ui inverted link list">
+              <a class="item" href="https://se.linkedin.com/in/pauldhillon75" target="_blank">
+                <div class="ui basic linkedin label">
+                  <span>Linked</span>
+                  <i class="large fitted linkedin square icon"></i>
+                  <span>profile</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+          <div class="eight wide column">
+            <h4 class="ui inverted header">Code</h4>
+            <div class="ui inverted link list">
+              <a class="item" href="https://github.com/pd75">
+                <i class="ui big github icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="ui inverted section divider"></div>
       <div class="ui horizontal inverted small divided link list">
         <a class="item" href="#">Contact Us</a>
         <a class="item" href="#">Terms and Conditions</a>
         <a class="item" href="#">Privacy Policy</a>
       </div>-->
+      </div>
     </div>
   </div>
   <script src="//oss.maxcdn.com/jquery/2.2.0/jquery.min.js"></script>
@@ -123,6 +126,7 @@
   <script src="app/practical-startpage/practical-startpage.js"></script>
   <script src="app/ui-angular/ui-angular.js"></script>
   <script src="app/ui-angular/ui-angular-readme.js"></script>
+  <script src="distDev/ui-angular/src/modules/sidebar.js"></script>
 
   <!--Load Last-->
 

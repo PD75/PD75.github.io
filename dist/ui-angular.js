@@ -1,7 +1,7 @@
 /**
  * ui-angular - v0.0.4
  * My KISS - semantic-ui/angularJS library  
- * https://github.com/PD75/ui-angular
+ * http://pd75.github.io/#/ui-angular
  * MIT License
  **/
 angular.module('uiAngular', []);

@@ -5,7 +5,7 @@
     .module('app')
     .controller('UICtrl', UICtrl);
 
-  function UICtrl() {
+  function UICtrl(IndexService) {
     var vm = this;
     vm.menuUrl = 'app/shared/submenu.html';
     vm.url = '/#/ui-angular';
@@ -14,70 +14,64 @@
     };
 
 
-    vm.menu = [
-      {
-        anchor: 'about',
-        title: 'About',
-        children: [
-          {
-            anchor: 'approach',
-            title: 'Approach',
-          }, {
-            anchor: 'dependencies',
-            title: 'Dependencies',
-          },{
-            anchor: 'status',
-            title: 'Status',
-          }, 
-        ],
+    vm.subMenu = [{
+      anchor: 'about',
+      title: 'About',
+      children: [{
+        anchor: 'approach',
+        title: 'Approach',
       }, {
-        anchor:  'install', 
-        title: 'Install',
-        children:[
-          {
-            anchor:  'download', 
-            title: 'Download',
-          },{
-            anchor:  'build', 
-            title: 'Build',
-          },
-        ],
-    },{
-        anchor: 'behaviours',
-        title: 'Behaviours',
-        children: [
-          {
-            anchor: 'common-features',
-            title: 'Common features',
-          }, {
-            anchor: 'visibility',
-            title: 'Visibility',
-          },
-        ],
+        anchor: 'dependencies',
+        title: 'Dependencies',
       }, {
-        anchor: 'modules',
-        title: 'Modules',
-        children: [
-          {
-            anchor: 'common-features',
-            title: 'Common features',
-          }, {
-            anchor: 'dropdown',
-            title: 'Dropdown',
-          },
-          {
-            anchor: 'modal',
-            title: 'Modal',
-          }, {
-            anchor: 'popup',
-            title: 'Popup',
-          }, {
-            anchor: 'sticky',
-            title: 'Sticky',
-          },
-        ],
-      },
-    ];
+        anchor: 'status',
+        title: 'Status',
+      }],
+    }, {
+      anchor: 'install',
+      title: 'Install',
+      children: [{
+        anchor: 'download',
+        title: 'Download',
+      }, {
+        anchor: 'build',
+        title: 'Build',
+      }],
+    }, {
+      anchor: 'usage',
+      title: 'Usage',
+      children: [{
+        anchor: 'common-features',
+        title: 'Common features',
+      }],
+    }, {
+      anchor: 'behaviours',
+      title: 'Behaviours',
+      children: [{
+        anchor: 'visibility',
+        title: 'Visibility',
+      }, ],
+    }, {
+      anchor: 'modules',
+      title: 'Modules',
+      children: [{
+        anchor: 'dropdown',
+        title: 'Dropdown',
+      }, {
+        anchor: 'modal',
+        title: 'Modal',
+      }, {
+        anchor: 'popup',
+        title: 'Popup',
+      }, {
+        anchor: 'sidebar',
+        title: 'Sidebar',
+      }, {
+        anchor: 'sticky',
+        title: 'Sticky',
+      }, ],
+    }, ];
+    IndexService.setSubMenu(vm.subMenu);
   }
 
 })();
