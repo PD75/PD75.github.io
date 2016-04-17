@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/ui-angular.png" alt="UI Angular"  style="max-width: 80%"/><br/>
+  <img src="img/ui-angular.png" alt="UI Angular" style="max-width: 80%"/><br/>
 </p>
 
 <div class="anchor" id="ui-angular"></div>
@@ -7,6 +7,12 @@
 <p>My <em>KISS</em> -  semantic-ui/angularJS library</p>
 <div class="anchor" id="about"></div>
 <h2>About</h2>
+<hr>
+<p><a href="https://raw.githubusercontent.com/PD75/ui-angular/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=plastic&amp;maxAge=3600" alt="License MIT"></a>
+<a href="https://www.npmjs.com/package/ui-angular"><img src="https://img.shields.io/npm/v/ui-angular.svg?style=plastic&amp;maxAge=3600" alt="npm"></a>
+<a href="https://github.com/PD75/ui-angular/releases"><img src="https://img.shields.io/github/release/pd75/ui-angular.svg?style=plastic&amp;label=GitHub&amp;maxAge=3600" alt="GitHub release"></a>
+<a href="http://pd75.github.io/#/ui-angular"><img src="https://img.shields.io/badge/homepage-0.1.1-green.svg?style=plastic"></a></p>
+<hr>
 <div class="anchor" id="approach"></div>
 <h3>Approach</h3>
 <p>Designed around KISS Principle <em>Keep it simple stupid</em></p>
@@ -46,7 +52,7 @@
 </tr>
 <tr>
 <td>Embed</td>
-<td>Sidebar</td>
+<td></td>
 <td>Modal</td>
 <td><del>Nag</del> *</td>
 </tr>
@@ -59,13 +65,13 @@
 <tr>
 <td>Rating</td>
 <td></td>
-<td>Sticky</td>
+<td>Sidebar</td>
 <td></td>
 </tr>
 <tr>
 <td>Search**</td>
 <td></td>
-<td></td>
+<td>Sticky</td>
 <td></td>
 </tr>
 <tr>
@@ -135,7 +141,7 @@
 <h4>Integrated Build</h4>
 <p>To integrate with your own gulp build</p>
 <ul>
-<li>Copy ui-angular to your build folder and set the relative paths in the file</li>
+<li>Copy <code>ui-angular.json</code> to your build folder and set the relative paths in the file</li>
 <li>There must be a semantic.json file in the same folder</li>
 <li>add <pre class="prettyprint lang-javascript">var buildUIAngular = require(&#39;[your path]/ui-angular/tasks/build&#39;)(__dirname); 
 gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
@@ -144,57 +150,8 @@ gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
 <li>And integrate this with your build task</li>
 </ul>
 <p>Only the the modules used for Semantic-UI will be included in the build</p>
-
-<div class="anchor" id="behaviours"></div>
-<h2>Behaviours</h2>
-<div class="anchor" id="common-features"></div>
-<h3>Common features</h3>
-<ul>
-<li>All object are initiated if needed to. E.g.<pre class="prettyprint lang-javascript">$(&#39;.classes&#39;).method();
-</pre>
-</li>
-</ul>
-<ul>
-<li><p><code>vm.directiveObject</code> Dom instance object to be used for [Semantic UI] usage. E.g.</p>
-<pre class="prettyprint lang-javascript">vm.directiveObject.method(&#39;show&#39;);
-</pre>
-</li>
-<li><p><code>vm.directiveData</code> [Semantic UI] settings object. E.g.</p>
-<pre class="prettyprint lang-javascript">vm.directiveData = {
- on: &#39;hover&#39;,
- onShow: function(){...}
-};
-</pre>
-</li>
-</ul>
-<p> <strong>Warning:</strong> Setting the variables for the method through javascript/jquery syntax will in many cases render the ui-directive useless, i.e.</p>
-<pre class="prettyprint lang-javascript"> $(&#39;.classes&#39;).method({
-  setting: value
- });
-
- /*OR*/
-
- vm.directiveObject.method({
-  setting: value,
-  callBack: function(){...}
- });
-</pre>
-<div class="anchor" id="visibility"></div>
-<h3>Visibility</h3>
-<pre class="prettyprint lang-html">&lt;ANY ui-visibility=&quot;vm.visibilityObject&quot;
-  ui-visibility-data=&quot;vm.visibilityData&quot;&gt;
-
-.... 
-
-&lt;/ANY&gt;
-</pre>
-<ul>
-<li><code>vm.visibilityData</code> <a href="http://semantic-ui.com/behaviors/visibility.html#/settings">Settings in Semantic UI</a> </li>
-<li><code>vm.visibilityObject</code> <a href="http://semantic-ui.com/behaviors/visibility.html#behaviors">Usage in Semantic UI</a></li>
-</ul>
-
-<div class="anchor" id="modules"></div>
-<h2>Modules</h2>
+<div class="anchor" id="usage"></div>
+<h2>Usage</h2>
 <div class="anchor" id="common-features"></div>
 <h3>Common features</h3>
 <ul>
@@ -227,6 +184,25 @@ gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
   callBack: function(){...}
  });
 </pre>
+
+<div class="anchor" id="behaviours"></div>
+<h2>Behaviours</h2>
+<div class="anchor" id="visibility"></div>
+<h3>Visibility</h3>
+<pre class="prettyprint lang-html">&lt;ANY ui-visibility=&quot;vm.visibilityObject&quot;
+  ui-visibility-data=&quot;vm.visibilityData&quot;&gt;
+
+.... 
+
+&lt;/ANY&gt;
+</pre>
+<ul>
+<li><code>vm.visibilityData</code> <a href="http://semantic-ui.com/behaviors/visibility.html#/settings">Settings in Semantic UI</a> </li>
+<li><code>vm.visibilityObject</code> <a href="http://semantic-ui.com/behaviors/visibility.html#behaviors">Usage in Semantic UI</a></li>
+</ul>
+
+<div class="anchor" id="modules"></div>
+<h2>Modules</h2>
 <div class="anchor" id="dropdown"></div>
 <h3>Dropdown</h3>
 <pre class="prettyprint lang-html">&lt;ANY ui-dropdown=&quot;vm.dropdownObject&quot; 
@@ -294,6 +270,34 @@ gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
 <li><p><code>vm.popupObject</code> <a href="http://semantic-ui.com/modules/popup.html#behavior">Usage in Semantic UI</a></p>
 </li>
 <li><p><code>semanticUIMetadata</code> Can also specify content with html attributes, see <a href="http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata">Specifying Content In Metadata in Semantic UI</a></p>
+</li>
+</ul>
+<div class="anchor" id="sidebar"></div>
+<h3>Sidebar</h3>
+<pre class="prettyprint lang-html">&lt;ANY-OPTIONAL ui-sidebar-event=&quot;vm.sidebarEvent&quot;&gt; 
+
+  ...
+
+  &lt;ANY ui-sidebar=&quot;vm.sidebarData&quot; 
+    ui-sidebar-obj=&quot;vm.sidebarObject&quot;
+    ui-sidebar-event-id=&quot;vm.sidebarEvent&quot;&gt;
+  &lt;/ANY&gt;
+
+  ...
+
+&lt;/ANY-OPTIONAL&gt;
+</pre>
+<ul>
+<li><p><code>vm.sidebarData</code> <a href="http://semantic-ui.com/modules/sidebar.html#/settings">Settings in Semantic UI</a> </p>
+</li>
+<li><p><code>vm.sidebarObject</code> <a href="http://semantic-ui.com/modules/sidebar.html#behavior">Usage in Semantic UI</a></p>
+</li>
+<li><p><code>vm.sidebarEvent</code> </p>
+<ul>
+<li>Just pass and empty variable for each case, used to assign the trigger to show the sidebar</li>
+<li><code>ui-sidebar-event</code> is on the DOM element you want it trigger the sidebar</li>
+<li>See <a href="http://semantic-ui.com/modules/sidebar.html#triggering-showhide-with-other-content">Triggering show/hide with other content</a></li>
+</ul>
 </li>
 </ul>
 <div class="anchor" id="sticky"></div>

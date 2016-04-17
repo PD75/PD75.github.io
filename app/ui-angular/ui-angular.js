@@ -26,7 +26,7 @@
       }, {
         anchor: 'status',
         title: 'Status',
-      }, ],
+      }],
     }, {
       anchor: 'install',
       title: 'Install',
@@ -36,14 +36,18 @@
       }, {
         anchor: 'build',
         title: 'Build',
-      }, ],
+      }],
+    }, {
+      anchor: 'usage',
+      title: 'Usage',
+      children: [{
+        anchor: 'common-features',
+        title: 'Common features',
+      }],
     }, {
       anchor: 'behaviours',
       title: 'Behaviours',
       children: [{
-        anchor: 'common-features',
-        title: 'Common features',
-      }, {
         anchor: 'visibility',
         title: 'Visibility',
       }, ],
@@ -51,9 +55,6 @@
       anchor: 'modules',
       title: 'Modules',
       children: [{
-        anchor: 'common-features',
-        title: 'Common features',
-      }, {
         anchor: 'dropdown',
         title: 'Dropdown',
       }, {
@@ -62,6 +63,9 @@
       }, {
         anchor: 'popup',
         title: 'Popup',
+      }, {
+        anchor: 'sidebar',
+        title: 'Sidebar',
       }, {
         anchor: 'sticky',
         title: 'Sticky',

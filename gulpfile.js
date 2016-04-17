@@ -4,11 +4,14 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+
 var buildUIAngular = require('./distDev/ui-angular/tasks/build')(__dirname);
 var buildUI = require('./dist/semantic-ui/tasks/build');
-var src = [
-  './distDev/ui-angular/**/*.md',
-  '!./distDev/ui-angular/node_modules/**/*',
+
+var SrcUiAngular = './distDev/ui-angular/';
+var SrcUiAngularMd = [
+  SrcUiAngular + '**/*.md',
+  '!' + SrcUiAngular + 'node_modules/**/*',
 ];
 
 gulp.task('buildUI', buildUI);
@@ -39,7 +42,7 @@ gulp.task('mdToMenu', function() {
   var replacement1 = '{anchor: \'$2\', title: \'$3\',}, $4';
   var regEx2 = /(^|<\/h[2-3]>)(.|\n)*?($|{anchor:)/g;
   var replacement2 = '$1\n $3 ';
-  return gulp.src(src)
+  return gulp.src(SrcUiAngularMd)
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
@@ -49,6 +52,10 @@ gulp.task('mdToMenu', function() {
 });
 
 gulp.task('mdToHtml', function() {
+  var package = require(SrcUiAngular + 'package.json');
+
+
+
   var regEx1 = /<pre><code class="(.*)">/g;
   var replacement1 = '<pre class="prettyprint $1">';
   var regEx2 = /<\/code><\/pre>/g;
@@ -61,9 +68,13 @@ gulp.task('mdToHtml', function() {
   var replacement5 = '<div class="ui checkbox"><input type="checkbox"><label>$2</label></div><br>';
   var regEx6 = /<table>/g;
   var replacement6 = '<table class="ui celled table">';
+  var regEx7 = /(<h2>About<\/h2>)(.|\n)*?(<hr>)/g;
+  var replacement7 = '$1\n$3';
+ var regEx8 = /(<\/a>)(<\/p>)(.|\n)*?(<hr>)/g;
+  var replacement8 = '$1\n'+'<a href="http://pd75.github.io/#/ui-angular"><img src="https://img.shields.io/badge/homepage-'+package.version+'-green.svg?style=plastic"><\/a>'+'$2\n$4';
 
 
-  return gulp.src(src)
+  return gulp.src(SrcUiAngularMd)
     .pipe(plugins.print())
     .pipe(plugins.markdown())
     .pipe(plugins.replace(regEx1, replacement1))
@@ -72,6 +83,8 @@ gulp.task('mdToHtml', function() {
     .pipe(plugins.replace(regEx4, replacement4))
     .pipe(plugins.replace(regEx5, replacement5))
     .pipe(plugins.replace(regEx6, replacement6))
+    .pipe(plugins.replace(regEx7, replacement7))
+    .pipe(plugins.replace(regEx8, replacement8))
     .pipe(plugins.concat('ui-angular-readme.html'))
     .pipe(gulp.dest('./app/ui-angular'));
 });
@@ -81,5 +94,3 @@ gulp.task('psLocale', function() {
     .pipe(plugins.print())
     .pipe(gulp.dest('app/practical-startpage/_locales'));
 });
-// (<h[2-3]) id="(.*)">(.*)(<\/h[2-3]>)
-// {anchor: '$2', title: '$3',}, $4
