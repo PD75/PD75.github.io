@@ -92,5 +92,5 @@ gulp.task('mdToHtml', function() {
 gulp.task('psLocale', function() {
   return gulp.src('distDev/practical-startpage/appDev/_locales/**/*')
     .pipe(plugins.print())
-    .pipe(gulp.dest('app/practical-startpage/_locales'));
+    .pipe(gulp.dest('app/practical-startpage/locales'));
 });

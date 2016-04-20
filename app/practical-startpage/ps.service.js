@@ -34,8 +34,8 @@
         var locales = ['es', 'sv'];
         if (locales.indexOf(locale) >= 0) {
           var promises = [];
-          promises[0] = $http.get('app/practical-startpage/_locales/en/messages.json');
-          promises[1] = $http.get('app/practical-startpage/_locales/' + locale + '/messages.json');
+          promises[0] = $http.get('app/practical-startpage/locales/en/messages.json');
+          promises[1] = $http.get('app/practical-startpage/locales/' + locale + '/messages.json');
           return $q.all(promises)
             .then(function(data) {
               s.messages = data[0].data;
@@ -43,7 +43,7 @@
               return s.messages;
             });
         } else {
-          return $http.get('app/practical-startpage/_locales/en/messages.json')
+          return $http.get('app/practical-startpage/locales/en/messages.json')
             .then(function(data) {
               s.messages=data.data;
               return s.messages;

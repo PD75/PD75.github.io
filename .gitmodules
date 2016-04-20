@@ -3,5 +3,4 @@
 	url = https://github.com/PD75/ui-angular
 [submodule "distDev/practical-startpage"]
 	path = distDev/practical-startpage
-[submodule "distDev/practical-startpage"]
 	url = https://github.com/PD75/practical-startpage
