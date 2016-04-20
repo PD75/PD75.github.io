@@ -55,7 +55,7 @@
       if (locales.indexOf(locale) === -1) {
         locale = 'en';
       }
-      return 'app/practical-startpage/_locales/' + locale + '/promotional.html';
+      return 'app/practical-startpage/locales/' + locale + '/promotional.html';
     }
 
     function initFB() {
