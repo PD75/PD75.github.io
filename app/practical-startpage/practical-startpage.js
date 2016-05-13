@@ -51,7 +51,8 @@
 
     function getPromotional() {
       var locale = navigator.language.substring(0, 2);
-      var locales = ['en', 'es', 'sv'];
+      // locale = 'de'
+      var locales = ['de', 'en', 'es', 'sv'];
       if (locales.indexOf(locale) === -1) {
         locale = 'en';
       }
