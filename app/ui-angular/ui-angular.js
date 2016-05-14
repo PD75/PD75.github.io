@@ -41,6 +41,9 @@
       anchor: 'usage',
       title: 'Usage',
       children: [{
+        anchor: 'load-the-module',
+        title: 'Load the Module',
+      },{
         anchor: 'common-features',
         title: 'Common features',
       }],

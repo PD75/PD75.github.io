@@ -25,14 +25,12 @@
 <body ng-app="app" pd-index class="pushable">
   <div class="ui blue inverted vertical sidebar menu" ui-sidebar ui-sidebar-event-id="vm.sideBarEvent">
     <div class="header item">
-      <i class="ui caret down icon"></i>
-      Main Pages
+      <i class="ui caret down icon"></i> Main Pages
     </div>
     <a class="item" ng-repeat="item in vm.menu" ng-href="#/{{item.url}}" ng-class="{active:vm.isActive('/{{item.url}}')}" ng-bind="item.menu">
     </a>
     <div class="header item">
-      <i class="ui caret down icon"></i>
-      Page Navigation
+      <i class="ui caret down icon"></i> Page Navigation
     </div>
     <div class="item" ng-repeat="header in vm.subMenu">
       <a class="header" ng-href="{{vm.url+'#'+header.anchor}}">{{header.title}}</a>
@@ -126,9 +124,7 @@
   <script src="app/practical-startpage/practical-startpage.js"></script>
   <script src="app/ui-angular/ui-angular.js"></script>
   <script src="app/ui-angular/ui-angular-readme.js"></script>
-  <script src="distDev/ui-angular/src/modules/sidebar.js"></script>
-
-  <!--Load Last-->
+  <!--<script src="distDev/ui-angular/src/modules/sidebar.js"></script>-->
 
 </body>
 

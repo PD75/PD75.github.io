@@ -11,13 +11,13 @@
 <p><a href="https://raw.githubusercontent.com/PD75/ui-angular/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=plastic&amp;maxAge=3600" alt="License MIT"></a>
 <a href="https://www.npmjs.com/package/ui-angular"><img src="https://img.shields.io/npm/v/ui-angular.svg?style=plastic&amp;maxAge=3600" alt="npm"></a>
 <a href="https://github.com/PD75/ui-angular/releases"><img src="https://img.shields.io/github/release/pd75/ui-angular.svg?style=plastic&amp;label=GitHub&amp;maxAge=3600" alt="GitHub release"></a>
-<a href="http://pd75.github.io/#/ui-angular"><img src="https://img.shields.io/badge/homepage-0.1.1-green.svg?style=plastic"></a></p>
+<a href="http://pd75.github.io/#/ui-angular"><img src="https://img.shields.io/badge/homepage-0.1.2-green.svg?style=plastic"></a></p>
 <hr>
 <div class="anchor" id="approach"></div>
 <h3>Approach</h3>
 <p>Designed around KISS Principle <em>Keep it simple stupid</em></p>
 <ol>
-<li>Accept <strong>all</strong> parameters that <em>Semantic UI</em> does, angular features are extra.</li>
+<li>Accept <strong>all</strong> parameters that <em>Semantic UI</em> does and extends with some angular features.</li>
 <li>Pass data in variables and objects (don&#39;t clutter html, use controller and services)</li>
 <li>Call <em>Semantic UI</em> js code as much as possible: <strong>Why reinvent the wheel!</strong></li>
 <li><em>Semantic UI</em> syntax looks good with angular, no need to have directive to add html classes unless really nessesary or simpifies significantly</li>
@@ -152,6 +152,11 @@ gulp.task(&#39;buildUIAngular&#39;, buildUIAngular);
 <p>Only the the modules used for Semantic-UI will be included in the build</p>
 <div class="anchor" id="usage"></div>
 <h2>Usage</h2>
+<div class="anchor" id="load-the-module"></div>
+<h2>Load the Module</h2>
+<p>Use <code>uiAngular</code> to load the module. E.g.</p>
+<pre class="prettyprint lang-javascript">angular.module(&#39;app&#39;, [&#39;uiAngular&#39;]);
+</pre>
 <div class="anchor" id="common-features"></div>
 <h3>Common features</h3>
 <ul>

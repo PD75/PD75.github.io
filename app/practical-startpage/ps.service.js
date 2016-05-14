@@ -31,7 +31,8 @@
         return s.messages;
       } else {
         var locale = navigator.language.substring(0, 2);
-        var locales = ['es', 'sv'];
+        // locale = 'de'
+        var locales = ['de', 'es', 'sv'];
         if (locales.indexOf(locale) >= 0) {
           var promises = [];
           promises[0] = $http.get('app/practical-startpage/locales/en/messages.json');
@@ -45,7 +46,7 @@
         } else {
           return $http.get('app/practical-startpage/locales/en/messages.json')
             .then(function(data) {
-              s.messages=data.data;
+              s.messages = data.data;
               return s.messages;
             });
         }
