@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PD75/PD75.github.io.git"
+    "url": "https://github.com/PD75/PD75.github.io.git"
   },
   "author": "Paul Dhillon",
   "license": "MIT",
@@ -35,9 +35,9 @@
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
     "gulp-print": "*",
-    "gulp-replace": "^0.5.4",
-    "gulp-markdown": "^1.2.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-replace": "*",
+    "gulp-markdown": "*",
+    "gulp-rename": "*",
     "gulp-uglify": "*"
   }
 }
