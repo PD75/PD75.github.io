@@ -9,8 +9,11 @@
   <div class="ui fitted  divider"></div>
 
   <div class="ui mini horizontal list">
+    <div sa-facebook class="item"></div>
+    
+    <div sa-linkedin class="item"></div>
 
-    <div class="fb-like item" data-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+    <!--<div class="fb-like item" data-href="https://chrome.google.com/webstore/detail/practical-startpage/ikjalccfdoghanieehppljppanjlmkcf" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>-->
 
     <div tweet="vm.like.name" tweet-url="vm.like.url" class="item"></div>
 
@@ -29,7 +32,7 @@
   <h2 class="ui center aligned header" ng-bind="vm.messages.About">About</h2>
   <div ng-include="vm.getPromotional()">
   </div>
-  
+
   <div class="ui divider"></div>
 
   <div class="ui stackable equal width grid" ng-if="vm.checkBrowser('Chrome')">

@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app', ['ngRoute', 'uiAngular', 'djds4rce.angular-socialshare', 'angulike', 'angulartics', 'angulartics.google.analytics']);
+  angular.module('app', ['ngRoute', 'uiAngular', 'djds4rce.angular-socialshare', 'angulike', 'social-angular', 'angulartics', 'angulartics.google.analytics']);
 
 
   angular.module('app')
