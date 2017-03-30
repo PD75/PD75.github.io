@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/PD75/PD75.github.io",
   "dependencies": {
-    "angular": "^1.5.2",
-    "angular-route": "^1.5.2",
-    "angulartics": "^1.0.3",
-    "angulartics-google-analytics": "^0.1.4",
-    "jquery": "^2.2.2",
-    "semantic-ui": "^2.1.8"
+    "angular": "1.*",
+    "angular-route": "1.*",
+    "angulartics": "1.*",
+    "angulartics-google-analytics": "0.*",
+    "jquery": "2.*",
+    "semantic-ui": "^2.*"
   },
   "devDependencies": {
     "eslint": "*",
