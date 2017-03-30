@@ -25,8 +25,8 @@
       controllerAs: 'vm',
     }).
     when('/ps-uninstall', {
-      templateUrl: 'app/practical-startpage/ps-uninstall.html',
-      controller: 'psUninstallCtrl',
+      templateUrl: 'app/practical-startpage/practical-startpage.html',
+      controller: 'PSCtrl',
       controllerAs: 'vm',
     }).
     otherwise({
