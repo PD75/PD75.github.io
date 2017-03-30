@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.1.8
+ * # Semantic UI - 2.2.10
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -10,11 +10,10 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 /*!
- * # Semantic UI 2.1.8 - Reset
+ * # Semantic UI 2.2.10 - Reset
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -271,7 +270,6 @@ figure {
  */
 
 hr {
-  box-sizing: content-box;
   height: 0;
 }
 
@@ -425,8 +423,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  /* 2 */
-  box-sizing: content-box;
 }
 
 /**
@@ -495,12 +491,15 @@ td,
 th {
   padding: 0;
 }
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Site
+ * # Semantic UI 2.2.10 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -542,8 +541,8 @@ h3,
 h4,
 h5 {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  line-height: 1.2857em;
-  margin: calc(2rem -  0.14285em ) 0em 1rem;
+  line-height: 1.28571429em;
+  margin: calc(2rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
   padding: 0em;
 }
@@ -554,15 +553,15 @@ h1 {
 }
 
 h2 {
-  font-size: 1.714rem;
+  font-size: 1.71428571rem;
 }
 
 h3 {
-  font-size: 1.28rem;
+  font-size: 1.28571429rem;
 }
 
 h4 {
-  font-size: 1.071rem;
+  font-size: 1.07142857rem;
 }
 
 h5 {
@@ -660,12 +659,15 @@ input::selection {
 /*******************************
         Global Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Button
+ * # Semantic UI 2.2.10 - Button
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -872,7 +874,7 @@ input::selection {
   opacity: 0.45 !important;
   background-image: none !important;
   box-shadow: none !important;
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 /* Basic Group With Disabled */
@@ -1084,12 +1086,10 @@ input::selection {
 
 .ui.labeled.button:not(.icon) {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   background: none !important;
@@ -1104,11 +1104,9 @@ input::selection {
 
 .ui.labeled.button > .label {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0px 0px 0px -1px !important;
@@ -1177,7 +1175,7 @@ input::selection {
 /* Twitter */
 
 .ui.twitter.button {
-  background-color: #0084B4;
+  background-color: #55ACEE;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1185,13 +1183,13 @@ input::selection {
 }
 
 .ui.twitter.button:hover {
-  background-color: #00719b;
+  background-color: #35a2f4;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.twitter.button:active {
-  background-color: #005f81;
+  background-color: #2795e9;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1199,7 +1197,7 @@ input::selection {
 /* Google Plus */
 
 .ui.google.plus.button {
-  background-color: #DC4A38;
+  background-color: #DD4B39;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1207,13 +1205,13 @@ input::selection {
 }
 
 .ui.google.plus.button:hover {
-  background-color: #de321d;
+  background-color: #e0321c;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.google.plus.button:active {
-  background-color: #bf3322;
+  background-color: #c23321;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1285,7 +1283,7 @@ input::selection {
 /* Pinterest */
 
 .ui.pinterest.button {
-  background-color: #00ACED;
+  background-color: #BD081C;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -1293,13 +1291,13 @@ input::selection {
 }
 
 .ui.pinterest.button:hover {
-  background-color: #0099d4;
+  background-color: #ac0013;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.pinterest.button:active {
-  background-color: #0087ba;
+  background-color: #8c0615;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -1337,7 +1335,11 @@ input::selection {
   color: '';
 }
 
-.ui.button > .right.icon:not(.button) {
+.ui.button:not(.icon) > .icon:not(.button):not(.dropdown) {
+  margin: 0em 0.42857143em 0em -0.21428571em;
+}
+
+.ui.button:not(.icon) > .right.icon:not(.button):not(.dropdown) {
   margin: 0em -0.21428571em 0em 0.42857143em;
 }
 
@@ -1389,7 +1391,7 @@ input::selection {
 .ui.mini.buttons .button,
 .ui.mini.buttons .or,
 .ui.mini.button {
-  font-size: 0.71428571rem;
+  font-size: 0.78571429rem;
 }
 
 .ui.tiny.buttons .button,
@@ -1446,7 +1448,7 @@ input::selection {
 .ui.icon.buttons .button > .icon,
 .ui.icon.button > .icon {
   opacity: 0.9;
-  margin: 0em;
+  margin: 0em !important;
   vertical-align: top;
 }
 
@@ -1501,7 +1503,6 @@ input::selection {
   background: rgba(0, 0, 0, 0.05) !important;
   box-shadow: '' !important;
   color: rgba(0, 0, 0, 0.95);
-  box-shadow: rgba(34, 36, 38, 0.35);
 }
 
 .ui.basic.buttons .active.button:hover,
@@ -1520,7 +1521,7 @@ input::selection {
 }
 
 .ui.basic.buttons .active.button {
-  box-shadow: rgba(34, 36, 38, 0.35) inset;
+  box-shadow: '' !important;
 }
 
 /* Standard Basic Inverted */
@@ -1808,7 +1809,6 @@ input::selection {
 .ui.attached.buttons {
   position: relative;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   border-radius: 0em;
@@ -1862,7 +1862,6 @@ input::selection {
 
 .ui[class*="left attached"].buttons {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-right: 0em;
@@ -1882,7 +1881,6 @@ input::selection {
 
 .ui[class*="right attached"].buttons {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 0em;
@@ -2006,7 +2004,6 @@ input::selection {
 .ui.fluid.vertical.buttons,
 .ui.fluid.vertical.buttons > .button {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: auto;
@@ -2808,7 +2805,7 @@ input::selection {
 .ui.inverted.green.button.active,
 .ui.inverted.green.buttons .button:active,
 .ui.inverted.green.button:active {
-  box-shadlightOw: none !important;
+  box-shadow: none !important;
   color: #FFFFFF;
 }
 
@@ -4170,6 +4167,8 @@ input::selection {
        Primary
 --------------------*/
 
+/*--- Standard ---*/
+
 .ui.primary.buttons .button,
 .ui.primary.button {
   background-color: #1560BD;
@@ -4204,15 +4203,58 @@ input::selection {
 }
 
 .ui.primary.buttons .active.button,
-.ui.primary.active.button {
+.ui.primary.buttons .active.button:active,
+.ui.primary.active.button,
+.ui.primary.button .active.button:active {
   background-color: #0753b1;
   color: #FFFFFF;
   text-shadow: none;
 }
 
+/* Basic */
+
+.ui.basic.primary.buttons .button,
+.ui.basic.primary.button {
+  box-shadow: 0px 0px 0px 1px #1560BD inset !important;
+  color: #1560BD !important;
+}
+
+.ui.basic.primary.buttons .button:hover,
+.ui.basic.primary.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #0b54ad inset !important;
+  color: #0b54ad !important;
+}
+
+.ui.basic.primary.buttons .button:focus,
+.ui.basic.primary.button:focus {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #034ca6 inset !important;
+  color: #0b54ad !important;
+}
+
+.ui.basic.primary.buttons .active.button,
+.ui.basic.primary.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #0753b1 inset !important;
+  color: #10498f !important;
+}
+
+.ui.basic.primary.buttons .button:active,
+.ui.basic.primary.button:active {
+  box-shadow: 0px 0px 0px 1px #10498f inset !important;
+  color: #10498f !important;
+}
+
+.ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
+}
+
 /*-------------------
       Secondary
 --------------------*/
+
+/* Standard */
 
 .ui.secondary.buttons .button,
 .ui.secondary.button {
@@ -4248,19 +4290,62 @@ input::selection {
 }
 
 .ui.secondary.buttons .active.button,
-.ui.secondary.active.button {
+.ui.secondary.buttons .active.button:active,
+.ui.secondary.active.button,
+.ui.secondary.button .active.button:active {
   background-color: #0d0d0d;
   color: #FFFFFF;
   text-shadow: none;
+}
+
+/* Basic */
+
+.ui.basic.secondary.buttons .button,
+.ui.basic.secondary.button {
+  box-shadow: 0px 0px 0px 1px #000000 inset !important;
+  color: #000000 !important;
+}
+
+.ui.basic.secondary.buttons .button:hover,
+.ui.basic.secondary.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #0d0d0d inset !important;
+  color: #0d0d0d !important;
+}
+
+.ui.basic.secondary.buttons .button:focus,
+.ui.basic.secondary.button:focus {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #141414 inset !important;
+  color: #0d0d0d !important;
+}
+
+.ui.basic.secondary.buttons .active.button,
+.ui.basic.secondary.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #0d0d0d inset !important;
+  color: #1a1a1a !important;
+}
+
+.ui.basic.secondary.buttons .button:active,
+.ui.basic.secondary.button:active {
+  box-shadow: 0px 0px 0px 1px #1a1a1a inset !important;
+  color: #1a1a1a !important;
+}
+
+.ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
 }
 
 /*---------------
     Positive
 ----------------*/
 
+/* Standard */
+
 .ui.positive.buttons .button,
 .ui.positive.button {
-  background-color: #21BA45 !important;
+  background-color: #21BA45;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -4272,40 +4357,82 @@ input::selection {
 
 .ui.positive.buttons .button:hover,
 .ui.positive.button:hover {
-  background-color: #16ab39 !important;
+  background-color: #16ab39;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.positive.buttons .button:focus,
 .ui.positive.button:focus {
-  background-color: #0ea432 !important;
+  background-color: #0ea432;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.positive.buttons .button:active,
 .ui.positive.button:active {
-  background-color: #198f35 !important;
+  background-color: #198f35;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.positive.buttons .active.button,
+.ui.positive.buttons .active.button:active,
 .ui.positive.active.button,
-.ui.positive.buttons .active.button:active {
+.ui.positive.button .active.button:active {
   background-color: #13ae38;
   color: #FFFFFF;
   text-shadow: none;
+}
+
+/* Basic */
+
+.ui.basic.positive.buttons .button,
+.ui.basic.positive.button {
+  box-shadow: 0px 0px 0px 1px #21BA45 inset !important;
+  color: #21BA45 !important;
+}
+
+.ui.basic.positive.buttons .button:hover,
+.ui.basic.positive.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #16ab39 inset !important;
+  color: #16ab39 !important;
+}
+
+.ui.basic.positive.buttons .button:focus,
+.ui.basic.positive.button:focus {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #0ea432 inset !important;
+  color: #16ab39 !important;
+}
+
+.ui.basic.positive.buttons .active.button,
+.ui.basic.positive.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #13ae38 inset !important;
+  color: #198f35 !important;
+}
+
+.ui.basic.positive.buttons .button:active,
+.ui.basic.positive.button:active {
+  box-shadow: 0px 0px 0px 1px #198f35 inset !important;
+  color: #198f35 !important;
+}
+
+.ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
 }
 
 /*---------------
      Negative
 ----------------*/
 
+/* Standard */
+
 .ui.negative.buttons .button,
 .ui.negative.button {
-  background-color: #bd1d15 !important;
+  background-color: #bd1d15;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -4317,31 +4444,71 @@ input::selection {
 
 .ui.negative.buttons .button:hover,
 .ui.negative.button:hover {
-  background-color: #ad130b !important;
+  background-color: #ad130b;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.negative.buttons .button:focus,
 .ui.negative.button:focus {
-  background-color: #a60b03 !important;
+  background-color: #a60b03;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.negative.buttons .button:active,
 .ui.negative.button:active {
-  background-color: #8f1610 !important;
+  background-color: #8f1610;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.negative.buttons .active.button,
+.ui.negative.buttons .active.button:active,
 .ui.negative.active.button,
-.ui.negative.buttons .active.button:active {
+.ui.negative.button .active.button:active {
   background-color: #b10f07;
   color: #FFFFFF;
   text-shadow: none;
+}
+
+/* Basic */
+
+.ui.basic.negative.buttons .button,
+.ui.basic.negative.button {
+  box-shadow: 0px 0px 0px 1px #bd1d15 inset !important;
+  color: #bd1d15 !important;
+}
+
+.ui.basic.negative.buttons .button:hover,
+.ui.basic.negative.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #ad130b inset !important;
+  color: #ad130b !important;
+}
+
+.ui.basic.negative.buttons .button:focus,
+.ui.basic.negative.button:focus {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #a60b03 inset !important;
+  color: #ad130b !important;
+}
+
+.ui.basic.negative.buttons .active.button,
+.ui.basic.negative.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 1px #b10f07 inset !important;
+  color: #8f1610 !important;
+}
+
+.ui.basic.negative.buttons .button:active,
+.ui.basic.negative.button:active {
+  box-shadow: 0px 0px 0px 1px #8f1610 inset !important;
+  color: #8f1610 !important;
+}
+
+.ui.buttons:not(.vertical) > .basic.primary.button:not(:first-child) {
+  margin-left: -1px;
 }
 
 /*******************************
@@ -4350,12 +4517,10 @@ input::selection {
 
 .ui.buttons {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   font-size: 0em;
@@ -4381,7 +4546,6 @@ input::selection {
 
 .ui.buttons .button {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   margin: 0em;
@@ -4410,12 +4574,10 @@ input::selection {
 
 .ui.vertical.buttons {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -4426,37 +4588,36 @@ input::selection {
   width: 100%;
   margin: 0px 0px 0px 0px;
   box-shadow: none;
+  border-radius: 0em;
 }
 
-.ui.vertical.buttons .button:first-child,
-.ui.vertical.buttons .mini.button:first-child,
-.ui.vertical.buttons .tiny.button:first-child,
-.ui.vertical.buttons .small.button:first-child,
-.ui.vertical.buttons .massive.button:first-child,
-.ui.vertical.buttons .huge.button:first-child {
-  border-radius: 0.28571429rem 0.28571429rem 0px 0px;
+.ui.vertical.buttons .button:first-child {
+  border-top-left-radius: 0.28571429rem;
+  border-top-right-radius: 0.28571429rem;
 }
 
-.ui.vertical.buttons .button:last-child,
-.ui.vertical.buttons .mini.button:last-child,
-.ui.vertical.buttons .tiny.button:last-child,
-.ui.vertical.buttons .small.button:last-child,
-.ui.vertical.buttons .massive.button:last-child,
-.ui.vertical.buttons .huge.button:last-child,
-.ui.vertical.buttons .gigantic.button:last-child {
+.ui.vertical.buttons .button:last-child {
   margin-bottom: 0px;
-  border-radius: 0px 0px 0.28571429rem 0.28571429rem;
+  border-bottom-left-radius: 0.28571429rem;
+  border-bottom-right-radius: 0.28571429rem;
+}
+
+.ui.vertical.buttons .button:only-child {
+  border-radius: 0.28571429rem;
 }
 
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Container
+ * # Semantic UI 2.2.10 - Container
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -4609,12 +4770,15 @@ input::selection {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Divider
+ * # Semantic UI 2.2.10 - Divider
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -4668,7 +4832,6 @@ input::selection {
   white-space: nowrap;
   height: auto;
   margin: '';
-  overflow: hidden;
   line-height: 1;
   text-align: center;
 }
@@ -4863,7 +5026,7 @@ input::selection {
 
 .ui.horizontal.divider:before,
 .ui.horizontal.divider:after {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC");
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
 }
 
 @media only screen and (max-width: 767px) {
@@ -4871,15 +5034,18 @@ input::selection {
   .ui.grid .stackable.row .ui.vertical.divider:before,
   .ui.stackable.grid .ui.vertical.divider:after,
   .ui.grid .stackable.row .ui.vertical.divider:after {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC");
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
   }
 }
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Form
+ * # Semantic UI 2.2.10 - Form
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -4922,7 +5088,7 @@ input::selection {
 
 .ui.form .fields .field {
   clear: both;
-  margin: 0em 0em 1em;
+  margin: 0em;
 }
 
 /*--------------------
@@ -4953,6 +5119,7 @@ input::selection {
 .ui.form input[type="tel"],
 .ui.form input[type="time"],
 .ui.form input[type="text"],
+.ui.form input[type="file"],
 .ui.form input[type="url"] {
   width: 100%;
   vertical-align: top;
@@ -4962,7 +5129,7 @@ input::selection {
 
 .ui.form ::-webkit-datetime-edit,
 .ui.form ::-webkit-inner-spin-button {
-  height: 1.2142em;
+  height: 1.21428571em;
 }
 
 .ui.form input:not([type]),
@@ -4975,14 +5142,15 @@ input::selection {
 .ui.form input[type="tel"],
 .ui.form input[type="time"],
 .ui.form input[type="text"],
+.ui.form input[type="file"],
 .ui.form input[type="url"] {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;
   tap-highlight-color: rgba(255, 255, 255, 0);
-  line-height: 1.2142em;
-  padding: 0.67861429em 1em;
+  line-height: 1.21428571em;
+  padding: 0.67857143em 1em;
   font-size: 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -5116,7 +5284,6 @@ input::selection {
 .ui.form .two.fields .ui.input input,
 .ui.form .wide.field .ui.input input {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   width: 0px;
@@ -5198,27 +5365,27 @@ input::selection {
 /* browsers require these rules separate */
 
 .ui.form ::-webkit-input-placeholder {
-  color: rgba(140, 140, 140, 0.87);
+  color: rgba(191, 191, 191, 0.87);
 }
 
-.ui.form ::-ms-input-placeholder {
-  color: rgba(140, 140, 140, 0.87);
+.ui.form :-ms-input-placeholder {
+  color: rgba(191, 191, 191, 0.87);
 }
 
 .ui.form ::-moz-placeholder {
-  color: rgba(140, 140, 140, 0.87);
+  color: rgba(191, 191, 191, 0.87);
 }
 
 .ui.form :focus::-webkit-input-placeholder {
-  color: rgba(89, 89, 89, 0.87);
+  color: rgba(115, 115, 115, 0.87);
 }
 
-.ui.form :focus::-ms-input-placeholder {
-  color: rgba(89, 89, 89, 0.87);
+.ui.form :focus:-ms-input-placeholder {
+  color: rgba(115, 115, 115, 0.87);
 }
 
 .ui.form :focus::-moz-placeholder {
-  color: rgba(89, 89, 89, 0.87);
+  color: rgba(115, 115, 115, 0.87);
 }
 
 /* Error Placeholder */
@@ -5227,8 +5394,8 @@ input::selection {
   color: #e7bdbc;
 }
 
-.ui.form .error ::-ms-input-placeholder {
-  color: #e7bdbc;
+.ui.form .error :-ms-input-placeholder {
+  color: #e7bdbc !important;
 }
 
 .ui.form .error ::-moz-placeholder {
@@ -5239,8 +5406,8 @@ input::selection {
   color: #da9796;
 }
 
-.ui.form .error :focus::-ms-input-placeholder {
-  color: #da9796;
+.ui.form .error :focus:-ms-input-placeholder {
+  color: #da9796 !important;
 }
 
 .ui.form .error :focus::-moz-placeholder {
@@ -5261,6 +5428,7 @@ input::selection {
 .ui.form input[type="tel"]:focus,
 .ui.form input[type="time"]:focus,
 .ui.form input[type="text"]:focus,
+.ui.form input[type="file"]:focus,
 .ui.form input[type="url"]:focus {
   color: rgba(0, 0, 0, 0.95);
   border-color: #85B7D9;
@@ -5288,9 +5456,12 @@ input::selection {
   display: block;
 }
 
+.ui.form.success .compact.success.message:not(:empty) {
+  display: inline-block;
+}
+
 .ui.form.success .icon.success.message:not(:empty) {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -5305,9 +5476,12 @@ input::selection {
   display: block;
 }
 
+.ui.form.warning .compact.warning.message:not(:empty) {
+  display: inline-block;
+}
+
 .ui.form.warning .icon.warning.message:not(:empty) {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -5322,9 +5496,12 @@ input::selection {
   display: block;
 }
 
+.ui.form.error .compact.error.message:not(:empty) {
+  display: inline-block;
+}
+
 .ui.form.error .icon.error.message:not(:empty) {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -5356,6 +5533,7 @@ input::selection {
 .ui.form .fields.error .field input[type="tel"],
 .ui.form .fields.error .field input[type="time"],
 .ui.form .fields.error .field input[type="text"],
+.ui.form .fields.error .field input[type="file"],
 .ui.form .fields.error .field input[type="url"],
 .ui.form .field.error textarea,
 .ui.form .field.error select,
@@ -5369,6 +5547,7 @@ input::selection {
 .ui.form .field.error input[type="tel"],
 .ui.form .field.error input[type="time"],
 .ui.form .field.error input[type="text"],
+.ui.form .field.error input[type="file"],
 .ui.form .field.error input[type="url"] {
   background: #FFF6F6;
   border-color: #E0B4B4;
@@ -5389,6 +5568,7 @@ input::selection {
 .ui.form .field.error input[type="tel"]:focus,
 .ui.form .field.error input[type="time"]:focus,
 .ui.form .field.error input[type="text"]:focus,
+.ui.form .field.error input[type="file"]:focus,
 .ui.form .field.error input[type="url"]:focus {
   background: #FFF6F6;
   border-color: #E0B4B4;
@@ -5495,7 +5675,8 @@ input::selection {
   opacity: 0.45;
 }
 
-.ui.form .field.disabled label {
+.ui.form .field.disabled > label,
+.ui.form .fields.disabled > label {
   opacity: 0.45;
 }
 
@@ -5510,7 +5691,7 @@ input::selection {
 .ui.loading.form {
   position: relative;
   cursor: default;
-  point-events: none;
+  pointer-events: none;
 }
 
 .ui.loading.form:before {
@@ -5614,7 +5795,12 @@ input::selection {
 .ui.form .inverted.segment .ui.checkbox label,
 .ui.form .inverted.segment .ui.checkbox .box,
 .ui.inverted.form .ui.checkbox label,
-.ui.inverted.form .ui.checkbox .box {
+.ui.inverted.form .ui.checkbox .box,
+.ui.inverted.form .inline.fields > label,
+.ui.inverted.form .inline.fields .field > label,
+.ui.inverted.form .inline.fields .field > p,
+.ui.inverted.form .inline.field > label,
+.ui.inverted.form .inline.field > p {
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -5630,6 +5816,7 @@ input::selection {
 .ui.inverted.form input[type="tel"],
 .ui.inverted.form input[type="time"],
 .ui.inverted.form input[type="text"],
+.ui.inverted.form input[type="file"],
 .ui.inverted.form input[type="url"] {
   background: #FFFFFF;
   border-color: rgba(255, 255, 255, 0.1);
@@ -5675,19 +5862,17 @@ input::selection {
 
 .ui.form .fields {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  margin: 0em -0.5em 1em;
 }
 
 .ui.form .fields > .field {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   padding-left: 0.5em;
@@ -5750,11 +5935,12 @@ input::selection {
 
 @media only screen and (max-width: 767px) {
   .ui.form .fields {
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
+  .ui[class*="equal width"].form .fields > .field,
+  .ui.form [class*="equal width"].fields > .field,
   .ui.form .two.fields > .fields,
   .ui.form .two.fields > .field,
   .ui.form .three.fields > .fields,
@@ -5775,17 +5961,7 @@ input::selection {
   .ui.form .ten.fields > .field {
     width: 100% !important;
     margin: 0em 0em 1em;
-    padding-left: 0%;
-    padding-right: 0%;
   }
-}
-
-.ui.form .fields .field:first-child {
-  padding-left: 0%;
-}
-
-.ui.form .fields .field:last-child {
-  padding-right: 0%;
 }
 
 /* Sizing Combinations */
@@ -5794,14 +5970,6 @@ input::selection {
   width: 6.25%;
   padding-left: 0.5em;
   padding-right: 0.5em;
-}
-
-.ui.form .fields .wide.field:first-child {
-  padding-left: 0%;
-}
-
-.ui.form .fields .wide.field:last-child {
-  padding-right: 0%;
 }
 
 .ui.form .one.wide.field {
@@ -5895,9 +6063,10 @@ input::selection {
   .ui.form .fields > .fifteen.wide.field,
   .ui.form .fields > .sixteen.wide.field {
     width: 100% !important;
-    margin: 0em 0em 1em;
-    padding-left: 0%;
-    padding-right: 0%;
+  }
+
+  .ui.form .fields {
+    margin-bottom: 0em;
   }
 }
 
@@ -5909,7 +6078,6 @@ input::selection {
 .ui.form [class*="equal width"].fields > .field {
   width: 100%;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
@@ -5921,9 +6089,7 @@ input::selection {
 .ui.form .inline.fields {
   margin: 0em 0em 1em;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
 }
 
@@ -5986,11 +6152,9 @@ input::selection {
 
 .ui.form .inline.fields .wide.field {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -6004,39 +6168,50 @@ input::selection {
         Sizes
 ---------------------*/
 
-/* Standard */
+.ui.mini.form {
+  font-size: 0.78571429rem;
+}
+
+.ui.tiny.form {
+  font-size: 0.85714286rem;
+}
 
 .ui.small.form {
   font-size: 0.92857143rem;
 }
 
-/* Medium */
-
 .ui.form {
   font-size: 1rem;
 }
-
-/* Large */
 
 .ui.large.form {
   font-size: 1.14285714rem;
 }
 
-/* Huge */
+.ui.big.form {
+  font-size: 1.28571429rem;
+}
 
 .ui.huge.form {
   font-size: 1.42857143rem;
 }
 
+.ui.massive.form {
+  font-size: 1.71428571rem;
+}
+
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Header
+ * # Semantic UI 2.2.10 - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -6050,17 +6225,17 @@ input::selection {
 
 .ui.header {
   border: none;
-  margin: calc(2rem -  0.14285em ) 0em 1rem;
+  margin: calc(2rem -  0.14285714em ) 0em 1rem;
   padding: 0em 0em;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
-  line-height: 1.2857em;
+  line-height: 1.28571429em;
   text-transform: none;
   color: rgba(0, 0, 0, 0.87);
 }
 
 .ui.header:first-child {
-  margin-top: -0.14285em;
+  margin-top: -0.14285714em;
 }
 
 .ui.header:last-child {
@@ -6089,7 +6264,7 @@ input::selection {
   display: table-cell;
   opacity: 1;
   font-size: 1.5em;
-  padding-top: 0.14285em;
+  padding-top: 0.14285714em;
   vertical-align: middle;
 }
 
@@ -6105,16 +6280,16 @@ input::selection {
         Image
 --------------------*/
 
-.ui.header > .image,
+.ui.header > .image:not(.icon),
 .ui.header > img {
   display: inline-block;
-  margin-top: 0.14285em;
+  margin-top: 0.14285714em;
   width: 2.5em;
   height: auto;
   vertical-align: middle;
 }
 
-.ui.header > .image:only-child,
+.ui.header > .image:not(.icon):only-child,
 .ui.header > img:only-child {
   margin-right: 0.75rem;
 }
@@ -6173,15 +6348,15 @@ h1.ui.header {
 }
 
 h2.ui.header {
-  font-size: 1.714rem;
+  font-size: 1.71428571rem;
 }
 
 h3.ui.header {
-  font-size: 1.28rem;
+  font-size: 1.28571429rem;
 }
 
 h4.ui.header {
-  font-size: 1.071rem;
+  font-size: 1.07142857rem;
 }
 
 h5.ui.header {
@@ -6220,15 +6395,15 @@ h5.ui.header .sub.header {
 }
 
 .ui.large.header {
-  font-size: 1.714em;
+  font-size: 1.71428571em;
 }
 
 .ui.medium.header {
-  font-size: 1.28em;
+  font-size: 1.28571429em;
 }
 
 .ui.small.header {
-  font-size: 1.071em;
+  font-size: 1.07142857em;
 }
 
 .ui.tiny.header {
@@ -6271,7 +6446,7 @@ h5.ui.header .sub.header {
 }
 
 .ui.small.sub.header {
-  font-size: 0.71428571em;
+  font-size: 0.78571429em;
 }
 
 .ui.sub.header {
@@ -6322,6 +6497,7 @@ h5.ui.header .sub.header {
 
 .ui.icon.header .content {
   display: block;
+  padding: 0em;
 }
 
 .ui.icon.header .circular.icon {
@@ -6720,7 +6896,7 @@ a.ui.inverted.grey.header:hover {
 }
 
 /*-------------------
-       Fittted
+       Fitted
 --------------------*/
 
 .ui.fitted.header {
@@ -6754,7 +6930,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.block.header {
   background: #F3F4F5;
-  padding: 0.71428571rem 1rem;
+  padding: 0.78571429rem 1rem;
   box-shadow: none;
   border: 1px solid #D4D4D5;
   border-radius: 0.28571429rem;
@@ -6786,7 +6962,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.attached.header {
   background: #FFFFFF;
-  padding: 0.71428571rem 1rem;
+  padding: 0.78571429rem 1rem;
   margin-left: -1px;
   margin-right: -1px;
   box-shadow: none;
@@ -6842,18 +7018,21 @@ a.ui.inverted.grey.header:hover {
 --------------------*/
 
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 1.28em;
+  font-size: 1.28571429em;
 }
 
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Icon
+ * # Semantic UI 2.2.10 - Icon
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -6865,8 +7044,8 @@ a.ui.inverted.grey.header:hover {
 
 @font-face {
   font-family: 'Icons';
-  src: url("themes/default/assets/fonts/icons.eot");
-  src: url("themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("themes/default/assets/fonts/icons.woff2") format('woff2'), url("themes/default/assets/fonts/icons.woff") format('woff'), url("themes/default/assets/fonts/icons.ttf") format('truetype'), url("themes/default/assets/fonts/icons.svg#icons") format('svg');
+  src: url("./themes/default/assets/fonts/icons.eot");
+  src: url("./themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("./themes/default/assets/fonts/icons.woff2") format('woff2'), url("./themes/default/assets/fonts/icons.woff") format('woff'), url("./themes/default/assets/fonts/icons.ttf") format('truetype'), url("./themes/default/assets/fonts/icons.svg#icons") format('svg');
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -6973,14 +7152,16 @@ i.fitted.icon {
          Link
 --------------------*/
 
-i.link.icon {
+i.link.icon,
+i.link.icons {
   cursor: pointer;
   opacity: 0.8;
   -webkit-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
 }
 
-i.link.icon:hover {
+i.link.icon:hover,
+i.link.icons:hover {
   opacity: 1 !important;
 }
 
@@ -7274,7 +7455,7 @@ i.inverted.black.icon {
   color: #545454 !important;
 }
 
-i.inverted.bordeblack.black.icon,
+i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
   background-color: #000000 !important;
   color: #FFFFFF !important;
@@ -7287,19 +7468,19 @@ i.inverted.circular.black.icon {
 i.mini.icon,
 i.mini.icons {
   line-height: 1;
-  font-size: 0.71428571rem;
+  font-size: 0.4em;
 }
 
 i.tiny.icon,
 i.tiny.icons {
   line-height: 1;
-  font-size: 0.85714286rem;
+  font-size: 0.5em;
 }
 
 i.small.icon,
 i.small.icons {
   line-height: 1;
-  font-size: 0.92857143em;
+  font-size: 0.75em;
 }
 
 i.icon,
@@ -7383,7 +7564,7 @@ i.icons .inverted.corner.icon {
 }
 
 /*
- * Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ * Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  * License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
@@ -7424,10 +7605,6 @@ i.icon.mail.outline:before {
   content: "\f003";
 }
 
-i.icon.external:before {
-  content: "\f08e";
-}
-
 i.icon.signal:before {
   content: "\f012";
 }
@@ -7456,6 +7633,10 @@ i.icon.tags:before {
   content: "\f02c";
 }
 
+i.icon.image:before {
+  content: "\f03e";
+}
+
 i.icon.calendar:before {
   content: "\f073";
 }
@@ -7464,12 +7645,16 @@ i.icon.comment:before {
   content: "\f075";
 }
 
+i.icon.shop:before {
+  content: "\f07a";
+}
+
 i.icon.comments:before {
   content: "\f086";
 }
 
-i.icon.shop:before {
-  content: "\f07a";
+i.icon.external:before {
+  content: "\f08e";
 }
 
 i.icon.privacy:before {
@@ -7478,6 +7663,14 @@ i.icon.privacy:before {
 
 i.icon.settings:before {
   content: "\f085";
+}
+
+i.icon.comments:before {
+  content: "\f086";
+}
+
+i.icon.external:before {
+  content: "\f08e";
 }
 
 i.icon.trophy:before {
@@ -7512,16 +7705,24 @@ i.icon.mail:before {
   content: "\f0e0";
 }
 
-i.icon.idea:before {
-  content: "\f0eb";
-}
-
 i.icon.dashboard:before {
   content: "\f0e4";
 }
 
+i.icon.comment.outline:before {
+  content: "\f0e5";
+}
+
+i.icon.comments.outline:before {
+  content: "\f0e6";
+}
+
 i.icon.sitemap:before {
   content: "\f0e8";
+}
+
+i.icon.idea:before {
+  content: "\f0eb";
 }
 
 i.icon.alarm:before {
@@ -7552,10 +7753,6 @@ i.icon.external.square:before {
   content: "\f14c";
 }
 
-i.icon.map:before {
-  content: "\f14e";
-}
-
 i.icon.bug:before {
   content: "\f188";
 }
@@ -7572,14 +7769,6 @@ i.icon.options:before {
   content: "\f1de";
 }
 
-i.icon.comment.outline:before {
-  content: "\f0e5";
-}
-
-i.icon.comments.outline:before {
-  content: "\f0e6";
-}
-
 i.icon.text.telephone:before {
   content: "\f1e4";
 }
@@ -7588,15 +7777,11 @@ i.icon.find:before {
   content: "\f1e5";
 }
 
-i.icon.wifi:before {
-  content: "\f1eb";
-}
-
-i.icon.alarm.slash:before {
+i.icon.alarm.mute:before {
   content: "\f1f6";
 }
 
-i.icon.alarm.slash.outline:before {
+i.icon.alarm.mute.outline:before {
   content: "\f1f7";
 }
 
@@ -7620,7 +7805,151 @@ i.icon.heartbeat:before {
   content: "\f21e";
 }
 
+i.icon.mouse.pointer:before {
+  content: "\f245";
+}
+
+i.icon.hourglass.empty:before {
+  content: "\f250";
+}
+
+i.icon.hourglass.start:before {
+  content: "\f251";
+}
+
+i.icon.hourglass.half:before {
+  content: "\f252";
+}
+
+i.icon.hourglass.end:before {
+  content: "\f253";
+}
+
+i.icon.hourglass.full:before {
+  content: "\f254";
+}
+
+i.icon.hand.pointer:before {
+  content: "\f25a";
+}
+
+i.icon.trademark:before {
+  content: "\f25c";
+}
+
+i.icon.registered:before {
+  content: "\f25d";
+}
+
+i.icon.creative.commons:before {
+  content: "\f25e";
+}
+
+i.icon.add.to.calendar:before {
+  content: "\f271";
+}
+
+i.icon.remove.from.calendar:before {
+  content: "\f272";
+}
+
+i.icon.delete.calendar:before {
+  content: "\f273";
+}
+
+i.icon.checked.calendar:before {
+  content: "\f274";
+}
+
+i.icon.industry:before {
+  content: "\f275";
+}
+
+i.icon.shopping.bag:before {
+  content: "\f290";
+}
+
+i.icon.shopping.basket:before {
+  content: "\f291";
+}
+
+i.icon.hashtag:before {
+  content: "\f292";
+}
+
+i.icon.percent:before {
+  content: "\f295";
+}
+
+i.icon.handshake:before {
+  content: "\f2b5";
+}
+
+i.icon.open.envelope:before {
+  content: "\f2b6";
+}
+
+i.icon.open.envelope.outline:before {
+  content: "\f2b7";
+}
+
+i.icon.address.book:before {
+  content: "\f2b9";
+}
+
+i.icon.address.book.outline:before {
+  content: "\f2ba";
+}
+
+i.icon.address.card:before {
+  content: "\f2bb";
+}
+
+i.icon.address.card.outline:before {
+  content: "\f2bc";
+}
+
+i.icon.id.badge:before {
+  content: "\f2c1";
+}
+
+i.icon.id.card:before {
+  content: "\f2c2";
+}
+
+i.icon.id.card.outline:before {
+  content: "\f2c3";
+}
+
+i.icon.podcast:before {
+  content: "\f2ce";
+}
+
+i.icon.window.maximize:before {
+  content: "\f2d0";
+}
+
+i.icon.window.minimize:before {
+  content: "\f2d1";
+}
+
+i.icon.window.restore:before {
+  content: "\f2d2";
+}
+
+i.icon.window.close:before {
+  content: "\f2d3";
+}
+
+i.icon.window.close.outline:before {
+  content: "\f2d4";
+}
+
 /* User Actions */
+
+i.icon.wait:before {
+  content: "\f017";
+}
 
 i.icon.download:before {
   content: "\f019";
@@ -7650,12 +7979,12 @@ i.icon.write:before {
   content: "\f040";
 }
 
-i.icon.theme:before {
-  content: "\f043";
-}
-
 i.icon.adjust:before {
   content: "\f042";
+}
+
+i.icon.theme:before {
+  content: "\f043";
 }
 
 i.icon.edit:before {
@@ -7722,12 +8051,12 @@ i.icon.call:before {
   content: "\f095";
 }
 
-i.icon.call.square:before {
-  content: "\f098";
-}
-
 i.icon.remove.bookmark:before {
   content: "\f097";
+}
+
+i.icon.call.square:before {
+  content: "\f098";
 }
 
 i.icon.unlock:before {
@@ -7778,6 +8107,14 @@ i.icon.unlock.alternate:before {
   content: "\f13e";
 }
 
+i.icon.write.square:before {
+  content: "\f14b";
+}
+
+i.icon.share.square:before {
+  content: "\f14d";
+}
+
 i.icon.archive:before {
   content: "\f187";
 }
@@ -7806,18 +8143,6 @@ i.icon.share.alternate.square:before {
   content: "\f1e1";
 }
 
-i.icon.wait:before {
-  content: "\f017";
-}
-
-i.icon.write.square:before {
-  content: "\f14b";
-}
-
-i.icon.share.square:before {
-  content: "\f14d";
-}
-
 i.icon.add.to.cart:before {
   content: "\f217";
 }
@@ -7834,6 +8159,26 @@ i.icon.remove.user:before {
   content: "\f235";
 }
 
+i.icon.object.group:before {
+  content: "\f247";
+}
+
+i.icon.object.ungroup:before {
+  content: "\f248";
+}
+
+i.icon.clone:before {
+  content: "\f24d";
+}
+
+i.icon.talk:before {
+  content: "\f27a";
+}
+
+i.icon.talk.outline:before {
+  content: "\f27b";
+}
+
 /* Messages */
 
 i.icon.help.circle:before {
@@ -7844,16 +8189,16 @@ i.icon.info.circle:before {
   content: "\f05a";
 }
 
-i.icon.warning:before {
-  content: "\f12a";
-}
-
 i.icon.warning.circle:before {
   content: "\f06a";
 }
 
 i.icon.warning.sign:before {
   content: "\f071";
+}
+
+i.icon.announcement:before {
+  content: "\f0a1";
 }
 
 i.icon.help:before {
@@ -7864,15 +8209,23 @@ i.icon.info:before {
   content: "\f129";
 }
 
-i.icon.announcement:before {
-  content: "\f0a1";
+i.icon.warning:before {
+  content: "\f12a";
 }
 
 i.icon.birthday:before {
   content: "\f1fd";
 }
 
+i.icon.help.circle.outline:before {
+  content: "\f29c";
+}
+
 /* Users */
+
+i.icon.user:before {
+  content: "\f007";
+}
 
 i.icon.users:before {
   content: "\f0c0";
@@ -7880,14 +8233,6 @@ i.icon.users:before {
 
 i.icon.doctor:before {
   content: "\f0f0";
-}
-
-i.icon.child:before {
-  content: "\f1ae";
-}
-
-i.icon.user:before {
-  content: "\f007";
 }
 
 i.icon.handicap:before {
@@ -7898,8 +8243,24 @@ i.icon.student:before {
   content: "\f19d";
 }
 
+i.icon.child:before {
+  content: "\f1ae";
+}
+
 i.icon.spy:before {
   content: "\f21b";
+}
+
+i.icon.user.circle:before {
+  content: "\f2bd";
+}
+
+i.icon.user.circle.outline:before {
+  content: "\f2be";
+}
+
+i.icon.user.outline:before {
+  content: "\f2c0";
 }
 
 /* Gender & Sexuality */
@@ -7960,7 +8321,61 @@ i.icon.neuter:before {
   content: "\f22c";
 }
 
+i.icon.genderless:before {
+  content: "\f22d";
+}
+
+/* Accessibility */
+
+i.icon.universal.access:before {
+  content: "\f29a";
+}
+
+i.icon.wheelchair:before {
+  content: "\f29b";
+}
+
+i.icon.blind:before {
+  content: "\f29d";
+}
+
+i.icon.audio.description:before {
+  content: "\f29e";
+}
+
+i.icon.volume.control.phone:before {
+  content: "\f2a0";
+}
+
+i.icon.braille:before {
+  content: "\f2a1";
+}
+
+i.icon.asl:before {
+  content: "\f2a3";
+}
+
+i.icon.assistive.listening.systems:before {
+  content: "\f2a2";
+}
+
+i.icon.deafness:before {
+  content: "\f2a4";
+}
+
+i.icon.sign.language:before {
+  content: "\f2a7";
+}
+
+i.icon.low.vision:before {
+  content: "\f2a8";
+}
+
 /* View Adjustment */
+
+i.icon.block.layout:before {
+  content: "\f009";
+}
 
 i.icon.grid.layout:before {
   content: "\f00a";
@@ -7968,10 +8383,6 @@ i.icon.grid.layout:before {
 
 i.icon.list.layout:before {
   content: "\f00b";
-}
-
-i.icon.block.layout:before {
-  content: "\f009";
 }
 
 i.icon.zoom:before {
@@ -8036,10 +8447,6 @@ i.icon.magnet:before {
   content: "\f076";
 }
 
-i.icon.legal:before {
-  content: "\f0e3";
-}
-
 i.icon.lemon:before {
   content: "\f094";
 }
@@ -8060,11 +8467,15 @@ i.icon.money:before {
   content: "\f0d6";
 }
 
+i.icon.legal:before {
+  content: "\f0e3";
+}
+
 i.icon.lightning:before {
   content: "\f0e7";
 }
 
-i.icon.rain:before {
+i.icon.umbrella:before {
   content: "\f0e9";
 }
 
@@ -8140,6 +8551,78 @@ i.icon.diamond:before {
   content: "\f219";
 }
 
+i.icon.sticky.note:before {
+  content: "\f249";
+}
+
+i.icon.sticky.note.outline:before {
+  content: "\f24a";
+}
+
+i.icon.law:before {
+  content: "\f24e";
+}
+
+i.icon.hand.peace:before {
+  content: "\f25b";
+}
+
+i.icon.hand.rock:before {
+  content: "\f255";
+}
+
+i.icon.hand.paper:before {
+  content: "\f256";
+}
+
+i.icon.hand.scissors:before {
+  content: "\f257";
+}
+
+i.icon.hand.lizard:before {
+  content: "\f258";
+}
+
+i.icon.hand.spock:before {
+  content: "\f259";
+}
+
+i.icon.tv:before {
+  content: "\f26c";
+}
+
+i.icon.thermometer.full:before {
+  content: "\f2c7";
+}
+
+i.icon.thermometer.three.quarters:before {
+  content: "\f2c8";
+}
+
+i.icon.thermometer.half:before {
+  content: "\f2c9";
+}
+
+i.icon.thermometer.quarter:before {
+  content: "\f2ca";
+}
+
+i.icon.thermometer.empty:before {
+  content: "\f2cb";
+}
+
+i.icon.shower:before {
+  content: "\f2cc";
+}
+
+i.icon.bathtub:before {
+  content: "\f2cd";
+}
+
+i.icon.snowflake:before {
+  content: "\f2dc";
+}
+
 /* Shapes */
 
 i.icon.crosshairs:before {
@@ -8150,12 +8633,16 @@ i.icon.asterisk:before {
   content: "\f069";
 }
 
+i.icon.square.outline:before {
+  content: "\f096";
+}
+
 i.icon.certificate:before {
   content: "\f0a3";
 }
 
-i.icon.circle:before {
-  content: "\f111";
+i.icon.square:before {
+  content: "\f0c8";
 }
 
 i.icon.quote.left:before {
@@ -8164,6 +8651,14 @@ i.icon.quote.left:before {
 
 i.icon.quote.right:before {
   content: "\f10e";
+}
+
+i.icon.spinner:before {
+  content: "\f110";
+}
+
+i.icon.circle:before {
+  content: "\f111";
 }
 
 i.icon.ellipsis.horizontal:before {
@@ -8188,14 +8683,6 @@ i.icon.circle.notched:before {
 
 i.icon.circle.thin:before {
   content: "\f1db";
-}
-
-i.icon.square.outline:before {
-  content: "\f096";
-}
-
-i.icon.square:before {
-  content: "\f0c8";
 }
 
 /* Item Selection */
@@ -8256,10 +8743,6 @@ i.icon.radio:before {
   content: "\f10c";
 }
 
-i.icon.selected.radio:before {
-  content: "\f192";
-}
-
 i.icon.minus.square:before {
   content: "\f146";
 }
@@ -8270,6 +8753,10 @@ i.icon.minus.square.outline:before {
 
 i.icon.check.square:before {
   content: "\f14a";
+}
+
+i.icon.selected.radio:before {
+  content: "\f192";
 }
 
 i.icon.plus.square.outline:before {
@@ -8500,14 +8987,40 @@ i.icon.toggle.left:before {
   content: "\f191";
 }
 
+/* Mobile */
+
+i.icon.tablet:before {
+  content: "\f10a";
+}
+
+i.icon.mobile:before {
+  content: "\f10b";
+}
+
+i.icon.battery.full:before {
+  content: "\f240";
+}
+
+i.icon.battery.high:before {
+  content: "\f241";
+}
+
+i.icon.battery.medium:before {
+  content: "\f242";
+}
+
+i.icon.battery.low:before {
+  content: "\f243";
+}
+
+i.icon.battery.empty:before {
+  content: "\f244";
+}
+
 /* Computer */
 
 i.icon.power:before {
   content: "\f011";
-}
-
-i.icon.trash:before {
-  content: "\f1f8";
 }
 
 i.icon.trash.outline:before {
@@ -8526,14 +9039,6 @@ i.icon.laptop:before {
   content: "\f109";
 }
 
-i.icon.tablet:before {
-  content: "\f10a";
-}
-
-i.icon.mobile:before {
-  content: "\f10b";
-}
-
 i.icon.game:before {
   content: "\f11b";
 }
@@ -8548,12 +9053,32 @@ i.icon.plug:before {
 
 /* File System */
 
+i.icon.trash:before {
+  content: "\f1f8";
+}
+
+i.icon.file.outline:before {
+  content: "\f016";
+}
+
 i.icon.folder:before {
   content: "\f07b";
 }
 
 i.icon.folder.open:before {
   content: "\f07c";
+}
+
+i.icon.file.text.outline:before {
+  content: "\f0f6";
+}
+
+i.icon.folder.outline:before {
+  content: "\f114";
+}
+
+i.icon.folder.open.outline:before {
+  content: "\f115";
 }
 
 i.icon.level.up:before {
@@ -8568,24 +9093,8 @@ i.icon.file:before {
   content: "\f15b";
 }
 
-i.icon.file.outline:before {
-  content: "\f016";
-}
-
 i.icon.file.text:before {
   content: "\f15c";
-}
-
-i.icon.file.text.outline:before {
-  content: "\f0f6";
-}
-
-i.icon.folder.outline:before {
-  content: "\f114";
-}
-
-i.icon.folder.open.outline:before {
-  content: "\f115";
 }
 
 i.icon.file.pdf.outline:before {
@@ -8626,12 +9135,16 @@ i.icon.file.code.outline:before {
 
 /* Technologies */
 
+i.icon.qrcode:before {
+  content: "\f029";
+}
+
 i.icon.barcode:before {
   content: "\f02a";
 }
 
-i.icon.qrcode:before {
-  content: "\f029";
+i.icon.rss:before {
+  content: "\f09e";
 }
 
 i.icon.fork:before {
@@ -8646,10 +9159,6 @@ i.icon.css3:before {
   content: "\f13c";
 }
 
-i.icon.rss:before {
-  content: "\f09e";
-}
-
 i.icon.rss.square:before {
   content: "\f143";
 }
@@ -8662,8 +9171,28 @@ i.icon.database:before {
   content: "\f1c0";
 }
 
+i.icon.wifi:before {
+  content: "\f1eb";
+}
+
 i.icon.server:before {
   content: "\f233";
+}
+
+i.icon.usb:before {
+  content: "\f287";
+}
+
+i.icon.bluetooth:before {
+  content: "\f293";
+}
+
+i.icon.bluetooth.alternative:before {
+  content: "\f294";
+}
+
+i.icon.microchip:before {
+  content: "\f2db";
 }
 
 /* Rating */
@@ -8802,6 +9331,22 @@ i.icon.closed.captioning:before {
   content: "\f20a";
 }
 
+i.icon.pause.circle:before {
+  content: "\f28b";
+}
+
+i.icon.pause.circle.outline:before {
+  content: "\f28c";
+}
+
+i.icon.stop.circle:before {
+  content: "\f28d";
+}
+
+i.icon.stop.circle.outline:before {
+  content: "\f28e";
+}
+
 /* Map, Locations, & Transportation */
 
 i.icon.marker:before {
@@ -8842,6 +9387,10 @@ i.icon.h:before {
 
 i.icon.location.arrow:before {
   content: "\f124";
+}
+
+i.icon.compass:before {
+  content: "\f14e";
 }
 
 i.icon.space.shuttle:before {
@@ -8908,6 +9457,22 @@ i.icon.subway:before {
   content: "\f239";
 }
 
+i.icon.map.pin:before {
+  content: "\f276";
+}
+
+i.icon.map.signs:before {
+  content: "\f277";
+}
+
+i.icon.map.outline:before {
+  content: "\f278";
+}
+
+i.icon.map:before {
+  content: "\f279";
+}
+
 /* Tables */
 
 i.icon.table:before {
@@ -8922,12 +9487,12 @@ i.icon.sort:before {
   content: "\f0dc";
 }
 
-i.icon.sort.ascending:before {
-  content: "\f0de";
-}
-
 i.icon.sort.descending:before {
   content: "\f0dd";
+}
+
+i.icon.sort.ascending:before {
+  content: "\f0de";
 }
 
 i.icon.sort.alphabet.ascending:before {
@@ -9048,7 +9613,7 @@ i.icon.paste:before {
   content: "\f0ea";
 }
 
-i.icon.unlink:before {
+i.icon.unlinkify:before {
   content: "\f127";
 }
 
@@ -9066,6 +9631,10 @@ i.icon.header:before {
 
 i.icon.paragraph:before {
   content: "\f1dd";
+}
+
+i.icon.text.cursor:before {
+  content: "\f246";
 }
 
 /* Currency */
@@ -9098,6 +9667,10 @@ i.icon.won:before {
   content: "\f159";
 }
 
+i.icon.bitcoin:before {
+  content: "\f15a";
+}
+
 i.icon.lira:before {
   content: "\f195";
 }
@@ -9110,10 +9683,6 @@ i.icon.shekel:before {
 
 i.icon.paypal:before {
   content: "\f1ed";
-}
-
-i.icon.paypal.card:before {
-  content: "\f1f4";
 }
 
 i.icon.google.wallet:before {
@@ -9136,8 +9705,24 @@ i.icon.american.express:before {
   content: "\f1f3";
 }
 
+i.icon.paypal.card:before {
+  content: "\f1f4";
+}
+
 i.icon.stripe:before {
   content: "\f1f5";
+}
+
+i.icon.japan.credit.bureau:before {
+  content: "\f24b";
+}
+
+i.icon.diners.club:before {
+  content: "\f24c";
+}
+
+i.icon.credit.card.alternative:before {
+  content: "\f283";
 }
 
 /* Networks and Websites*/
@@ -9162,7 +9747,7 @@ i.icon.twitter:before {
   content: "\f099";
 }
 
-i.icon.facebook:before {
+i.icon.facebook.f:before {
   content: "\f09a";
 }
 
@@ -9196,10 +9781,6 @@ i.icon.github.alternate:before {
 
 i.icon.maxcdn:before {
   content: "\f136";
-}
-
-i.icon.bitcoin:before {
-  content: "\f15a";
 }
 
 i.icon.youtube.square:before {
@@ -9274,7 +9855,7 @@ i.icon.linux:before {
   content: "\f17c";
 }
 
-i.icon.dribbble:before {
+i.icon.dribble:before {
   content: "\f17d";
 }
 
@@ -9314,7 +9895,7 @@ i.icon.stack.exchange:before {
   content: "\f18d";
 }
 
-i.icon.vimeo:before {
+i.icon.vimeo.square:before {
   content: "\f194";
 }
 
@@ -9514,6 +10095,14 @@ i.icon.skyatlas:before {
   content: "\f216";
 }
 
+i.icon.facebook:before {
+  content: "\f230";
+}
+
+i.icon.pinterest:before {
+  content: "\f231";
+}
+
 i.icon.whatsapp:before {
   content: "\f232";
 }
@@ -9524,6 +10113,250 @@ i.icon.viacoin:before {
 
 i.icon.medium:before {
   content: "\f23a";
+}
+
+i.icon.y.combinator:before {
+  content: "\f23b";
+}
+
+i.icon.optinmonster:before {
+  content: "\f23c";
+}
+
+i.icon.opencart:before {
+  content: "\f23d";
+}
+
+i.icon.expeditedssl:before {
+  content: "\f23e";
+}
+
+i.icon.gg:before {
+  content: "\f260";
+}
+
+i.icon.gg.circle:before {
+  content: "\f261";
+}
+
+i.icon.tripadvisor:before {
+  content: "\f262";
+}
+
+i.icon.odnoklassniki:before {
+  content: "\f263";
+}
+
+i.icon.odnoklassniki.square:before {
+  content: "\f264";
+}
+
+i.icon.pocket:before {
+  content: "\f265";
+}
+
+i.icon.wikipedia:before {
+  content: "\f266";
+}
+
+i.icon.safari:before {
+  content: "\f267";
+}
+
+i.icon.chrome:before {
+  content: "\f268";
+}
+
+i.icon.firefox:before {
+  content: "\f269";
+}
+
+i.icon.opera:before {
+  content: "\f26a";
+}
+
+i.icon.internet.explorer:before {
+  content: "\f26b";
+}
+
+i.icon.contao:before {
+  content: "\f26d";
+}
+
+i.icon.\35 00px:before {
+  content: "\f26e";
+}
+
+i.icon.amazon:before {
+  content: "\f270";
+}
+
+i.icon.houzz:before {
+  content: "\f27c";
+}
+
+i.icon.vimeo:before {
+  content: "\f27d";
+}
+
+i.icon.black.tie:before {
+  content: "\f27e";
+}
+
+i.icon.fonticons:before {
+  content: "\f280";
+}
+
+i.icon.reddit.alien:before {
+  content: "\f281";
+}
+
+i.icon.microsoft.edge:before {
+  content: "\f282";
+}
+
+i.icon.codiepie:before {
+  content: "\f284";
+}
+
+i.icon.modx:before {
+  content: "\f285";
+}
+
+i.icon.fort.awesome:before {
+  content: "\f286";
+}
+
+i.icon.product.hunt:before {
+  content: "\f288";
+}
+
+i.icon.mixcloud:before {
+  content: "\f289";
+}
+
+i.icon.scribd:before {
+  content: "\f28a";
+}
+
+i.icon.gitlab:before {
+  content: "\f296";
+}
+
+i.icon.wpbeginner:before {
+  content: "\f297";
+}
+
+i.icon.wpforms:before {
+  content: "\f298";
+}
+
+i.icon.envira.gallery:before {
+  content: "\f299";
+}
+
+i.icon.glide:before {
+  content: "\f2a5";
+}
+
+i.icon.glide.g:before {
+  content: "\f2a6";
+}
+
+i.icon.viadeo:before {
+  content: "\f2a9";
+}
+
+i.icon.viadeo.square:before {
+  content: "\f2aa";
+}
+
+i.icon.snapchat:before {
+  content: "\f2ab";
+}
+
+i.icon.snapchat.ghost:before {
+  content: "\f2ac";
+}
+
+i.icon.snapchat.square:before {
+  content: "\f2ad";
+}
+
+i.icon.pied.piper.hat:before {
+  content: "\f2ae";
+}
+
+i.icon.first.order:before {
+  content: "\f2b0";
+}
+
+i.icon.yoast:before {
+  content: "\f2b1";
+}
+
+i.icon.themeisle:before {
+  content: "\f2b2";
+}
+
+i.icon.google.plus.circle:before {
+  content: "\f2b3";
+}
+
+i.icon.font.awesome:before {
+  content: "\f2b4";
+}
+
+i.icon.linode:before {
+  content: "\f2b8";
+}
+
+i.icon.quora:before {
+  content: "\f2c4";
+}
+
+i.icon.free.code.camp:before {
+  content: "\f2c5";
+}
+
+i.icon.telegram:before {
+  content: "\f2c6";
+}
+
+i.icon.bandcamp:before {
+  content: "\f2d5";
+}
+
+i.icon.grav:before {
+  content: "\f2d6";
+}
+
+i.icon.etsy:before {
+  content: "\f2d7";
+}
+
+i.icon.imdb:before {
+  content: "\f2d8";
+}
+
+i.icon.ravelry:before {
+  content: "\f2d9";
+}
+
+i.icon.eercast:before {
+  content: "\f2da";
+}
+
+i.icon.superpowers:before {
+  content: "\f2dd";
+}
+
+i.icon.wpexplorer:before {
+  content: "\f2de";
+}
+
+i.icon.meetup:before {
+  content: "\f2e0";
 }
 
 /*******************************
@@ -9560,26 +10393,6 @@ i.icon.delete:before {
 
 i.icon.x:before {
   content: "\f00d";
-}
-
-i.icon.user.times:before {
-  content: "\f235";
-}
-
-i.icon.user.close:before {
-  content: "\f235";
-}
-
-i.icon.user.cancel:before {
-  content: "\f235";
-}
-
-i.icon.user.delete:before {
-  content: "\f235";
-}
-
-i.icon.user.x:before {
-  content: "\f235";
 }
 
 i.icon.zoom.in:before {
@@ -9646,6 +10459,10 @@ i.icon.plus.circle:before {
   content: "\f055";
 }
 
+i.icon.question.circle:before {
+  content: "\f059";
+}
+
 i.icon.dont:before {
   content: "\f05e";
 }
@@ -9658,28 +10475,32 @@ i.icon.add:before {
   content: "\f067";
 }
 
-i.icon.eye:before {
-  content: "\f06e";
+i.icon.exclamation.circle:before {
+  content: "\f06a";
 }
 
 i.icon.attention:before {
   content: "\f06a";
 }
 
-i.icon.cart:before {
-  content: "\f07a";
+i.icon.eye:before {
+  content: "\f06e";
+}
+
+i.icon.exclamation.triangle:before {
+  content: "\f071";
 }
 
 i.icon.shuffle:before {
   content: "\f074";
 }
 
-i.icon.talk:before {
+i.icon.chat:before {
   content: "\f075";
 }
 
-i.icon.chat:before {
-  content: "\f075";
+i.icon.cart:before {
+  content: "\f07a";
 }
 
 i.icon.shopping.cart:before {
@@ -9688,18 +10509,6 @@ i.icon.shopping.cart:before {
 
 i.icon.bar.graph:before {
   content: "\f080";
-}
-
-i.icon.area.graph:before {
-  content: "\f1fe";
-}
-
-i.icon.pie.graph:before {
-  content: "\f200";
-}
-
-i.icon.line.graph:before {
-  content: "\f201";
 }
 
 i.icon.key:before {
@@ -9738,12 +10547,12 @@ i.icon.winner:before {
   content: "\f091";
 }
 
-i.icon.bookmark.outline:before {
-  content: "\f097";
-}
-
 i.icon.phone:before {
   content: "\f095";
+}
+
+i.icon.bookmark.outline:before {
+  content: "\f097";
 }
 
 i.icon.phone.square:before {
@@ -9762,20 +10571,8 @@ i.icon.bullhorn:before {
   content: "\f0a1";
 }
 
-i.icon.bell:before {
-  content: "\f0f3";
-}
-
 i.icon.bell.outline:before {
   content: "\f0a2";
-}
-
-i.icon.bell.slash:before {
-  content: "\f1f6";
-}
-
-i.icon.bell.slash.outline:before {
-  content: "\f1f7";
 }
 
 i.icon.hand.outline.right:before {
@@ -9808,6 +10605,14 @@ i.icon.briefcase:before {
 
 i.icon.group:before {
   content: "\f0c0";
+}
+
+i.icon.linkify:before {
+  content: "\f0c1";
+}
+
+i.icon.chain:before {
+  content: "\f0c1";
 }
 
 i.icon.flask:before {
@@ -9874,7 +10679,7 @@ i.icon.conversation:before {
   content: "\f0e6";
 }
 
-i.icon.umbrella:before {
+i.icon.rain:before {
   content: "\f0e9";
 }
 
@@ -9884,6 +10689,10 @@ i.icon.clipboard:before {
 
 i.icon.lightbulb:before {
   content: "\f0eb";
+}
+
+i.icon.bell:before {
+  content: "\f0f3";
 }
 
 i.icon.ambulance:before {
@@ -9914,18 +10723,6 @@ i.icon.circle.outline:before {
   content: "\f10c";
 }
 
-i.icon.intersex:before {
-  content: "\f10c";
-}
-
-i.icon.asexual:before {
-  content: "\f10c";
-}
-
-i.icon.spinner:before {
-  content: "\f110";
-}
-
 i.icon.gamepad:before {
   content: "\f11b";
 }
@@ -9934,8 +10731,16 @@ i.icon.star.half.full:before {
   content: "\f123";
 }
 
+i.icon.broken.chain:before {
+  content: "\f127";
+}
+
 i.icon.question:before {
   content: "\f128";
+}
+
+i.icon.exclamation:before {
+  content: "\f12a";
 }
 
 i.icon.eraser:before {
@@ -9966,14 +10771,6 @@ i.icon.pencil.square:before {
   content: "\f14b";
 }
 
-i.icon.compass:before {
-  content: "\f14e";
-}
-
-i.icon.amex:before {
-  content: "\f1f3";
-}
-
 i.icon.eur:before {
   content: "\f153";
 }
@@ -9990,13 +10787,22 @@ i.icon.inr:before {
   content: "\f156";
 }
 
-i.icon.cny:before,
-i.icon.rmb:before,
+i.icon.cny:before {
+  content: "\f157";
+}
+
+i.icon.rmb:before {
+  content: "\f157";
+}
+
 i.icon.jpy:before {
   content: "\f157";
 }
 
-i.icon.rouble:before,
+i.icon.rouble:before {
+  content: "\f158";
+}
+
 i.icon.rub:before {
   content: "\f158";
 }
@@ -10009,13 +10815,8 @@ i.icon.btc:before {
   content: "\f15a";
 }
 
-i.icon.sheqel:before,
-i.icon.ils:before {
-  content: "\f20b";
-}
-
-i.icon.try:before {
-  content: "\f195";
+i.icon.gratipay:before {
+  content: "\f184";
 }
 
 i.icon.zip:before {
@@ -10026,48 +10827,100 @@ i.icon.dot.circle.outline:before {
   content: "\f192";
 }
 
-i.icon.sliders:before {
-  content: "\f1de";
-}
-
-i.icon.wi-fi:before {
-  content: "\f1eb";
+i.icon.try:before {
+  content: "\f195";
 }
 
 i.icon.graduation:before {
   content: "\f19d";
 }
 
-i.icon.weixin:before {
-  content: "\f1d7";
-}
-
-i.icon.binoculars:before {
-  content: "\f1e5";
-}
-
-i.icon.gratipay:before {
-  content: "\f184";
-}
-
-i.icon.genderless:before {
+i.icon.circle.outline:before {
   content: "\f1db";
 }
 
-i.icon.teletype:before {
-  content: "\f1e4";
+i.icon.sliders:before {
+  content: "\f1de";
 }
 
-i.icon.power.cord:before {
-  content: "\f1e6";
+i.icon.weixin:before {
+  content: "\f1d7";
 }
 
 i.icon.tty:before {
   content: "\f1e4";
 }
 
+i.icon.teletype:before {
+  content: "\f1e4";
+}
+
+i.icon.binoculars:before {
+  content: "\f1e5";
+}
+
+i.icon.power.cord:before {
+  content: "\f1e6";
+}
+
+i.icon.wi-fi:before {
+  content: "\f1eb";
+}
+
+i.icon.visa.card:before {
+  content: "\f1f0";
+}
+
+i.icon.mastercard.card:before {
+  content: "\f1f1";
+}
+
+i.icon.discover.card:before {
+  content: "\f1f2";
+}
+
+i.icon.amex:before {
+  content: "\f1f3";
+}
+
+i.icon.american.express.card:before {
+  content: "\f1f3";
+}
+
+i.icon.stripe.card:before {
+  content: "\f1f5";
+}
+
+i.icon.bell.slash:before {
+  content: "\f1f6";
+}
+
+i.icon.bell.slash.outline:before {
+  content: "\f1f7";
+}
+
+i.icon.area.graph:before {
+  content: "\f1fe";
+}
+
+i.icon.pie.graph:before {
+  content: "\f200";
+}
+
+i.icon.line.graph:before {
+  content: "\f201";
+}
+
 i.icon.cc:before {
   content: "\f20a";
+}
+
+i.icon.sheqel:before {
+  content: "\f20b";
+}
+
+i.icon.ils:before {
+  content: "\f20b";
 }
 
 i.icon.plus.cart:before {
@@ -10092,6 +10945,10 @@ i.icon.mars:before {
 
 i.icon.mercury:before {
   content: "\f223";
+}
+
+i.icon.intersex:before {
+  content: "\f224";
 }
 
 i.icon.venus.double:before {
@@ -10126,35 +10983,306 @@ i.icon.mars.vertical:before {
   content: "\f22a";
 }
 
-i.icon.mars.horizontal:before {
-  content: "\f22b";
-}
-
 i.icon.mars.stroke.vertical:before {
   content: "\f22a";
+}
+
+i.icon.mars.horizontal:before {
+  content: "\f22b";
 }
 
 i.icon.mars.stroke.horizontal:before {
   content: "\f22b";
 }
 
-i.icon.facebook.official {
+i.icon.asexual:before {
+  content: "\f22d";
+}
+
+i.icon.facebook.official:before {
   content: "\f230";
 }
 
-i.icon.pinterest.official {
-  content: "\f231";
+i.icon.user.plus:before {
+  content: "\f234";
+}
+
+i.icon.user.times:before {
+  content: "\f235";
+}
+
+i.icon.user.close:before {
+  content: "\f235";
+}
+
+i.icon.user.cancel:before {
+  content: "\f235";
+}
+
+i.icon.user.delete:before {
+  content: "\f235";
+}
+
+i.icon.user.x:before {
+  content: "\f235";
 }
 
 i.icon.bed:before {
   content: "\f236";
 }
+
+i.icon.yc:before {
+  content: "\f23b";
+}
+
+i.icon.ycombinator:before {
+  content: "\f23b";
+}
+
+i.icon.battery.four:before {
+  content: "\f240";
+}
+
+i.icon.battery.three:before {
+  content: "\f241";
+}
+
+i.icon.battery.three.quarters:before {
+  content: "\f241";
+}
+
+i.icon.battery.two:before {
+  content: "\f242";
+}
+
+i.icon.battery.half:before {
+  content: "\f242";
+}
+
+i.icon.battery.one:before {
+  content: "\f243";
+}
+
+i.icon.battery.quarter:before {
+  content: "\f243";
+}
+
+i.icon.battery.zero:before {
+  content: "\f244";
+}
+
+i.icon.i.cursor:before {
+  content: "\f246";
+}
+
+i.icon.jcb:before {
+  content: "\f24b";
+}
+
+i.icon.japan.credit.bureau.card:before {
+  content: "\f24b";
+}
+
+i.icon.diners.club.card:before {
+  content: "\f24c";
+}
+
+i.icon.balance:before {
+  content: "\f24e";
+}
+
+i.icon.hourglass.outline:before {
+  content: "\f250";
+}
+
+i.icon.hourglass.zero:before {
+  content: "\f250";
+}
+
+i.icon.hourglass.one:before {
+  content: "\f251";
+}
+
+i.icon.hourglass.two:before {
+  content: "\f252";
+}
+
+i.icon.hourglass.three:before {
+  content: "\f253";
+}
+
+i.icon.hourglass.four:before {
+  content: "\f254";
+}
+
+i.icon.grab:before {
+  content: "\f255";
+}
+
+i.icon.hand.victory:before {
+  content: "\f25b";
+}
+
+i.icon.tm:before {
+  content: "\f25c";
+}
+
+i.icon.r.circle:before {
+  content: "\f25d";
+}
+
+i.icon.television:before {
+  content: "\f26c";
+}
+
+i.icon.five.hundred.pixels:before {
+  content: "\f26e";
+}
+
+i.icon.calendar.plus:before {
+  content: "\f271";
+}
+
+i.icon.calendar.minus:before {
+  content: "\f272";
+}
+
+i.icon.calendar.times:before {
+  content: "\f273";
+}
+
+i.icon.calendar.check:before {
+  content: "\f274";
+}
+
+i.icon.factory:before {
+  content: "\f275";
+}
+
+i.icon.commenting:before {
+  content: "\f27a";
+}
+
+i.icon.commenting.outline:before {
+  content: "\f27b";
+}
+
+i.icon.edge:before {
+  content: "\f282";
+}
+
+i.icon.ms.edge:before {
+  content: "\f282";
+}
+
+i.icon.wordpress.beginner:before {
+  content: "\f297";
+}
+
+i.icon.wordpress.forms:before {
+  content: "\f298";
+}
+
+i.icon.envira:before {
+  content: "\f299";
+}
+
+i.icon.question.circle.outline:before {
+  content: "\f29c";
+}
+
+i.icon.assistive.listening.devices:before {
+  content: "\f2a2";
+}
+
+i.icon.als:before {
+  content: "\f2a2";
+}
+
+i.icon.ald:before {
+  content: "\f2a2";
+}
+
+i.icon.asl.interpreting:before {
+  content: "\f2a3";
+}
+
+i.icon.deaf:before {
+  content: "\f2a4";
+}
+
+i.icon.american.sign.language.interpreting:before {
+  content: "\f2a3";
+}
+
+i.icon.hard.of.hearing:before {
+  content: "\f2a4";
+}
+
+i.icon.signing:before {
+  content: "\f2a7";
+}
+
+i.icon.new.pied.piper:before {
+  content: "\f2ae";
+}
+
+i.icon.theme.isle:before {
+  content: "\f2b2";
+}
+
+i.icon.google.plus.official:before {
+  content: "\f2b3";
+}
+
+i.icon.fa:before {
+  content: "\f2b4";
+}
+
+i.icon.vcard:before {
+  content: "\f2bb";
+}
+
+i.icon.vcard.outline:before {
+  content: "\f2bc";
+}
+
+i.icon.drivers.license:before {
+  content: "\f2c2";
+}
+
+i.icon.drivers.license.outline:before {
+  content: "\f2c3";
+}
+
+i.icon.thermometer:before {
+  content: "\f2c7";
+}
+
+i.icon.s15:before {
+  content: "\f2cd";
+}
+
+i.icon.bath:before {
+  content: "\f2cd";
+}
+
+i.icon.times.rectangle:before {
+  content: "\f2d3";
+}
+
+i.icon.times.rectangle.outline:before {
+  content: "\f2d4";
+}
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Image
+ * # Semantic UI 2.2.10 - Image
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -10190,6 +11318,12 @@ img.ui.image {
 .ui.hidden.images,
 .ui.hidden.image {
   display: none;
+}
+
+.ui.hidden.transition.images,
+.ui.hidden.transition.image {
+  display: block;
+  visibility: hidden;
 }
 
 .ui.disabled.images,
@@ -10372,7 +11506,7 @@ img.ui.bordered.image {
 .ui.mini.image {
   width: 35px;
   height: auto;
-  font-size: 0.71428571rem;
+  font-size: 0.78571429rem;
 }
 
 .ui.tiny.images .image,
@@ -10457,12 +11591,15 @@ img.ui.bordered.image {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Item
+ * # Semantic UI 2.2.10 - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -10478,7 +11615,6 @@ img.ui.bordered.image {
 
 .ui.items > .item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 1em 0em;
@@ -10542,7 +11678,6 @@ img.ui.bordered.image {
 .ui.items > .item > .image {
   position: relative;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   display: block;
@@ -10550,8 +11685,8 @@ img.ui.bordered.image {
   margin: 0em;
   padding: 0em;
   max-height: '';
-  -webkit-align-self: top;
   -ms-flex-item-align: top;
+  -ms-grid-row-align: top;
   align-self: top;
 }
 
@@ -10574,7 +11709,6 @@ img.ui.bordered.image {
 .ui.items > .item > .content {
   display: block;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background: none;
@@ -10600,8 +11734,8 @@ img.ui.bordered.image {
   width: auto;
   display: block;
   margin-left: 0em;
-  -webkit-align-self: top;
   -ms-flex-item-align: top;
+  -ms-grid-row-align: top;
   align-self: top;
   padding-left: 1.5em;
 }
@@ -10637,8 +11771,8 @@ img.ui.bordered.image {
 ---------------*/
 
 .ui.items > .item .content img {
-  -webkit-align-self: middle;
   -ms-flex-item-align: middle;
+  -ms-grid-row-align: middle;
   align-self: middle;
   width: '';
 }
@@ -10842,32 +11976,31 @@ img.ui.bordered.image {
   }
 }
 
-/* Mobily Only */
+/* Mobile Only */
 
 @media only screen and (max-width: 767px) {
-  .ui.items > .item {
+  .ui.items:not(.unstackable) > .item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     margin: 2em 0em;
   }
 
-  .ui.items > .item > .image {
+  .ui.items:not(.unstackable) > .item > .image {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .ui.items > .item > .image,
-  .ui.items > .item > .image > img {
+  .ui.items:not(.unstackable) > .item > .image,
+  .ui.items:not(.unstackable) > .item > .image > img {
     max-width: 100% !important;
     width: auto !important;
     max-height: 250px !important;
   }
 
-  .ui.items > .item > .image + .content {
+  .ui.items:not(.unstackable) > .item > .image + .content {
     display: block;
     padding: 1.5em 0em 0em;
   }
@@ -10882,19 +12015,17 @@ img.ui.bordered.image {
 --------------------*/
 
 .ui.items > .item > .image + [class*="top aligned"].content {
-  -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
 .ui.items > .item > .image + [class*="middle aligned"].content {
-  -webkit-align-self: center;
   -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 
 .ui.items > .item > .image + [class*="bottom aligned"].content {
-  -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
@@ -10966,15 +12097,29 @@ img.ui.bordered.image {
   font-size: 1em;
 }
 
+/*---------------
+   Unstackable
+----------------*/
+
+@media only screen and (max-width: 767px) {
+  .ui.unstackable.items > .item > .image,
+  .ui.unstackable.items > .item > .image > img {
+    width: 125px !important;
+  }
+}
+
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+    User Variable Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Label
+ * # Semantic UI 2.2.10 - Label
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -11113,7 +12258,8 @@ a.ui.label {
 
 /* Padding on next content after a label */
 
-.ui.top.attached.label:first-child + :not(.attached) {
+.ui.top.attached.label:first-child + :not(.attached),
+.ui.top.attached.label + [class*="right floated"] + * {
   margin-top: 2rem !important;
 }
 
@@ -11366,11 +12512,11 @@ a.ui.label {
 /* Inside Table */
 
 .ui.table td > .ui.ribbon.label {
-  left: calc( -0.71428571em  -  1.2em );
+  left: calc( -0.78571429em  -  1.2em );
 }
 
 .ui.table td > .ui[class*="right ribbon"].label {
-  left: calc(100% +  0.71428571em  +  1.2em );
+  left: calc(100% +  0.78571429em  +  1.2em );
   padding-left: 0.833em;
 }
 
@@ -11494,7 +12640,7 @@ a.ui.active.label:ActiveHover:before {
 --------------------*/
 
 .ui.labels.visible .label,
-.ui.label.visible {
+.ui.label.visible:not(.dropdown) {
   display: inline-block !important;
 }
 
@@ -12390,12 +13536,15 @@ a.ui.basic.label:hover {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - List
+ * # Semantic UI 2.2.10 - List
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -13008,11 +14157,18 @@ ul.ui.list li:before,
   position: absolute;
   top: auto;
   left: auto;
+  font-weight: normal;
   margin-left: -1.25rem;
   content: '•';
   opacity: 1;
   color: inherit;
   vertical-align: top;
+}
+
+ul.ui.list li:before,
+.ui.bulleted.list .list > a.item:before,
+.ui.bulleted.list > a.item:before {
+  color: rgba(0, 0, 0, 0.87);
 }
 
 ul.ui.list ul,
@@ -13204,12 +14360,18 @@ ol.ui.horizontal.list li:before,
   margin-left: 0em;
 }
 
+.ui.divided.horizontal.list > .item:not(:first-child) {
+  padding-left: 0.5em;
+}
+
+.ui.divided.horizontal.list > .item:not(:last-child) {
+  padding-right: 0.5em;
+}
+
 .ui.divided.horizontal.list > .item {
   border-top: none;
   border-left: 1px solid rgba(34, 36, 38, 0.15);
   margin: 0em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
   line-height: 0.6;
 }
 
@@ -13334,36 +14496,41 @@ ol.ui.horizontal.list li:before,
        Relaxed
 --------------------*/
 
-.ui.relaxed.list:not(.horizontal) > .item {
+.ui.relaxed.list:not(.horizontal) > .item:not(:first-child) {
   padding-top: 0.42857143em;
+}
+
+.ui.relaxed.list:not(.horizontal) > .item:not(:last-child) {
   padding-bottom: 0.42857143em;
 }
 
-.ui.relaxed.list:not(.horizontal) .list > .item {
-  padding-top: 0.21428571em;
-  padding-bottom: 0.21428571em;
+.ui.horizontal.relaxed.list .list > .item:not(:first-child),
+.ui.horizontal.relaxed.list > .item:not(:first-child) {
+  padding-left: 1rem;
 }
 
-.ui.horizontal.relaxed.list > .item {
-  padding-left: 1rem;
+.ui.horizontal.relaxed.list .list > .item:not(:last-child),
+.ui.horizontal.relaxed.list > .item:not(:last-child) {
   padding-right: 1rem;
 }
 
 /* Very Relaxed */
 
-.ui[class*="very relaxed"].list:not(.horizontal) > .item {
+.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:first-child) {
   padding-top: 0.85714286em;
+}
+
+.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:last-child) {
   padding-bottom: 0.85714286em;
 }
 
-.ui[class*="very relaxed"].list:not(.horizontal) .list > .item {
-  padding-top: 0.28571429em;
-  padding-bottom: 0.28571429em;
+.ui.horizontal[class*="very relaxed"].list .list > .item:not(:first-child),
+.ui.horizontal[class*="very relaxed"].list > .item:not(:first-child) {
+  padding-left: 1.5rem;
 }
 
-.ui.horizontal[class*="very relaxed"].list .list > .item,
-.ui.horizontal[class*="very relaxed"].list > .item {
-  padding-left: 1.5rem;
+.ui.horizontal[class*="very relaxed"].list .list > .item:not(:last-child),
+.ui.horizontal[class*="very relaxed"].list > .item:not(:last-child) {
   padding-right: 1.5rem;
 }
 
@@ -13372,7 +14539,7 @@ ol.ui.horizontal.list li:before,
 --------------------*/
 
 .ui.mini.list {
-  font-size: 0.71428571em;
+  font-size: 0.78571429em;
 }
 
 .ui.tiny.list {
@@ -13405,7 +14572,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.mini.horizontal.list .list > .item,
 .ui.mini.horizontal.list > .item {
-  font-size: 0.71428571rem;
+  font-size: 0.78571429rem;
 }
 
 .ui.tiny.horizontal.list .list > .item,
@@ -13446,12 +14613,15 @@ ol.ui.horizontal.list li:before,
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+    User Variable Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Modal
+ * # Semantic UI 2.2.10 - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -13535,7 +14705,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.modal > .header:not(.ui) {
   font-size: 1.42857143rem;
-  line-height: 1.2857em;
+  line-height: 1.28571429em;
   font-weight: bold;
 }
 
@@ -13554,12 +14724,10 @@ ol.ui.horizontal.list li:before,
 
 .ui.modal > .image.content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
 }
@@ -13569,30 +14737,29 @@ ol.ui.horizontal.list li:before,
 .ui.modal > .content > .image {
   display: block;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: '';
-  -webkit-align-self: top;
   -ms-flex-item-align: top;
+  -ms-grid-row-align: top;
   align-self: top;
 }
 
 .ui.modal > [class*="top aligned"] {
-  -webkit-align-self: top;
   -ms-flex-item-align: top;
+  -ms-grid-row-align: top;
   align-self: top;
 }
 
 .ui.modal > [class*="middle aligned"] {
-  -webkit-align-self: middle;
   -ms-flex-item-align: middle;
+  -ms-grid-row-align: middle;
   align-self: middle;
 }
 
 .ui.modal > [class*="stretched"] {
-  -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
   align-self: stretch;
 }
 
@@ -13601,19 +14768,17 @@ ol.ui.horizontal.list li:before,
 .ui.modal > .content > .description {
   display: block;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   min-width: 0px;
-  -webkit-align-self: top;
   -ms-flex-item-align: top;
+  -ms-grid-row-align: top;
   align-self: top;
 }
 
 .ui.modal > .content > .icon + .description,
 .ui.modal > .content > .image + .description {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   min-width: '';
@@ -13724,7 +14889,6 @@ ol.ui.horizontal.list li:before,
   .ui.modal .image.content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
@@ -14000,12 +15164,15 @@ ol.ui.horizontal.list li:before,
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Rail
+ * # Semantic UI 2.2.10 - Rail
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -14083,7 +15250,7 @@ ol.ui.horizontal.list li:before,
 ---------------*/
 
 .ui.close.rail {
-  width: 301px;
+  width: calc( 300px  +  1em );
 }
 
 .ui.close.left.rail {
@@ -14097,7 +15264,7 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.very.close.rail {
-  width: 300.5px;
+  width: calc( 300px  +  0.5em );
 }
 
 .ui.very.close.left.rail {
@@ -14124,19 +15291,50 @@ ol.ui.horizontal.list li:before,
      Sizing
 ---------------*/
 
+.ui.mini.rail {
+  font-size: 0.78571429rem;
+}
+
+.ui.tiny.rail {
+  font-size: 0.85714286rem;
+}
+
+.ui.small.rail {
+  font-size: 0.92857143rem;
+}
+
 .ui.rail {
   font-size: 1rem;
+}
+
+.ui.large.rail {
+  font-size: 1.14285714rem;
+}
+
+.ui.big.rail {
+  font-size: 1.28571429rem;
+}
+
+.ui.huge.rail {
+  font-size: 1.42857143rem;
+}
+
+.ui.massive.rail {
+  font-size: 1.71428571rem;
 }
 
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Segment
+ * # Semantic UI 2.2.10 - Segment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -14372,6 +15570,14 @@ ol.ui.horizontal.list li:before,
   padding: 3em;
 }
 
+/* Padded vertical */
+
+.ui.padded.segment.vertical.segment,
+.ui[class*="very padded"].vertical.segment {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /*-------------------
        Compact
 --------------------*/
@@ -14384,7 +15590,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.compact.segments {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
@@ -14393,7 +15598,6 @@ ol.ui.horizontal.list li:before,
 .ui.segments .compact.segment {
   display: block;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
@@ -14416,7 +15620,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.raised.segments,
 .ui.raised.segment {
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
 }
 
 /*******************************
@@ -14428,7 +15632,6 @@ ol.ui.horizontal.list li:before,
 .ui.segments {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
@@ -14479,6 +15682,12 @@ ol.ui.horizontal.list li:before,
   border-radius: 0em 0em 0.28571429rem 0.28571429rem;
 }
 
+/* Only */
+
+.ui.segments:not(.horizontal) > .segment:only-child {
+  border-radius: 0.28571429rem;
+}
+
 /* Nested Group */
 
 .ui.segments > .ui.segments {
@@ -14498,12 +15707,10 @@ ol.ui.horizontal.list li:before,
 
 .ui.horizontal.segments {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: transparent;
@@ -14531,7 +15738,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.horizontal.segments > .segment {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
   -ms-flex: 1 1 0px;
   /* Solves #2550 MS Flex */
@@ -14574,7 +15780,7 @@ ol.ui.horizontal.list li:before,
 .ui.loading.segment {
   position: relative;
   cursor: default;
-  point-events: none;
+  pointer-events: none;
   text-shadow: none !important;
   color: transparent !important;
   -webkit-transition: all 0s linear;
@@ -14921,7 +16127,7 @@ ol.ui.horizontal.list li:before,
   border: 1px solid #D4D4D5;
 }
 
-.ui.attached + .ui.attached.segment:not(.top) {
+.ui.attached:not(.message) + .ui.attached.segment:not(.top) {
   border-top: none;
 }
 
@@ -14954,15 +16160,62 @@ ol.ui.horizontal.list li:before,
   margin-bottom: 0em;
 }
 
+/*-------------------
+        Size
+--------------------*/
+
+.ui.mini.segments .segment,
+.ui.mini.segment {
+  font-size: 0.78571429rem;
+}
+
+.ui.tiny.segments .segment,
+.ui.tiny.segment {
+  font-size: 0.85714286rem;
+}
+
+.ui.small.segments .segment,
+.ui.small.segment {
+  font-size: 0.92857143rem;
+}
+
+.ui.segments .segment,
+.ui.segment {
+  font-size: 1rem;
+}
+
+.ui.large.segments .segment,
+.ui.large.segment {
+  font-size: 1.14285714rem;
+}
+
+.ui.big.segments .segment,
+.ui.big.segment {
+  font-size: 1.28571429rem;
+}
+
+.ui.huge.segments .segment,
+.ui.huge.segment {
+  font-size: 1.42857143rem;
+}
+
+.ui.massive.segments .segment,
+.ui.massive.segment {
+  font-size: 1.71428571rem;
+}
+
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Table
+ * # Semantic UI 2.2.10 - Table
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -15018,7 +16271,7 @@ ol.ui.horizontal.list li:before,
   background: #F9FAFB;
   text-align: inherit;
   color: rgba(0, 0, 0, 0.87);
-  padding: 0.92857143em 0.71428571em;
+  padding: 0.92857143em 0.78571429em;
   vertical-align: inherit;
   font-style: none;
   font-weight: bold;
@@ -15055,7 +16308,7 @@ ol.ui.horizontal.list li:before,
   background: #F9FAFB;
   text-align: inherit;
   color: rgba(0, 0, 0, 0.87);
-  padding: 0.71428571em 0.71428571em;
+  padding: 0.78571429em 0.78571429em;
   vertical-align: middle;
   font-style: normal;
   font-weight: normal;
@@ -15091,7 +16344,7 @@ ol.ui.horizontal.list li:before,
 /* Table Cells */
 
 .ui.table td {
-  padding: 0.71428571em 0.71428571em;
+  padding: 0.78571429em 0.78571429em;
   text-align: inherit;
 }
 
@@ -15250,10 +16503,17 @@ ol.ui.horizontal.list li:before,
 
 /* Highlight Defining Column */
 
-.ui.definition.table tr td:first-child {
+.ui.definition.table tr td:first-child:not(.ignored),
+.ui.definition.table tr td.definition {
   background: rgba(0, 0, 0, 0.03);
   font-weight: bold;
   color: rgba(0, 0, 0, 0.95);
+  text-transform: '';
+  box-shadow: '';
+  text-align: '';
+  font-size: 1em;
+  padding-left: '';
+  padding-right: '';
 }
 
 /* Fix 2nd Column */
@@ -15499,7 +16759,7 @@ ol.ui.horizontal.list li:before,
 .ui.table tbody tr td.selectable > a:not(.ui) {
   display: block;
   color: inherit;
-  padding: 0.71428571em 0.71428571em;
+  padding: 0.78571429em 0.78571429em;
 }
 
 /* Other States */
@@ -15605,6 +16865,13 @@ ol.ui.horizontal.list li:before,
 .ui.inverted.striped.table > tr:nth-child(2n),
 .ui.inverted.striped.table tbody tr:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Allow striped active hover */
+
+.ui.striped.selectable.selectable.selectable.table tbody tr.active:hover {
+  background: #EFEFEF !important;
+  color: rgba(0, 0, 0, 0.95) !important;
 }
 
 /*--------------
@@ -16204,12 +17471,15 @@ ol.ui.horizontal.list li:before,
 .ui.large.table {
   font-size: 1.1em;
 }
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Grid
+ * # Semantic UI 2.2.10 - Grid
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -16221,19 +17491,15 @@ ol.ui.horizontal.list li:before,
 
 .ui.grid {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
   padding: 0em;
@@ -16294,23 +17560,18 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .row {
   position: relative;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: inherit;
-  -webkit-justify-content: inherit;
   -ms-flex-pack: inherit;
   justify-content: inherit;
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
   width: 100% !important;
@@ -16369,7 +17630,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.grid .row + .ui.divider {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 1rem 1rem;
@@ -17320,14 +18580,13 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .centered.row {
   text-align: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.ui.centered.grid > .column:not(.aligned):not(.row),
-.ui.centered.grid > .row > .column:not(.aligned),
-.ui.grid .centered.row > .column:not(.aligned) {
+.ui.centered.grid > .column:not(.aligned):not(.justified):not(.row),
+.ui.centered.grid > .row > .column:not(.aligned):not(.justified),
+.ui.grid .centered.row > .column:not(.aligned):not(.justified) {
   text-align: left;
 }
 
@@ -17429,6 +18688,12 @@ ol.ui.horizontal.list li:before,
 .ui.divided.grid:not([class*="vertically divided"]) > .column:first-child,
 .ui.divided.grid:not([class*="vertically divided"]) > .row > .column:first-child {
   box-shadow: none;
+}
+
+/* No space on top of first row */
+
+.ui[class*="vertically divided"].grid > .row:first-child > .column {
+  margin-top: 0em;
 }
 
 /* Divided Row */
@@ -17571,11 +18836,9 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .row > [class*="top aligned"].column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   vertical-align: top;
-  -webkit-align-self: flex-start !important;
   -ms-flex-item-align: start !important;
   align-self: flex-start !important;
 }
@@ -17589,12 +18852,11 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .row > [class*="middle aligned"].column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   vertical-align: middle;
-  -webkit-align-self: center !important;
   -ms-flex-item-align: center !important;
+  -ms-grid-row-align: center !important;
   align-self: center !important;
 }
 
@@ -17607,11 +18869,9 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .row > [class*="bottom aligned"].column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   vertical-align: bottom;
-  -webkit-align-self: flex-end !important;
   -ms-flex-item-align: end !important;
   align-self: flex-end !important;
 }
@@ -17624,15 +18884,12 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .stretched.column:not(.row),
 .ui.grid > .row > .stretched.column {
   display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
   display: -ms-inline-flexbox !important;
   display: inline-flex !important;
-  -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -17643,7 +18900,6 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .stretched.column:not(.row) > *,
 .ui.grid > .row > .stretched.column > * {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
@@ -17658,10 +18914,10 @@ ol.ui.horizontal.list li:before,
 .ui[class*="left aligned"].grid > .row > .column,
 .ui.grid > [class*="left aligned"].row > .column,
 .ui.grid > [class*="left aligned"].column.column,
-.ui.grid > .row > [class*="left aligned"].column {
+.ui.grid > .row > [class*="left aligned"].column.column {
   text-align: left;
-  -webkit-align-self: inherit;
   -ms-flex-item-align: inherit;
+  -ms-grid-row-align: inherit;
   align-self: inherit;
 }
 
@@ -17671,16 +18927,15 @@ ol.ui.horizontal.list li:before,
 .ui[class*="center aligned"].grid > .row > .column,
 .ui.grid > [class*="center aligned"].row > .column,
 .ui.grid > [class*="center aligned"].column.column,
-.ui.grid > .row > [class*="center aligned"].column {
+.ui.grid > .row > [class*="center aligned"].column.column {
   text-align: center;
-  -webkit-align-self: inherit;
   -ms-flex-item-align: inherit;
+  -ms-grid-row-align: inherit;
   align-self: inherit;
 }
 
 .ui[class*="center aligned"].grid {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -17691,10 +18946,10 @@ ol.ui.horizontal.list li:before,
 .ui[class*="right aligned"].grid > .row > .column,
 .ui.grid > [class*="right aligned"].row > .column,
 .ui.grid > [class*="right aligned"].column.column,
-.ui.grid > .row > [class*="right aligned"].column {
+.ui.grid > .row > [class*="right aligned"].column.column {
   text-align: right;
-  -webkit-align-self: inherit;
   -ms-flex-item-align: inherit;
+  -ms-grid-row-align: inherit;
   align-self: inherit;
 }
 
@@ -17704,7 +18959,7 @@ ol.ui.horizontal.list li:before,
 .ui.justified.grid > .row > .column,
 .ui.grid > .justified.row > .column,
 .ui.grid > .justified.column.column,
-.ui.grid > .row > .justified.column {
+.ui.grid > .row > .justified.column.column {
   text-align: justify;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -17860,7 +19115,6 @@ ol.ui.horizontal.list li:before,
 .ui.grid > [class*="equal width"].row > .column {
   display: inline-block;
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
@@ -17869,7 +19123,6 @@ ol.ui.horizontal.list li:before,
 .ui[class*="equal width"].grid > .row > .wide.column,
 .ui.grid > [class*="equal width"].row > .wide.column {
   -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
 }
@@ -17886,7 +19139,6 @@ ol.ui.horizontal.list li:before,
   .ui.grid > [class*="mobile reversed"].row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
@@ -17895,7 +19147,6 @@ ol.ui.horizontal.list li:before,
   .ui.stackable[class*="mobile reversed"] {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
@@ -17941,7 +19192,6 @@ ol.ui.horizontal.list li:before,
   .ui.grid > [class*="tablet reversed"].row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
@@ -17949,7 +19199,6 @@ ol.ui.horizontal.list li:before,
   .ui[class*="tablet vertically reversed"].grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
@@ -17995,7 +19244,6 @@ ol.ui.horizontal.list li:before,
   .ui.grid > [class*="computer reversed"].row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
@@ -18003,7 +19251,6 @@ ol.ui.horizontal.list li:before,
   .ui[class*="computer vertically reversed"].grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
@@ -18158,7 +19405,7 @@ ol.ui.horizontal.list li:before,
   }
 }
 
-/* Mobily Only */
+/* Mobile Only */
 
 @media only screen and (max-width: 767px) {
   .ui.grid > .doubling.row,
@@ -18496,6 +19743,10 @@ ol.ui.horizontal.list li:before,
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*
  * # Semantic - Menu
  * http://github.com/semantic-org/semantic-ui/
@@ -18517,7 +19768,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.menu {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0em;
@@ -18556,7 +19806,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.menu:not(.vertical) > .menu {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -18567,11 +19816,9 @@ ol.ui.horizontal.list li:before,
 
 .ui.menu:not(.vertical) .item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
@@ -18583,7 +19830,6 @@ ol.ui.horizontal.list li:before,
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   -webkit-user-select: none;
@@ -18655,8 +19901,8 @@ ol.ui.horizontal.list li:before,
   position: relative;
   top: 0em;
   margin: -0.5em 0em;
-  padding-bottom: 0.71428571em;
-  padding-top: 0.71428571em;
+  padding-bottom: 0.78571429em;
+  padding-top: 0.78571429em;
   font-size: 1em;
 }
 
@@ -18667,16 +19913,13 @@ ol.ui.horizontal.list li:before,
 .ui.menu > .grid,
 .ui.menu > .container {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: inherit;
-  -webkit-align-items: inherit;
   -ms-flex-align: inherit;
   align-items: inherit;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: inherit;
   -ms-flex-direction: inherit;
   flex-direction: inherit;
 }
@@ -18720,18 +19963,6 @@ ol.ui.horizontal.list li:before,
 }
 
 /*--------------
-     Popup
----------------*/
-
-.ui.menu .ui.popup {
-  display: none;
-}
-
-.ui.menu .ui.visible.popup {
-  display: block;
-}
-
-/*--------------
     Dropdowns
 ---------------*/
 
@@ -18754,7 +19985,6 @@ ol.ui.horizontal.list li:before,
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
-  -webkit-flex-direction: column !important;
   -ms-flex-direction: column !important;
   flex-direction: column !important;
 }
@@ -18765,7 +19995,7 @@ ol.ui.horizontal.list li:before,
   margin: 0;
   text-align: left;
   font-size: 1em !important;
-  padding: 0.71428571em 1.14285714em !important;
+  padding: 0.78571429em 1.14285714em !important;
   background: transparent !important;
   color: rgba(0, 0, 0, 0.87) !important;
   text-transform: none !important;
@@ -18832,12 +20062,19 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.vertical.menu .dropdown.item .menu {
-  top: 0% !important;
   left: 100%;
   min-width: 0;
   margin: 0em 0em 0em 0em;
   box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
   border-radius: 0em 0.28571429rem 0.28571429rem 0.28571429rem;
+}
+
+.ui.vertical.menu .dropdown.item.upward .menu {
+  bottom: 0;
+}
+
+.ui.vertical.menu .dropdown.item:not(.upward) .menu {
+  top: 0;
 }
 
 .ui.vertical.menu .active.dropdown.item {
@@ -18863,7 +20100,7 @@ ol.ui.horizontal.list li:before,
   background: #999999;
   color: #FFFFFF;
   margin-left: 1em;
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 
 .ui.vertical.menu .item > .label {
@@ -18871,11 +20108,11 @@ ol.ui.horizontal.list li:before,
   color: #FFFFFF;
   margin-top: -0.15em;
   margin-bottom: -0.15em;
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 
 .ui.menu .item > .floating.label {
-  padding: 0.3em 0.71428571em;
+  padding: 0.3em 0.78571429em;
 }
 
 /*--------------
@@ -19009,7 +20246,6 @@ Floated Menu / Item
 .ui.menu:not(.vertical) .left.item,
 .ui.menu:not(.vertical) .left.menu {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: auto !important;
@@ -19020,7 +20256,6 @@ Floated Menu / Item
 .ui.menu:not(.vertical) .right.item,
 .ui.menu:not(.vertical) .right.menu {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-left: auto !important;
@@ -19042,7 +20277,6 @@ Floated Menu / Item
   display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   background: #FFFFFF;
@@ -19094,8 +20328,8 @@ Floated Menu / Item
   top: 0%;
   left: 0px;
   width: 100%;
-  background: rgba(34, 36, 38, 0.1);
   height: 1px;
+  background: rgba(34, 36, 38, 0.1);
 }
 
 .ui.vertical.menu .item:first-child:before {
@@ -19209,7 +20443,9 @@ Floated Menu / Item
 .ui.tabular.menu + .attached:not(.top).segment,
 .ui.tabular.menu + .attached:not(.top).segment + .attached:not(.top).segment {
   border-top: none;
-  margin: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
   width: 100%;
 }
 
@@ -19315,7 +20551,6 @@ Floated Menu / Item
 .ui.pagination.menu {
   margin: 0em;
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
@@ -19368,12 +20603,12 @@ Floated Menu / Item
 /* Item */
 
 .ui.secondary.menu .item {
-  -webkit-align-self: center;
   -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   box-shadow: none;
   border: none;
-  padding: 0.71428571em 0.92857143em;
+  padding: 0.78571429em 0.92857143em;
   margin: 0em 0.35714286em;
   background: none;
   -webkit-transition: color 0.1s ease;
@@ -19512,7 +20747,6 @@ Floated Menu / Item
   border-bottom-color: transparent;
   border-bottom-style: solid;
   border-radius: 0em;
-  -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
   margin: 0em 0em -2px;
@@ -19622,7 +20856,8 @@ Floated Menu / Item
 
 /* Hover */
 
-.ui.secondary.inverted.pointing.menu .item:hover {
+.ui.secondary.inverted.pointing.menu .link.item:hover,
+.ui.secondary.inverted.pointing.menu a.item:hover {
   color: rgba(0, 0, 0, 0.95);
 }
 
@@ -19648,8 +20883,8 @@ Floated Menu / Item
 .ui.text.menu .item {
   border-radius: 0px;
   box-shadow: none;
-  -webkit-align-self: center;
   -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   margin: 0em 0em;
   padding: 0.35714286em 0.5em;
@@ -19705,6 +20940,8 @@ Floated Menu / Item
 
 .ui.vertical.text.menu .item {
   margin: 0.57142857em 0em;
+  padding-left: 0em;
+  padding-right: 0em;
 }
 
 .ui.vertical.text.menu .item > i.icon {
@@ -19846,7 +21083,6 @@ Floated Menu / Item
   min-width: 6em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -19878,7 +21114,6 @@ Floated Menu / Item
   .ui.stackable.menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
@@ -19894,8 +21129,18 @@ Floated Menu / Item
     bottom: 0px;
     left: 0px;
     width: 100%;
-    background: rgba(34, 36, 38, 0.1);
     height: 1px;
+    background: rgba(34, 36, 38, 0.1);
+  }
+
+  .ui.stackable.menu .left.menu,
+  .ui.stackable.menu .left.item {
+    margin-right: 0 !important;
+  }
+
+  .ui.stackable.menu .right.menu,
+  .ui.stackable.menu .right.item {
+    margin-left: 0 !important;
   }
 }
 
@@ -20050,8 +21295,7 @@ Floated Menu / Item
 /*--- Pressed ---*/
 
 .ui.inverted.menu a.item:active,
-.ui.inverted.menu .link.item:active,
-.ui.inverted.menu a.item:active {
+.ui.inverted.menu .link.item:active {
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
@@ -20328,7 +21572,6 @@ Floated Menu / Item
 
 .ui.compact.menu {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0em;
@@ -20377,7 +21620,6 @@ Floated Menu / Item
   margin-right: 0em !important;
   text-align: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -20661,6 +21903,26 @@ Floated Menu / Item
      Sizes
 ---------------*/
 
+/* Mini */
+
+.ui.mini.menu {
+  font-size: 0.78571429rem;
+}
+
+.ui.mini.vertical.menu {
+  width: 9rem;
+}
+
+/* Tiny */
+
+.ui.tiny.menu {
+  font-size: 0.85714286rem;
+}
+
+.ui.tiny.vertical.menu {
+  width: 11rem;
+}
+
 /* Small */
 
 .ui.small.menu {
@@ -20684,7 +21946,7 @@ Floated Menu / Item
 /* Large */
 
 .ui.large.menu {
-  font-size: 1.14285714rem;
+  font-size: 1.07142857rem;
 }
 
 .ui.large.vertical.menu {
@@ -20694,22 +21956,45 @@ Floated Menu / Item
 /* Huge */
 
 .ui.huge.menu {
-  font-size: 1.42857143rem;
+  font-size: 1.14285714rem;
 }
 
 .ui.huge.vertical.menu {
   width: 20rem;
 }
 
+/* Big */
+
+.ui.big.menu {
+  font-size: 1.21428571rem;
+}
+
+.ui.big.vertical.menu {
+  width: 22rem;
+}
+
+/* Massive */
+
+.ui.massive.menu {
+  font-size: 1.28571429rem;
+}
+
+.ui.massive.vertical.menu {
+  width: 25rem;
+}
+
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Checkbox
+ * # Semantic UI 2.2.10 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -20900,14 +22185,14 @@ Floated Menu / Item
   Indeterminate
 ---------------*/
 
-.ui.checkbox input:indeterminate ~ .box:before,
-.ui.checkbox input:indeterminate ~ label:before {
+.ui.checkbox input:not([type=radio]):indeterminate ~ .box:before,
+.ui.checkbox input:not([type=radio]):indeterminate ~ label:before {
   background: #FFFFFF;
   border-color: rgba(34, 36, 38, 0.35);
 }
 
-.ui.checkbox input:indeterminate ~ .box:after,
-.ui.checkbox input:indeterminate ~ label:after {
+.ui.checkbox input:not([type=radio]):indeterminate ~ .box:after,
+.ui.checkbox input:not([type=radio]):indeterminate ~ label:after {
   opacity: 1;
   color: rgba(0, 0, 0, 0.95);
 }
@@ -20916,16 +22201,16 @@ Floated Menu / Item
   Active Focus
 ---------------*/
 
-.ui.checkbox input:indeterminate:focus ~ .box:before,
-.ui.checkbox input:indeterminate:focus ~ label:before,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:before,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:before,
 .ui.checkbox input:checked:focus ~ .box:before,
 .ui.checkbox input:checked:focus ~ label:before {
   background: #FFFFFF;
   border-color: #96C8DA;
 }
 
-.ui.checkbox input:indeterminate:focus ~ .box:after,
-.ui.checkbox input:indeterminate:focus ~ label:after,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ .box:after,
+.ui.checkbox input:not([type=radio]):indeterminate:focus ~ label:after,
 .ui.checkbox input:checked:focus ~ .box:after,
 .ui.checkbox input:checked:focus ~ label:after {
   color: rgba(0, 0, 0, 0.95);
@@ -20948,7 +22233,7 @@ Floated Menu / Item
 .ui.disabled.checkbox label,
 .ui.checkbox input[disabled] ~ .box:after,
 .ui.checkbox input[disabled] ~ label {
-  cursor: default;
+  cursor: default !important;
   opacity: 0.5;
   color: #000000;
 }
@@ -21231,6 +22516,7 @@ Floated Menu / Item
   border: none;
   top: 0rem;
   background: rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   width: 3.5rem;
   height: 1.5rem;
   border-radius: 500rem;
@@ -21260,6 +22546,7 @@ Floated Menu / Item
 .ui.toggle.checkbox input ~ .box:after,
 .ui.toggle.checkbox input ~ label:after {
   left: -0.05rem;
+  box-shadow: none;
 }
 
 /* Focus */
@@ -21293,6 +22580,7 @@ Floated Menu / Item
 .ui.toggle.checkbox input:checked ~ .box:after,
 .ui.toggle.checkbox input:checked ~ label:after {
   left: 2.15rem;
+  box-shadow: none;
 }
 
 /* Active Focus */
@@ -21336,7 +22624,7 @@ Floated Menu / Item
 
 @font-face {
   font-family: 'Checkbox';
-  src: url("data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBD8AAAC8AAAAYGNtYXAYVtCJAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zn4huwUAAAF4AAABYGhlYWQGPe1ZAAAC2AAAADZoaGVhB30DyAAAAxAAAAAkaG10eBBKAEUAAAM0AAAAHGxvY2EAmgESAAADUAAAABBtYXhwAAkALwAAA2AAAAAgbmFtZSC8IugAAAOAAAABknBvc3QAAwAAAAAFFAAAACAAAwMTAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADoAgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6AL//f//AAAAAAAg6AD//f//AAH/4xgEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAEUAUQO7AvgAGgAAARQHAQYjIicBJjU0PwE2MzIfAQE2MzIfARYVA7sQ/hQQFhcQ/uMQEE4QFxcQqAF2EBcXEE4QAnMWEP4UEBABHRAXFhBOEBCoAXcQEE4QFwAAAAABAAABbgMlAkkAFAAAARUUBwYjISInJj0BNDc2MyEyFxYVAyUQEBf9SRcQEBAQFwK3FxAQAhJtFxAQEBAXbRcQEBAQFwAAAAABAAAASQMlA24ALAAAARUUBwYrARUUBwYrASInJj0BIyInJj0BNDc2OwE1NDc2OwEyFxYdATMyFxYVAyUQEBfuEBAXbhYQEO4XEBAQEBfuEBAWbhcQEO4XEBACEm0XEBDuFxAQEBAX7hAQF20XEBDuFxAQEBAX7hAQFwAAAQAAAAIAAHRSzT9fDzz1AAsEAAAAAADRsdR3AAAAANGx1HcAAAAAA7sDbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAADuwABAAAAAAAAAAAAAAAAAAAABwQAAAAAAAAAAAAAAAIAAAAEAABFAyUAAAMlAAAAAAAAAAoAFAAeAE4AcgCwAAEAAAAHAC0AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhWZXJzaW9uIDIuMABWAGUAcgBzAGkAbwBuACAAMgAuADBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhDaGVja2JveABDAGgAZQBjAGsAYgBvAHhSZWd1bGFyAFIAZQBnAHUAbABhAHJDaGVja2JveABDAGgAZQBjAGsAYgBvAHhGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA") format('truetype');
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBD8AAAC8AAAAYGNtYXAYVtCJAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zn4huwUAAAF4AAABYGhlYWQGPe1ZAAAC2AAAADZoaGVhB30DyAAAAxAAAAAkaG10eBBKAEUAAAM0AAAAHGxvY2EAmgESAAADUAAAABBtYXhwAAkALwAAA2AAAAAgbmFtZSC8IugAAAOAAAABknBvc3QAAwAAAAAFFAAAACAAAwMTAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADoAgPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6AL//f//AAAAAAAg6AD//f//AAH/4xgEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAEUAUQO7AvgAGgAAARQHAQYjIicBJjU0PwE2MzIfAQE2MzIfARYVA7sQ/hQQFhcQ/uMQEE4QFxcQqAF2EBcXEE4QAnMWEP4UEBABHRAXFhBOEBCoAXcQEE4QFwAAAAABAAABbgMlAkkAFAAAARUUBwYjISInJj0BNDc2MyEyFxYVAyUQEBf9SRcQEBAQFwK3FxAQAhJtFxAQEBAXbRcQEBAQFwAAAAABAAAASQMlA24ALAAAARUUBwYrARUUBwYrASInJj0BIyInJj0BNDc2OwE1NDc2OwEyFxYdATMyFxYVAyUQEBfuEBAXbhYQEO4XEBAQEBfuEBAWbhcQEO4XEBACEm0XEBDuFxAQEBAX7hAQF20XEBDuFxAQEBAX7hAQFwAAAQAAAAIAAHRSzT9fDzz1AAsEAAAAAADRsdR3AAAAANGx1HcAAAAAA7sDbgAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAADuwABAAAAAAAAAAAAAAAAAAAABwQAAAAAAAAAAAAAAAIAAAAEAABFAyUAAAMlAAAAAAAAAAoAFAAeAE4AcgCwAAEAAAAHAC0AAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAIAAAAAQAAAAAAAgAHAGkAAQAAAAAAAwAIADkAAQAAAAAABAAIAH4AAQAAAAAABQALABgAAQAAAAAABgAIAFEAAQAAAAAACgAaAJYAAwABBAkAAQAQAAgAAwABBAkAAgAOAHAAAwABBAkAAwAQAEEAAwABBAkABAAQAIYAAwABBAkABQAWACMAAwABBAkABgAQAFkAAwABBAkACgA0ALBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhWZXJzaW9uIDIuMABWAGUAcgBzAGkAbwBuACAAMgAuADBDaGVja2JveABDAGgAZQBjAGsAYgBvAHhDaGVja2JveABDAGgAZQBjAGsAYgBvAHhSZWd1bGFyAFIAZQBnAHUAbABhAHJDaGVja2JveABDAGgAZQBjAGsAYgBvAHhGb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype');
 }
 
 /* Checkmark */
@@ -21366,12 +22654,15 @@ Floated Menu / Item
 .dash:before  { content: '\e801'; }
 .plus:before { content: '\e802'; }
 */
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Dimmer
+ * # Semantic UI 2.2.10 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -21381,7 +22672,7 @@ Floated Menu / Item
             Dimmer
 *******************************/
 
-.dimmable {
+.dimmable:not(.body) {
   position: relative;
 }
 
@@ -21490,8 +22781,10 @@ body.dimmable > .dimmer {
 .blurring.dimmable > :not(.dimmer) {
   -webkit-filter: blur(0px) grayscale(0);
   filter: blur(0px) grayscale(0);
-  -webkit-transition: 800ms filter ease;
+  -webkit-transition: 800ms -webkit-filter ease;
+  transition: 800ms -webkit-filter ease;
   transition: 800ms filter ease;
+  transition: 800ms filter ease, 800ms -webkit-filter ease;
 }
 
 .blurring.dimmed.dimmable > :not(.dimmer) {
@@ -21569,12 +22862,15 @@ body.dimmable > .dimmer {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+        User Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Popup
+ * # Semantic UI 2.2.10 - Popup
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -21603,13 +22899,13 @@ body.dimmable > .dimmer {
   font-style: normal;
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
-  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.08);
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
 }
 
 .ui.popup > .header {
   padding: 0em;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1.125em;
+  font-size: 1.14285714em;
   line-height: 1.2;
   font-weight: bold;
 }
@@ -21621,8 +22917,8 @@ body.dimmable > .dimmer {
 .ui.popup:before {
   position: absolute;
   content: '';
-  width: 0.75em;
-  height: 0.75em;
+  width: 0.71428571em;
+  height: 0.71428571em;
   background: #FFFFFF;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -21635,6 +22931,411 @@ body.dimmable > .dimmer {
 *******************************/
 
 /*--------------
+    Tooltip
+---------------*/
+
+/* Content */
+
+[data-tooltip] {
+  position: relative;
+}
+
+/* Arrow */
+
+[data-tooltip]:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  font-size: 1rem;
+  width: 0.71428571em;
+  height: 0.71428571em;
+  background: #FFFFFF;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 2;
+  box-shadow: 1px 1px 0px 0px #bababc;
+}
+
+/* Popup */
+
+[data-tooltip]:after {
+  pointer-events: none;
+  content: attr(data-tooltip);
+  position: absolute;
+  text-transform: none;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1rem;
+  border: 1px solid #D4D4D5;
+  line-height: 1.4285em;
+  max-width: none;
+  background: #FFFFFF;
+  padding: 0.833em 1em;
+  font-weight: normal;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+  z-index: 1;
+}
+
+/* Default Position (Top Center) */
+
+[data-tooltip]:not([data-position]):before {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  background: #FFFFFF;
+  margin-left: -0.07142857rem;
+  margin-bottom: 0.14285714rem;
+}
+
+[data-tooltip]:not([data-position]):after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 100%;
+  margin-bottom: 0.5em;
+}
+
+/* Animation */
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+[data-tooltip]:before {
+  opacity: 0;
+  -webkit-transform: rotate(45deg) scale(0) !important;
+  transform: rotate(45deg) scale(0) !important;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+[data-tooltip]:after {
+  opacity: 1;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+[data-tooltip]:hover:before {
+  -webkit-transform: rotate(45deg) scale(1) !important;
+  transform: rotate(45deg) scale(1) !important;
+  opacity: 1;
+}
+
+/* Animation Position */
+
+[data-tooltip]:after,
+[data-tooltip][data-position="top center"]:after,
+[data-tooltip][data-position="bottom center"]:after {
+  -webkit-transform: translateX(-50%) scale(0) !important;
+  transform: translateX(-50%) scale(0) !important;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip][data-position="bottom center"]:hover:after {
+  -webkit-transform: translateX(-50%) scale(1) !important;
+  transform: translateX(-50%) scale(1) !important;
+}
+
+[data-tooltip][data-position="left center"]:after,
+[data-tooltip][data-position="right center"]:after {
+  -webkit-transform: translateY(-50%) scale(0) !important;
+  transform: translateY(-50%) scale(0) !important;
+}
+
+[data-tooltip][data-position="left center"]:hover:after,
+[data-tooltip][data-position="right center"]:hover:after {
+  -webkit-transform: translateY(-50%) scale(1) !important;
+  transform: translateY(-50%) scale(1) !important;
+}
+
+[data-tooltip][data-position="top left"]:after,
+[data-tooltip][data-position="top right"]:after,
+[data-tooltip][data-position="bottom left"]:after,
+[data-tooltip][data-position="bottom right"]:after {
+  -webkit-transform: scale(0) !important;
+  transform: scale(0) !important;
+}
+
+[data-tooltip][data-position="top left"]:hover:after,
+[data-tooltip][data-position="top right"]:hover:after,
+[data-tooltip][data-position="bottom left"]:hover:after,
+[data-tooltip][data-position="bottom right"]:hover:after {
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+}
+
+/*--------------
+    Inverted
+---------------*/
+
+/* Arrow */
+
+[data-tooltip][data-inverted]:before {
+  box-shadow: none !important;
+}
+
+/* Arrow Position */
+
+[data-tooltip][data-inverted]:before {
+  background: #000000;
+}
+
+/* Popup  */
+
+[data-tooltip][data-inverted]:after {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: none;
+}
+
+[data-tooltip][data-inverted]:after .header {
+  background-color: none;
+  color: #FFFFFF;
+}
+
+/*--------------
+    Position
+---------------*/
+
+/* Top Center */
+
+[data-position="top center"][data-tooltip]:after {
+  top: auto;
+  right: auto;
+  left: 50%;
+  bottom: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-bottom: 0.5em;
+}
+
+[data-position="top center"][data-tooltip]:before {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 50%;
+  background: #FFFFFF;
+  margin-left: -0.07142857rem;
+  margin-bottom: 0.14285714rem;
+}
+
+/* Top Left */
+
+[data-position="top left"][data-tooltip]:after {
+  top: auto;
+  right: auto;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 0.5em;
+}
+
+[data-position="top left"][data-tooltip]:before {
+  top: auto;
+  right: auto;
+  bottom: 100%;
+  left: 1em;
+  margin-left: -0.07142857rem;
+  margin-bottom: 0.14285714rem;
+}
+
+/* Top Right */
+
+[data-position="top right"][data-tooltip]:after {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 0.5em;
+}
+
+[data-position="top right"][data-tooltip]:before {
+  top: auto;
+  left: auto;
+  bottom: 100%;
+  right: 1em;
+  margin-left: -0.07142857rem;
+  margin-bottom: 0.14285714rem;
+}
+
+/* Bottom Center */
+
+[data-position="bottom center"][data-tooltip]:after {
+  bottom: auto;
+  right: auto;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 0.5em;
+}
+
+[data-position="bottom center"][data-tooltip]:before {
+  bottom: auto;
+  right: auto;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.07142857rem;
+  margin-top: 0.14285714rem;
+}
+
+/* Bottom Left */
+
+[data-position="bottom left"][data-tooltip]:after {
+  left: 0;
+  top: 100%;
+  margin-top: 0.5em;
+}
+
+[data-position="bottom left"][data-tooltip]:before {
+  bottom: auto;
+  right: auto;
+  top: 100%;
+  left: 1em;
+  margin-left: -0.07142857rem;
+  margin-top: 0.14285714rem;
+}
+
+/* Bottom Right */
+
+[data-position="bottom right"][data-tooltip]:after {
+  right: 0;
+  top: 100%;
+  margin-top: 0.5em;
+}
+
+[data-position="bottom right"][data-tooltip]:before {
+  bottom: auto;
+  left: auto;
+  top: 100%;
+  right: 1em;
+  margin-left: -0.14285714rem;
+  margin-top: 0.07142857rem;
+}
+
+/* Left Center */
+
+[data-position="left center"][data-tooltip]:after {
+  right: 100%;
+  top: 50%;
+  margin-right: 0.5em;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+[data-position="left center"][data-tooltip]:before {
+  right: 100%;
+  top: 50%;
+  margin-top: -0.14285714rem;
+  margin-right: -0.07142857rem;
+}
+
+/* Right Center */
+
+[data-position="right center"][data-tooltip]:after {
+  left: 100%;
+  top: 50%;
+  margin-left: 0.5em;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+[data-position="right center"][data-tooltip]:before {
+  left: 100%;
+  top: 50%;
+  margin-top: -0.07142857rem;
+  margin-left: 0.14285714rem;
+}
+
+/* Arrow */
+
+[data-position~="bottom"][data-tooltip]:before {
+  background: #FFFFFF;
+  box-shadow: -1px -1px 0px 0px #bababc;
+}
+
+[data-position="left center"][data-tooltip]:before {
+  background: #FFFFFF;
+  box-shadow: 1px -1px 0px 0px #bababc;
+}
+
+[data-position="right center"][data-tooltip]:before {
+  background: #FFFFFF;
+  box-shadow: -1px 1px 0px 0px #bababc;
+}
+
+[data-position~="top"][data-tooltip]:before {
+  background: #FFFFFF;
+}
+
+/* Inverted Arrow Color */
+
+[data-inverted][data-position~="bottom"][data-tooltip]:before {
+  background: #000000;
+  box-shadow: -1px -1px 0px 0px #bababc;
+}
+
+[data-inverted][data-position="left center"][data-tooltip]:before {
+  background: #000000;
+  box-shadow: 1px -1px 0px 0px #bababc;
+}
+
+[data-inverted][data-position="right center"][data-tooltip]:before {
+  background: #000000;
+  box-shadow: -1px 1px 0px 0px #bababc;
+}
+
+[data-inverted][data-position~="top"][data-tooltip]:before {
+  background: #000000;
+}
+
+[data-position~="bottom"][data-tooltip]:before {
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+[data-position~="bottom"][data-tooltip]:after {
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+}
+
+[data-position="left center"][data-tooltip]:before {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+[data-position="left center"][data-tooltip]:after {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+[data-position="right center"][data-tooltip]:before {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+[data-position="right center"][data-tooltip]:after {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+/*--------------
      Spacing
 ---------------*/
 
@@ -21645,7 +23346,7 @@ body.dimmable > .dimmer {
 /* Extending from Top */
 
 .ui.top.popup {
-  margin: 0em 0em 0.75em;
+  margin: 0em 0em 0.71428571em;
 }
 
 .ui.top.left.popup {
@@ -21666,13 +23367,13 @@ body.dimmable > .dimmer {
 /* Extending from Vertical Center */
 
 .ui.left.center.popup {
-  margin: 0em 0.75em 0em 0em;
+  margin: 0em 0.71428571em 0em 0em;
   -webkit-transform-origin: right 50%;
   transform-origin: right 50%;
 }
 
 .ui.right.center.popup {
-  margin: 0em 0em 0em 0.75em;
+  margin: 0em 0em 0em 0.71428571em;
   -webkit-transform-origin: left 50%;
   transform-origin: left 50%;
 }
@@ -21680,7 +23381,7 @@ body.dimmable > .dimmer {
 /* Extending from Bottom */
 
 .ui.bottom.popup {
-  margin: 0.75em 0em 0em;
+  margin: 0.71428571em 0em 0em;
 }
 
 .ui.bottom.left.popup {
@@ -21705,8 +23406,8 @@ body.dimmable > .dimmer {
 /*--- Below ---*/
 
 .ui.bottom.center.popup:before {
-  margin-left: -0.325em;
-  top: -0.325em;
+  margin-left: -0.30714286em;
+  top: -0.30714286em;
   left: 50%;
   right: auto;
   bottom: auto;
@@ -21720,7 +23421,7 @@ body.dimmable > .dimmer {
 /*rtl:rename*/
 
 .ui.bottom.left.popup:before {
-  top: -0.325em;
+  top: -0.30714286em;
   left: 1em;
   right: auto;
   bottom: auto;
@@ -21735,7 +23436,7 @@ body.dimmable > .dimmer {
 /*rtl:rename*/
 
 .ui.bottom.right.popup:before {
-  top: -0.325em;
+  top: -0.30714286em;
   right: 1em;
   bottom: auto;
   left: auto;
@@ -21748,9 +23449,9 @@ body.dimmable > .dimmer {
 .ui.top.center.popup:before {
   top: auto;
   right: auto;
-  bottom: -0.325em;
+  bottom: -0.30714286em;
   left: 50%;
-  margin-left: -0.325em;
+  margin-left: -0.30714286em;
 }
 
 .ui.top.left.popup {
@@ -21760,7 +23461,7 @@ body.dimmable > .dimmer {
 /*rtl:rename*/
 
 .ui.top.left.popup:before {
-  bottom: -0.325em;
+  bottom: -0.30714286em;
   left: 1em;
   top: auto;
   right: auto;
@@ -21774,7 +23475,7 @@ body.dimmable > .dimmer {
 /*rtl:rename*/
 
 .ui.top.right.popup:before {
-  bottom: -0.325em;
+  bottom: -0.30714286em;
   right: 1em;
   top: auto;
   left: auto;
@@ -21787,10 +23488,10 @@ body.dimmable > .dimmer {
 
 .ui.left.center.popup:before {
   top: 50%;
-  right: -0.325em;
+  right: -0.30714286em;
   bottom: auto;
   left: auto;
-  margin-top: -0.325em;
+  margin-top: -0.30714286em;
   box-shadow: 1px -1px 0px 0px #bababc;
 }
 
@@ -21800,10 +23501,10 @@ body.dimmable > .dimmer {
 
 .ui.right.center.popup:before {
   top: 50%;
-  left: -0.325em;
+  left: -0.30714286em;
   bottom: auto;
   right: auto;
-  margin-top: -0.325em;
+  margin-top: -0.30714286em;
   box-shadow: -1px 1px 0px 0px #bababc;
 }
 
@@ -21946,7 +23647,7 @@ body.dimmable > .dimmer {
 ---------------*/
 
 .ui.mini.popup {
-  font-size: 0.71428571rem;
+  font-size: 0.78571429rem;
 }
 
 .ui.tiny.popup {
@@ -21972,12 +23673,15 @@ body.dimmable > .dimmer {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+        User Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Sidebar
+ * # Semantic UI 2.2.10 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -22245,11 +23949,6 @@ body.pushable > .pusher {
 html.ios {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-}
-
-html.ios,
-html.ios body {
-  height: initial !important;
 }
 
 /*******************************
@@ -22667,12 +24366,15 @@ html.ios body {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Sticky
+ * # Semantic UI 2.2.10 - Sticky
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -22738,12 +24440,15 @@ html.ios body {
 /*******************************
          Theme Overrides
 *******************************/
+
+/*******************************
+         Site Overrides
+*******************************/
 /*!
- * # Semantic UI 2.1.8 - Transition
+ * # Semantic UI 2.2.10 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
- * Copyright 2015 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
@@ -24972,3 +26677,7 @@ html.ios body {
     transform: scale3d(1, 1, 1);
   }
 }
+
+/*******************************
+         Site Overrides
+*******************************/
