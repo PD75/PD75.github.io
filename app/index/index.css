@@ -25,7 +25,7 @@
   top: -55px;
 }
 
-.ui.button > .image {
+.ui.button>.image {
   margin: -0.1em 0.4em -0.1em 0.1em;
   height: 16px;
 }
@@ -35,21 +35,21 @@
   vertical-align: text-bottom;
 }
 
-.linkedin.label > .linkedin.square.icon {
+.linkedin.label>.linkedin.square.icon {
   color: #287bbc;
   margin: 0;
 }
 
-.linkedin.label > span {
+.linkedin.label>span {
   position: relative;
   top: 2px;
 }
 
-.menu > .item > .header {
+.menu>.item>.header {
   color: #4d4d4d;
 }
 
-.menu > .item > .header:hover {
+.menu>.item>.header:hover {
   color: #000000;
 }
 
@@ -71,6 +71,25 @@
   }
 }
 
+.ui.xing.label {
+  background-color: #004748!important;
+  border-color: #004748!important;
+  color: #fff!important;
+}
+
+.ui.facebook.label {
+  background-color: #4267b2!important;
+  border-color: #4267b2!important;
+  color: #fff!important;
+}
+
+.ui.whatsapp.label {
+  background-color: #1ebea5!important;
+  border-color: #1ebea5!important;
+  color: #fff!important;
+}
+
+
 
 /*----------------------
      Only (Device)
@@ -89,12 +108,14 @@
   .ui.ui.mobile.nomargin {
     margin: 0px 0px 0px 0px !important;
     max-width: none !important;
-    width :100%;
+    width: 100%;
   }
-    .ui.right.rail {
+  .ui.right.rail {
     display: none;
   }
 }
+
+
 
 
 /* Computer Only Hide */
